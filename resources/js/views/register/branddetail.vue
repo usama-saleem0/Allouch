@@ -121,7 +121,7 @@ export default {
     width: 66%;
 }
 
-form-1 {
+.form-1 {
     width: 63%;
     height: 703px;
     flex-shrink: 0;

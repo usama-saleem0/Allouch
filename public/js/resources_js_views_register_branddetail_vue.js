@@ -70,6 +70,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Borders"
 });
@@ -93,7 +98,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n*[data-v-10ef68ab]{\n        padding: 0;\n        margin: 0;\n        box-sizing: border-box;\n}\nsection.form-1-sec[data-v-10ef68ab] {\n    width: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n.main-form[data-v-10ef68ab] {\n    width: 1290px;\n    height: 900px;\n    border-radius: 50px;\n    background-image: url(/images/Sign\\ Up.png);\n    position: relative;\n    display: flex;\n    justify-content: space-between;\n    flex-wrap: wrap;\n    gap:40px 0px ;\n}\n.form-img[data-v-10ef68ab] {\n    width: 100%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n.form-titel[data-v-10ef68ab] {\n    width: 30%;\n    display: flex;\n    justify-content: flex-end;\n}\n.form-img img[data-v-10ef68ab] {\n    width: 19%;\n}\n.form-titel h2[data-v-10ef68ab] {\n    color: #1C1D1E;\n    font-family: sans-serif;\n    font-size: 32px;\n    font-style: normal;\n    font-weight: 800;\n    line-height: normal;\n}\n.form-box[data-v-10ef68ab] {\n    width: 66%;\n}\nform.form-1[data-v-10ef68ab] {\n    width: 63%;\n    height: 703px;\n    flex-shrink: 0;\n    border-radius: 40px;\n    background: #FFF;\n    box-shadow: 0px 4px 35px 0px rgba(0, 0, 0, 0.08);\n    z-index: 1;\n    position: relative;\n    padding: 50px 45px;\n    display: flex;\n    flex-wrap: wrap;\n    align-items: center;\n    justify-content: space-between;\n}\n.form-box img[data-v-10ef68ab] {\n    position: absolute;\n    left: 205px;\n    bottom: 0px;\n}\n.input-group-1[data-v-10ef68ab] {\n    width: 46%;\n    display: flex;\n    flex-direction: column;\n}\n.input-group-2[data-v-10ef68ab] {\n    width: 100%;\n    display: flex;\n    flex-direction: column;\n}\n.input-group-1 label[data-v-10ef68ab] {\n    color: #000;\n    font-family: Poppins;\n    font-size: 18px;\n    font-style: normal;\n    font-weight: 400;\n    line-height: normal;\n    padding-bottom: 10px;\n}\n.input-group-1 input[data-v-10ef68ab] {\n    border-radius: 9px;\n    border: 1px solid #ADADAD;\n    background: #FFF;\n    color: #808080;\n    font-family: Poppins;\n    font-size: 14px;\n    font-style: normal;\n    font-weight: 300;\n    line-height: normal;\n    padding: 15px;\n}\n.input-group-2 label[data-v-10ef68ab] {\n    color: #000;\n    font-family: Poppins;\n    font-size: 18px;\n    font-style: normal;\n    font-weight: 400;\n    line-height: normal;\n    padding-bottom: 10px;\n}\n.input-group-2 input[data-v-10ef68ab] {\n    border-radius: 9px;\n    border: 1px solid #ADADAD;\n    background: #FFF;\n    color: #808080;\n    font-family: Poppins;\n    font-size: 14px;\n    font-style: normal;\n    font-weight: 300;\n    line-height: normal;\n    padding: 15px;\n}\nbutton.form-btn[data-v-10ef68ab] {\n    width: 100%;\n    display: flex;\n    height: 44px;\n    padding: 10px 0px;\n    justify-content: center;\n    align-items: center;\n    gap: 7.647px;\n    flex-shrink: 0;\n    border-radius: 6px;\n    border: 1px solid #000;\n    background: #F96;\n    box-shadow: 2px 2px 0px 0px #1B1C1D;\n}\nbutton.form-btn p[data-v-10ef68ab] {color: #FFF;text-align: center;font-family: DM Sans;font-size: 16px;font-style: normal;font-weight: 700;line-height: 24px; /* 150% */}\na.form-last[data-v-10ef68ab] {\n    width: 60%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    text-decoration: none;\n    gap: 14px;\n    padding-top:30px;\n}\na.form-last p[data-v-10ef68ab] {\n    color: #000;\n    font-family: Anton;\n    font-size: 16px;\n    font-style: normal;\n    font-weight: 600;\n    line-height: normal;\n}\n\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n*[data-v-10ef68ab]{\n        padding: 0;\n        margin: 0;\n        box-sizing: border-box;\n}\nsection.form-1-sec[data-v-10ef68ab] {\n    width: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n.main-form[data-v-10ef68ab] {\n    width: 1290px;\n    height: 900px;\n    border-radius: 50px;\n    background-image: url(/images/Sign\\ Up.png);\n    position: relative;\n    display: flex;\n    justify-content: space-between;\n    flex-wrap: wrap;\n    gap:40px 0px ;\n}\n.form-img[data-v-10ef68ab] {\n    width: 100%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n.form-titel[data-v-10ef68ab] {\n    width: 30%;\n    display: flex;\n    justify-content: flex-end;\n}\n.form-img img[data-v-10ef68ab] {\n    width: 19%;\n}\n.form-titel h2[data-v-10ef68ab] {\n    color: #1C1D1E;\n    font-family: sans-serif;\n    font-size: 32px;\n    font-style: normal;\n    font-weight: 800;\n    line-height: normal;\n}\n.form-box[data-v-10ef68ab] {\n    width: 66%;\n}\nform-1[data-v-10ef68ab] {\n    width: 63%;\n    height: 703px;\n    flex-shrink: 0;\n    border-radius: 40px;\n    background: #FFF;\n    box-shadow: 0px 4px 35px 0px rgba(0, 0, 0, 0.08);\n    z-index: 1;\n    position: relative;\n    padding: 50px 45px;\n    display: flex;\n    flex-wrap: wrap;\n    align-items: center;\n    justify-content: space-between;\n}\n.form-box img[data-v-10ef68ab] {\n    position: absolute;\n    left: 205px;\n    bottom: 0px;\n}\n.input-group-1[data-v-10ef68ab] {\n    width: 46%;\n    display: flex;\n    flex-direction: column;\n}\n.input-group-2[data-v-10ef68ab] {\n    width: 100%;\n    display: flex;\n    flex-direction: column;\n}\n.input-group-1 label[data-v-10ef68ab] {\n    color: #000;\n    font-family: Poppins;\n    font-size: 18px;\n    font-style: normal;\n    font-weight: 400;\n    line-height: normal;\n    padding-bottom: 10px;\n}\n.input-group-1 input[data-v-10ef68ab] {\n    border-radius: 9px;\n    border: 1px solid #ADADAD;\n    background: #FFF;\n    color: #808080;\n    font-family: Poppins;\n    font-size: 14px;\n    font-style: normal;\n    font-weight: 300;\n    line-height: normal;\n    padding: 15px;\n}\n.input-group-2 label[data-v-10ef68ab] {\n    color: #000;\n    font-family: Poppins;\n    font-size: 18px;\n    font-style: normal;\n    font-weight: 400;\n    line-height: normal;\n    padding-bottom: 10px;\n}\n.input-group-2 input[data-v-10ef68ab] {\n    border-radius: 9px;\n    border: 1px solid #ADADAD;\n    background: #FFF;\n    color: #808080;\n    font-family: Poppins;\n    font-size: 14px;\n    font-style: normal;\n    font-weight: 300;\n    line-height: normal;\n    padding: 15px;\n}\nbutton.form-btn[data-v-10ef68ab] {\n    width: 100%;\n    display: flex;\n    height: 44px;\n    padding: 10px 0px;\n    justify-content: center;\n    align-items: center;\n    gap: 7.647px;\n    flex-shrink: 0;\n    border-radius: 6px;\n    border: 1px solid #000;\n    background: #F96;\n    box-shadow: 2px 2px 0px 0px #1B1C1D;\n}\nbutton.form-btn p[data-v-10ef68ab] {color: #FFF;text-align: center;font-family: DM Sans;font-size: 16px;font-style: normal;font-weight: 700;line-height: 24px; /* 150% */}\na.form-last[data-v-10ef68ab] {\n    width: 60%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    text-decoration: none;\n    gap: 14px;\n    padding-top:30px;\n}\na.form-last p[data-v-10ef68ab] {\n    color: #000;\n    font-family: Anton;\n    font-size: 16px;\n    font-style: normal;\n    font-weight: 600;\n    line-height: normal;\n    cursor: pointer;\n}\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -597,7 +602,7 @@ var render = function() {
       _c("div", { staticClass: "form-box" }, [
         _c("img", { attrs: { src: "/images/Character.png", alt: "" } }),
         _vm._v(" "),
-        _c("form", { staticClass: "form-1", attrs: { action: "" } }, [
+        _c("div", { staticClass: "form-1" }, [
           _vm._m(2),
           _vm._v(" "),
           _vm._m(3),
@@ -645,39 +650,62 @@ var render = function() {
           ])
         ]),
         _vm._v(" "),
-        _c("a", { staticClass: "form-last", attrs: { href: "#" } }, [
-          _c(
-            "svg",
-            {
-              attrs: {
-                xmlns: "http://www.w3.org/2000/svg",
-                width: "30",
-                height: "30",
-                viewBox: "0 0 30 30",
-                fill: "none"
+        _c(
+          "a",
+          {
+            staticClass: "form-last",
+            attrs: { href: "#" },
+            on: {
+              click: function($event) {
+                return _vm.$emit("cancel")
               }
-            },
-            [
-              _c("path", {
+            }
+          },
+          [
+            _c(
+              "svg",
+              {
+                staticStyle: { cursor: "pointer" },
                 attrs: {
-                  d:
-                    "M25.6131 4.38811C19.7639 -1.4627 10.2434 -1.4627 4.39417 4.38811C1.56078 7.22338 0 10.9922 0 15.0004C0 19.0087 1.56078 22.7775 4.39417 25.6116C7.31937 28.5376 11.1615 30 15.0036 30C18.8457 30 22.6879 28.5376 25.6131 25.6116C31.4623 19.7608 31.4623 10.24 25.6131 4.38811ZM23.9698 23.9678C19.0259 28.9131 10.9813 28.9131 6.03745 23.9678C3.6434 21.5731 2.32432 18.3879 2.32432 15.0004C2.32432 11.6129 3.6434 8.4277 6.03745 6.03184C10.9813 1.0866 19.0259 1.08778 23.9698 6.03184C28.9125 10.9771 28.9125 19.0238 23.9698 23.9678Z",
-                  fill: "black"
+                  xmlns: "http://www.w3.org/2000/svg",
+                  width: "30",
+                  height: "30",
+                  viewBox: "0 0 30 30",
+                  fill: "none"
                 }
-              }),
-              _vm._v(" "),
-              _c("path", {
-                attrs: {
-                  d:
-                    "M20.0112 18.2127L16.721 14.9264L20.0112 11.64C20.4644 11.1867 20.4644 10.4508 20.0123 9.99626C19.5579 9.54057 18.8223 9.54174 18.3679 9.99509L15.0755 13.2838L11.7831 9.99509C11.3287 9.54174 10.593 9.54057 10.1386 9.99626C9.68538 10.4508 9.68537 11.1866 10.1398 11.64L13.4299 14.9264L10.1398 18.2127C9.68537 18.666 9.68538 19.4019 10.1386 19.8565C10.3652 20.0843 10.6639 20.1971 10.9614 20.1971C11.259 20.1971 11.5565 20.0831 11.7831 19.8576L15.0755 16.5689L18.3679 19.8576C18.5946 20.0843 18.8921 20.1971 19.1896 20.1971C19.4872 20.1971 19.7858 20.0831 20.0125 19.8565C20.4656 19.4019 20.4656 18.666 20.0112 18.2127Z",
-                  fill: "black"
+              },
+              [
+                _c("path", {
+                  attrs: {
+                    d:
+                      "M25.6131 4.38811C19.7639 -1.4627 10.2434 -1.4627 4.39417 4.38811C1.56078 7.22338 0 10.9922 0 15.0004C0 19.0087 1.56078 22.7775 4.39417 25.6116C7.31937 28.5376 11.1615 30 15.0036 30C18.8457 30 22.6879 28.5376 25.6131 25.6116C31.4623 19.7608 31.4623 10.24 25.6131 4.38811ZM23.9698 23.9678C19.0259 28.9131 10.9813 28.9131 6.03745 23.9678C3.6434 21.5731 2.32432 18.3879 2.32432 15.0004C2.32432 11.6129 3.6434 8.4277 6.03745 6.03184C10.9813 1.0866 19.0259 1.08778 23.9698 6.03184C28.9125 10.9771 28.9125 19.0238 23.9698 23.9678Z",
+                    fill: "black"
+                  }
+                }),
+                _vm._v(" "),
+                _c("path", {
+                  attrs: {
+                    d:
+                      "M20.0112 18.2127L16.721 14.9264L20.0112 11.64C20.4644 11.1867 20.4644 10.4508 20.0123 9.99626C19.5579 9.54057 18.8223 9.54174 18.3679 9.99509L15.0755 13.2838L11.7831 9.99509C11.3287 9.54174 10.593 9.54057 10.1386 9.99626C9.68538 10.4508 9.68537 11.1866 10.1398 11.64L13.4299 14.9264L10.1398 18.2127C9.68537 18.666 9.68538 19.4019 10.1386 19.8565C10.3652 20.0843 10.6639 20.1971 10.9614 20.1971C11.259 20.1971 11.5565 20.0831 11.7831 19.8576L15.0755 16.5689L18.3679 19.8576C18.5946 20.0843 18.8921 20.1971 19.1896 20.1971C19.4872 20.1971 19.7858 20.0831 20.0125 19.8565C20.4656 19.4019 20.4656 18.666 20.0112 18.2127Z",
+                    fill: "black"
+                  }
+                })
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "p",
+              {
+                on: {
+                  click: function($event) {
+                    return _vm.$emit("cancel")
+                  }
                 }
-              })
-            ]
-          ),
-          _vm._v(" "),
-          _c("p", [_vm._v("Get Back To Main Screen")])
-        ])
+              },
+              [_vm._v("Get Back To Main Screen")]
+            )
+          ]
+        )
       ])
     ])
   ])

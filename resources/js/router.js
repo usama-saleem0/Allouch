@@ -31,6 +31,12 @@ let router = new Router({
             name: "register",
             component: () => import("./views/register/branddetail.vue")
         },
+
+        {
+            path: "/businesstype",
+            name: "register",
+            component: () => import("./views/register/businesstype.vue")
+        },
         {
             path: "/verify/user/:id",
             name: "verify",

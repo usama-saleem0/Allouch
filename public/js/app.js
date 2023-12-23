@@ -2724,6 +2724,12 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_3__.default({
       return __webpack_require__.e(/*! import() */ "resources_js_views_register_branddetail_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./views/register/branddetail.vue */ "./resources/js/views/register/branddetail.vue"));
     }
   }, {
+    path: "/businesstype",
+    name: "register",
+    component: function component() {
+      return __webpack_require__.e(/*! import() */ "resources_js_views_register_businesstype_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./views/register/businesstype.vue */ "./resources/js/views/register/businesstype.vue"));
+    }
+  }, {
     path: "/verify/user/:id",
     name: "verify",
     props: true,
@@ -94968,7 +94974,7 @@ var index = {
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_views_home_index_vue":1,"resources_js_views_login_index_vue":1,"resources_js_views_register_index_vue":1,"resources_js_views_register_branddetail_vue":1,"resources_js_views_verify_index_vue":1,"resources_js_views_forgot_index_vue":1,"resources_js_views_reset_index_vue":1,"resources_js_views_admin_dashboard_vue":1,"resources_js_views_admin_buttons_vue":1,"resources_js_views_admin_cards_vue":1,"resources_js_views_admin_colors_vue":1,"resources_js_views_admin_borders_vue":1,"resources_js_views_admin_animations_vue":1,"resources_js_views_admin_other_vue":1,"resources_js_views_admin_page-not-found_vue":1,"resources_js_views_admin_blank_vue":1,"resources_js_views_admin_charts_vue":1,"resources_js_views_admin_tables_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_views_home_index_vue":1,"resources_js_views_login_index_vue":1,"resources_js_views_register_index_vue":1,"resources_js_views_register_branddetail_vue":1,"resources_js_views_register_businesstype_vue":1,"resources_js_views_verify_index_vue":1,"resources_js_views_forgot_index_vue":1,"resources_js_views_reset_index_vue":1,"resources_js_views_admin_dashboard_vue":1,"resources_js_views_admin_buttons_vue":1,"resources_js_views_admin_cards_vue":1,"resources_js_views_admin_colors_vue":1,"resources_js_views_admin_borders_vue":1,"resources_js_views_admin_animations_vue":1,"resources_js_views_admin_other_vue":1,"resources_js_views_admin_page-not-found_vue":1,"resources_js_views_admin_blank_vue":1,"resources_js_views_admin_charts_vue":1,"resources_js_views_admin_tables_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

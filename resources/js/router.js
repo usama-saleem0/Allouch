@@ -30,6 +30,11 @@ let router = new Router({
             name: "register",
             component: () => import("./views/register/formr.vue")
         },
+        {
+            path: "/singin",
+            name: "register",
+            component: () => import("./views/register/formrr.vue")
+        },
 
 
         {

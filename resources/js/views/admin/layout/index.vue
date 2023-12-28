@@ -2,10 +2,10 @@
   <!-- Page Wrapper -->
   <div id="wrapper">
     <!-- Sidebar -->
-    <Sidebar />
+    <!-- <Sidebar /> -->
 
     <!-- Content Wrapper -->
-    <div id="content-wrapper" class="d-flex flex-column">
+    <div id="content-wrapper" class="d-flex flex-column" style="min-height: 100vh">
       <!-- Main Content -->
       <div id="content">
         <!-- Start of Topbar -->
@@ -13,7 +13,8 @@
         <!-- End of Topbar -->
 
         <!-- Begin Page Content -->
-        <div class="container-fluid">
+        <div class="container-fluid" style="padding-right: 0px !important; padding-left: 0px !important;
+">
           <router-view></router-view>
         </div>
         <!-- /.container-fluid -->
@@ -21,13 +22,13 @@
       <!-- End of Main Content -->
 
       <!-- Footer -->
-      <footer class="sticky-footer bg-white">
+      <!-- <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
             <span>Copyright &copy; Your Website 2021</span>
           </div>
         </div>
-      </footer>
+      </footer> -->
       <!-- End of Footer -->
     </div>
     <!-- End of Content Wrapper -->

@@ -334,9 +334,6 @@ form.form-main h2 {
     line-height: normal;
     margin: 0px;
 }
-
-.fromr-btn {}
-
 button.Influencer {
     border-radius: 6px;
     border: 1px solid #000;
@@ -392,6 +389,7 @@ button.Brand {
     font-weight: 700;
     line-height: 24px; /* 150% */
 }
+
 </style>
 
 

@@ -35,8 +35,11 @@ let router = new Router({
             name: "register",
             component: () => import("./views/register/formrr.vue")
         },
-
-
+        {
+            path: "/profile",
+            name: "register",
+            component: () => import("./views/register/profile.vue")
+        },
         {
             path: "/details",
             name: "register",
@@ -80,6 +83,45 @@ let router = new Router({
             path: "/admin/components/buttons",
             name: "buttons",
             component: () => import("./views/admin/buttons.vue"),
+            meta: {
+                requiresAuth: true,
+                layout: AdminLayout
+            }
+        },
+        {
+            path: "/admin/dashborad1",
+            name: "admin",
+            component: () => import("./views/admin/dashborad1.vue"),
+            meta: {
+                requiresAuth: true,
+                layout: AdminLayout
+            }
+        },
+
+
+        {
+            path: "/admin/dashborad2",
+            name: "admin",
+            component: () => import("./views/admin/dashborad2.vue"),
+            meta: {
+                requiresAuth: true,
+                layout: AdminLayout
+            }
+        },
+        {
+            path: "/admin/dashborad3",
+            name: "admin",
+            component: () => import("./views/admin/dashborad3.vue"),
+            meta: {
+                requiresAuth: true,
+                layout: AdminLayout
+            }
+        },
+
+        {
+            path: "/admin/dashborad4",
+            name: "admin",
+            component: () => import("./views/admin/dashborad4.vue"),
             meta: {
                 requiresAuth: true,
                 layout: AdminLayout

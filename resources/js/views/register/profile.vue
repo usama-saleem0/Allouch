@@ -8,12 +8,41 @@
                 <h2>step-2</h2>
             </div>
             <div class="form-box">
-                <img src="/images/Character.png" alt="">
+                <img class="imgss" src="/images/Character.png" alt="">
                 <div  class="form-1">
 
                     <div class="img-input">
                         <label for="text">Upload Your Profile Picture</label>
-                        <div id="app">
+
+                        <div >
+        <div
+        class="drop-zone"
+      id="image-drop-area"
+      @dragover="onDragOver"
+      @drop="onDrop"
+      @click="openFileDialog"
+     
+    >
+    <input type="file" id="file-input" ref="fileInput" style="display: none" @change="handleFileChange" accept="image/*">
+      <div class="image-drop-zone" v-if="!imageUrl"  >
+
+        <span class="drop-zone__prompt" ><svg xmlns="http://www.w3.org/2000/svg" width="74" height="74" viewBox="0 0 74 74" fill="none">
+  <path d="M58.5833 40.0771H40.0833V58.5771H33.9166V40.0771H15.4166V33.9104H33.9166V15.4104H40.0833V33.9104H58.5833V40.0771Z" fill="#FF9966"/>
+</svg></span>
+      </div>
+      <div class="drop-zone" v-else>
+        <img class="image-preview" :src="imageUrl" alt="Uploaded Image" style="width: 100%;
+    min-width: 443px;
+    min-height: 278px;
+    border-radius: 5px;
+    max-width: 443px;
+    max-height: 278px;" />
+      </div>
+    </div>
+
+  
+  </div>
+                        <!-- <div id="app">
     <div class="drop-zone" :class="{ 'drop-zone--over': isDragging }" @dragover.prevent="handleDragOver" @dragleave="handleDragLeave" @drop="handleDrop">
       <span class="drop-zone__prompt" v-if="!thumbnail"><svg xmlns="http://www.w3.org/2000/svg" width="74" height="74" viewBox="0 0 74 74" fill="none">
   <path d="M58.5833 40.0771H40.0833V58.5771H33.9166V40.0771H15.4166V33.9104H33.9166V15.4104H40.0833V33.9104H58.5833V40.0771Z" fill="#FF9966"/>
@@ -21,21 +50,21 @@
       <input type="file" name="myFile" class="drop-zone__input" @change="handleFileChange">
       <div class="drop-zone__thumb" v-if="thumbnail" :style="{ 'background-image': `url('${thumbnail}')` }" :data-label="fileName"></div>
     </div>
-  </div>
+  </div> -->
                     </div>
                     
                     <div class="input-group-2">
                         <label for="text">Bio</label>
                         <input type="text" placeholder="Write here
-                        ">
+                        " v-model="form.bio">
                     </div>
                     <div class="input-3">
                         <label for="text">Provide Social Media Handles</label>
-                        <input class="icon-input1" type="text" placeholder="">
-                        <input class="icon-input2" type="text" placeholder="">
-                        <input class="icon-input3" type="text" placeholder="">
+                        <input class="icon-input1" type="text" placeholder="" v-model="form.facebook">
+                        <input class="icon-input2" type="text" placeholder="" v-model="form.instagram">
+                        <input class="icon-input3" type="text" placeholder="" v-model="form.linkdin">
                     </div>
-                    <button class="form-btn">
+                    <button class="form-btn" @click="save">
                         <p>Start for free </p>
                         <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
                             <path d="M2.51254 5.45272C3.05034 5.44321 3.53631 5.41563 4.01895 5.49884C4.06983 5.5074 4.12879 5.47935 4.18253 5.46318C4.44738 5.38329 4.71319 5.37236 4.9828 5.44131C5.21723 5.50122 5.45642 5.44986 5.6937 5.46746C6.05983 5.49456 6.42408 5.39566 6.78785 5.4142C7.08408 5.42942 7.38366 5.42466 7.678 5.47079C7.82731 5.49409 7.96852 5.50217 8.12116 5.46366C8.28711 5.42229 8.45164 5.52167 8.62378 5.52167C8.81304 5.52167 8.99943 5.56922 9.18108 5.62343C9.38459 5.68382 9.43594 5.86831 9.28759 6.0181C9.06124 6.24682 8.76549 6.34715 8.45926 6.39185C8.20581 6.42894 7.94713 6.45033 7.69178 6.46365C7.42169 6.47744 7.1497 6.57064 6.8758 6.48029C6.82873 6.4646 6.77025 6.46127 6.72269 6.47411C6.4041 6.56161 6.07268 6.50264 5.75171 6.56541C5.65281 6.5849 5.54438 6.57825 5.44357 6.56256C5.30377 6.54068 5.16968 6.54449 5.03654 6.58823C4.86631 6.64434 4.69704 6.57302 4.52632 6.57634C4.35371 6.57967 4.18253 6.58585 4.01895 6.62722C3.7617 6.69284 3.50588 6.65623 3.25528 6.6296C3.02894 6.60583 2.81068 6.6258 2.58767 6.6315C2.37702 6.63721 2.15686 6.65528 1.94954 6.61867C1.71416 6.57682 1.61193 6.36189 1.52586 6.1655C1.44883 5.98957 1.55725 5.85975 1.67565 5.73327C1.85015 5.54639 2.05129 5.44653 2.31045 5.46413C2.39509 5.46983 2.48116 5.45414 2.51397 5.45224L2.51254 5.45272Z" fill="white"/>
@@ -63,85 +92,90 @@
 </template>
 
 <script>
+ import { get , byMethod} from '../admin/components/lib/api'
 export default {
   name: "Borders",
+
+  props: {
+    userId: {
+      type: Number,
+      required: true,
+    },
+  },
+
+  data () {
+            return {
+                method:'POST',
+                imageUrl: null,
+                file: null,
+                form: {},
+              
+              
+              
+            }
+        },
+
+        methods:{
+          handleFileChange(event) {
+      this.file = event.target.files[0];
+      this.imageUrl = URL.createObjectURL(this.file);
+      console.log(this.imageUrl);
+    },
+    onDragOver(event) {
+      event.preventDefault();
+    },
+    onDrop(event) {
+      event.preventDefault();
+      this.file = event.dataTransfer.files[0];
+      this.imageUrl = URL.createObjectURL(this.file);
+    },
+    openFileDialog() {
+        
+    //   document.getElementById('file-input').click();
+    this.$refs.fileInput.click();
+    },
+
+
+    save(){
+                const formData = new FormData();
+    formData.append('image', this.file); 
+    formData.append('bio', this.form.bio);
+    formData.append('facebook', this.form.facebook);
+    formData.append('instagram', this.form.instagram);
+    formData.append('linkdin', this.form.linkdin);
+    formData.append('user_id', this.userId);
+
+
+   
+
+     
+                byMethod(this.method, '/api/profile' , formData)
+                     .then((res) => {
+                       
+                         if(res.data && res.data.saved) {
+                            this.$router.push('/brands');
+                          
+                         }
+                     })
+                     .catch((error) => {
+                         if(error.response.status === 422) {
+                             this.errors = error.response.data.errors
+                         }
+                         this.isProcessing = false
+                     })
+            }
+        }
 };
 
-document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
-  const dropZoneElement = inputElement.closest(".drop-zone");
-
-  dropZoneElement.addEventListener("click", (e) => {
-    inputElement.click();
-  });
-
-  inputElement.addEventListener("change", (e) => {
-    if (inputElement.files.length) {
-      updateThumbnail(dropZoneElement, inputElement.files[0]);
-    }
-  });
-
-  dropZoneElement.addEventListener("dragover", (e) => {
-    e.preventDefault();
-    dropZoneElement.classList.add("drop-zone--over");
-  });
-
-  ["dragleave", "dragend"].forEach((type) => {
-    dropZoneElement.addEventListener(type, (e) => {
-      dropZoneElement.classList.remove("drop-zone--over");
-    });
-  });
-
-  dropZoneElement.addEventListener("drop", (e) => {
-    e.preventDefault();
-
-    if (e.dataTransfer.files.length) {
-      inputElement.files = e.dataTransfer.files;
-      updateThumbnail(dropZoneElement, e.dataTransfer.files[0]);
-    }
-
-    dropZoneElement.classList.remove("drop-zone--over");
-  });
-});
-
-/**
- * Updates the thumbnail on a drop zone element.
- *
- * @param {HTMLElement} dropZoneElement
- * @param {File} file
- */
-function updateThumbnail(dropZoneElement, file) {
-  let thumbnailElement = dropZoneElement.querySelector(".drop-zone__thumb");
-
-  // First time - remove the prompt
-  if (dropZoneElement.querySelector(".drop-zone__prompt")) {
-    dropZoneElement.querySelector(".drop-zone__prompt").remove();
-  }
-
-  // First time - there is no thumbnail element, so lets create it
-  if (!thumbnailElement) {
-    thumbnailElement = document.createElement("div");
-    thumbnailElement.classList.add("drop-zone__thumb");
-    dropZoneElement.appendChild(thumbnailElement);
-  }
-
-  thumbnailElement.dataset.label = file.name;
-
-  // Show thumbnail for image files
-  if (file.type.startsWith("image/")) {
-    const reader = new FileReader();
-
-    reader.readAsDataURL(file);
-    reader.onload = () => {
-      thumbnailElement.style.backgroundImage = `url('${reader.result}')`;
-    };
-  } else {
-    thumbnailElement.style.backgroundImage = null;
-  }
-}
 
 
 </script>
 <style scoped>
+.image-preview img {
+  max-width: 88%;
+  max-height: 200px;
+}
+
     *{
         padding: 0;
         margin: 0;
@@ -252,7 +286,7 @@ function updateThumbnail(dropZoneElement, file) {
     justify-content: space-between;
 }
 
-.form-box img {
+.imgss {
     position: absolute;
     left: 205px;
     bottom: 0px;

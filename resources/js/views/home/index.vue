@@ -16,27 +16,23 @@
           </button> -->
 
           <button type="button" class="btn btn-primary" @click="openModal">
+            <!-- <a href="#popup-box"> 
+            Click to Open Popup Box !
+        </a> -->
            Register
           </button>
         <!-- <router-link to="/admin" class="btn btn-primary">
           Go to dashboard <i class="fas fa-chevron-right"></i
         ></router-link> -->
       </div>
+     
+    <div id="popup-box" class="modal" v-if="isModalOpen">
+      <Details @cancel="closeModal"/>
+      
+    </div>
 
 
-<!-- Modal -->
-<div v-if="shows">
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
-  <div class="modal-dialog" role="document">
-    <Details @cancel="closeModal"/>
 
-   
-          <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
-   
-        </div>
- 
-</div>
-</div>
     </div>
     <Footer />
   </div>
@@ -45,7 +41,7 @@
 <script>
 import Nav from "../../components/Nav";
 import Footer from "../../components/Footer";
-import Details from "../register/branddetail.vue";
+import Details from "../register/formrr.vue";
 
 
 export default {
@@ -58,6 +54,7 @@ export default {
   data() {
   return {
       shows: true,
+      isModalOpen: true,
     };
   },
 
@@ -65,16 +62,16 @@ export default {
   methods:{
 
     openModal() {
-      // You might need to trigger Bootstrap's modal using jQuery
-      $('#exampleModal').modal('show');
+     
+      $('#popup-box').modal('show');
       
     },
     closeModal() {
     console.log('avcd');
 
     this.shows = false;
-    $('#exampleModal').modal('hide');
-      // Use Bootstrap modal method to hide the modal
+    $('#popup-box').modal('hide');
+      
      
     },
   }
@@ -100,4 +97,57 @@ export default {
 .min-vh-50 {
     min-height: 50vh !important;
 }
+
+.box {
+            background-color: black;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        p {
+            font-size: 17px;
+            align-items: center;
+        }
+        .box a {
+            display: inline-block;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 3px;
+        }
+        /* .modal {
+            align-items: center;
+            display: flex;
+            justify-content: center; 
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(254, 126, 126, 0.7);
+            transition: all 0.4s;
+            visibility: hidden;
+            opacity: 0;
+        } */
+        .content {
+            position: absolute;
+            background: white;
+            width: 400px;
+            padding: 1em 2em;
+            border-radius: 4px;
+        } 
+        .modal:target {
+            visibility: visible;
+            opacity: 1;
+        }
+        .box-close {
+            position: absolute;
+            top: 0;
+            right: 15px;
+            color: #fe0606;
+            text-decoration: none;
+            font-size: 30px;
+        }
 </style>
+
+

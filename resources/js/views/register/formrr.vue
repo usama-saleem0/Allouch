@@ -1,7 +1,7 @@
 <template>
- 
-    <section class="form-1-sec">
-      <div class="main-form">
+
+    <section class="form-1-sec" >
+      <div class="main-form" v-if="show">
         <div class="logo-from">
             <img src="/images/logo.png" alt="">
         </div>
@@ -12,34 +12,35 @@
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
             </div>
             <div class="from-box">
-                <img src="/images/Characters.png" alt="">
-                <form action="" class="form-main">
+                <img src="/images/Character.png" alt="">
+                
+                <div class="form-main form">
                     <div class="fromr-btn">
                         <button class="Influencer">As Influencer</button>
                         <button class="Brand">As Brand</button>
-                        <a href="#">No Account ?<span>Sign in</span></a>
+                        <a href="#">No Account ?<span @click="singup">Sign up</span></a>
                     </div>
                     <h2>Sign in</h2>
                     <div class="input-group">
                         <label for="text">Enter your username or email address</label>
-                        <input type="text" placeholder="Username or email address">
+                        <input type="text" placeholder="Username or email address" v-model="email">
                     </div>
                    
                     
                     <div class="input-group">
                         <label for="Password">Enter your Password</label>
-                        <input type="Password" placeholder="Password">
+                        <input type="Password" placeholder="Password" v-model="password">
                     </div>
 
                     <p>Forgot Password?</p>
                     
-                    <button  class="button-20">
+                    <button  class="button-20" @click="login">
                         <p>Start for free</p><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
   <path d="M2.51254 5.45272C3.05034 5.44321 3.53631 5.41563 4.01895 5.49884C4.06983 5.5074 4.12879 5.47935 4.18253 5.46318C4.44738 5.38329 4.71319 5.37236 4.9828 5.44131C5.21723 5.50122 5.45642 5.44986 5.6937 5.46746C6.05984 5.49456 6.42408 5.39566 6.78785 5.4142C7.08409 5.42942 7.38366 5.42466 7.678 5.47079C7.82731 5.49409 7.96852 5.50217 8.12116 5.46366C8.28711 5.42229 8.45165 5.52167 8.62378 5.52167C8.81304 5.52167 8.99944 5.56922 9.18108 5.62343C9.3846 5.68382 9.43594 5.86831 9.28759 6.0181C9.06124 6.24682 8.76549 6.34715 8.45926 6.39185C8.20581 6.42894 7.94713 6.45033 7.69178 6.46365C7.42169 6.47744 7.1497 6.57064 6.8758 6.48029C6.82873 6.4646 6.77024 6.46127 6.72269 6.47411C6.4041 6.56161 6.07268 6.50264 5.75171 6.56541C5.65281 6.5849 5.54438 6.57825 5.44357 6.56256C5.30377 6.54068 5.16968 6.54449 5.03654 6.58823C4.86631 6.64434 4.69703 6.57302 4.52632 6.57634C4.35371 6.57967 4.18253 6.58585 4.01895 6.62722C3.7617 6.69284 3.50588 6.65623 3.25528 6.6296C3.02894 6.60583 2.81068 6.6258 2.58767 6.6315C2.37702 6.63721 2.15686 6.65528 1.94954 6.61867C1.71416 6.57682 1.61193 6.36189 1.52586 6.1655C1.44883 5.98957 1.55725 5.85975 1.67565 5.73327C1.85015 5.54639 2.05129 5.44653 2.31045 5.46413C2.39509 5.46983 2.48116 5.45414 2.51397 5.45224L2.51254 5.45272Z" fill="white"/>
   <path d="M9.13513 9.8451C8.83651 9.84748 8.60731 9.58072 8.65724 9.27068C8.69005 9.06574 8.76518 8.87411 8.89833 8.70768C9.00056 8.57977 9.10422 8.45091 9.18839 8.31111C9.48177 7.82181 9.80322 7.35391 10.1884 6.93166C10.2221 6.89457 10.2497 6.84654 10.2664 6.79899C10.3657 6.51416 10.565 6.2978 10.7595 6.07907C10.8779 5.94593 10.8883 5.84702 10.7533 5.7291C10.5745 5.57265 10.4347 5.39386 10.3353 5.17798C10.2649 5.02582 10.1166 4.93737 10.0082 4.81612C9.85743 4.64731 9.76043 4.44094 9.65439 4.24646C9.50745 3.97685 9.2949 3.76192 9.12229 3.5156C8.94825 3.26739 8.80227 3.00396 8.69671 2.71913C8.67294 2.65493 8.65629 2.58646 8.64964 2.51846C8.63775 2.39008 8.71573 2.31019 8.81607 2.2479C8.91069 2.18894 8.9958 2.21366 9.07949 2.27595C9.24497 2.39911 9.42043 2.5042 9.54882 2.67728C9.71287 2.89792 9.96299 3.0439 10.1052 3.28736C10.4799 3.50086 10.6601 3.88507 10.9159 4.20414C11.0662 4.39149 11.2497 4.55364 11.4261 4.71817C11.5683 4.85083 11.6843 4.99586 11.7357 5.18654C11.7656 5.29733 11.8322 5.38673 11.894 5.48136C12.0414 5.70722 12.0319 5.93737 11.8874 6.16276C11.6739 6.49562 11.497 6.85225 11.2549 7.16703C11.0039 7.49371 10.8375 7.87982 10.545 8.17844C10.3672 8.36008 10.273 8.59356 10.1632 8.81847C10.0115 9.12898 9.83222 9.4238 9.57782 9.66345C9.43755 9.79517 9.30917 9.84415 9.13656 9.84557L9.13513 9.8451Z" fill="white"/>
 </svg>
                     </button>
-                </form>
+                </div>
             </div>
             <div class="from-card">
                 <h2>Login as</h2>
@@ -58,16 +59,88 @@
                 <a href="#"> <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
   <path d="M25.6131 4.38811C19.7639 -1.4627 10.2434 -1.4627 4.39417 4.38811C1.56078 7.22338 0 10.9922 0 15.0004C0 19.0087 1.56078 22.7775 4.39417 25.6116C7.31937 28.5376 11.1615 30 15.0036 30C18.8457 30 22.6879 28.5376 25.6131 25.6116C31.4623 19.7608 31.4623 10.24 25.6131 4.38811ZM23.9698 23.9678C19.0259 28.9131 10.9813 28.9131 6.03745 23.9678C3.6434 21.5731 2.32432 18.3879 2.32432 15.0004C2.32432 11.6129 3.6434 8.4277 6.03745 6.03184C10.9813 1.0866 19.0259 1.08778 23.9698 6.03184C28.9125 10.9771 28.9125 19.0238 23.9698 23.9678Z" fill="black"/>
   <path d="M20.0112 18.2127L16.721 14.9264L20.0112 11.64C20.4644 11.1867 20.4644 10.4508 20.0123 9.99626C19.5579 9.54057 18.8223 9.54174 18.3679 9.99509L15.0755 13.2838L11.7831 9.99509C11.3287 9.54174 10.593 9.54057 10.1386 9.99626C9.68538 10.4508 9.68537 11.1866 10.1398 11.64L13.4299 14.9264L10.1398 18.2127C9.68537 18.666 9.68538 19.4019 10.1386 19.8565C10.3652 20.0843 10.6639 20.1971 10.9614 20.1971C11.259 20.1971 11.5565 20.0831 11.7831 19.8576L15.0755 16.5689L18.3679 19.8576C18.5946 20.0843 18.8921 20.1971 19.1896 20.1971C19.4872 20.1971 19.7858 20.0831 20.0125 19.8565C20.4656 19.4019 20.4656 18.666 20.0112 18.2127Z" fill="black"/>
-</svg><p>Get Back To Main Screen</p></a>
+</svg><p @click="$emit('cancel')" >Get Back To Main Screen</p></a>
             </div>
         </div>
       </div>
+      <div v-if="singups">
+      <Singup @cancel="closeModal"/>
+      
+    </div>
     </section>
+   
 </template>
 
 <script>
+import axios from "axios";
+import Singup from "../register/formr.vue";
 export default {
   name: "Form",
+
+  components: {
+   
+    Singup
+  },
+  
+  data() {
+    return {
+        show:true,
+        singups:false,
+      email: "",
+      password: "",
+      verificationStatus: this.$route.query.verification_status ? true : false,
+      verificationMessage: '',
+      verificationAlertClasses: {
+        'alert-success': false,
+        'alert-danger': false
+      }
+    };
+  },
+  created: function () {
+    if (this.$route.query.verification_status === "success") {
+      this.verificationMessage = "Your account has been verified. Please log in.";
+      this.verificationAlertClasses['alert-success'] = true;
+    } else if (this.$route.query.verification_status === "error") {
+      this.verificationMessage = "Your account could not be verified.";
+      this.verificationAlertClasses['alert-danger'] = true;
+    }
+  },
+  methods: {
+    async login() {
+      try {
+        const response = await axios.post("login", {
+          email: this.email,
+          password: this.password,
+        });
+
+        localStorage.setItem("token", response.data.token);
+        this.$store.dispatch("user", response.data.user);
+        this.$emit('cancel');
+        this.$router.push("/admin");
+      } catch (error) {
+        notify.authError(error);
+      }
+    },
+
+
+    singup(){
+        console.log('cdcdcdcd')
+        this.show = false;
+        this.singups = true;
+        // $('#popup-box').modal('hide');
+        // $('#popup-boxs').modal('show');
+
+    },
+
+    closeModal() {
+    console.log('avcd');
+
+    this.shows = false;
+    $('#popup-box').modal('hide');
+      
+     
+    },
+  },
 };
 </script>
 <style scoped>
@@ -142,7 +215,7 @@ export default {
 
 .from-titel p {
     color: #1B1C1D;
-    font-family: Poppins;
+  
     font-size: 13px;
     font-style: normal;
     font-weight: 300;
@@ -160,7 +233,7 @@ export default {
 
 
 
-form {
+.form {
     border-radius: 40px;
     background: #FFF;
     box-shadow: 0px 4px 35px 0px rgba(0, 0, 0, 0.08);
@@ -175,7 +248,7 @@ form {
     padding: 30px;
 }
 
-.from-box img {position: absolute;right: 255px;top: 0px;}
+.from-box img {position: absolute;right: 255px;top: 0px; width: 100%;}
 
 .card-box {
     width: 100%;

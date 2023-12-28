@@ -60,11 +60,44 @@
           
         </div>
     </section>
+   
 </template>
 
 <script>
+// import Details from "../register/branddetail.vue";
 export default {
   name: "Borders",
+
+  components: {
+    Nav,
+    Footer,
+  },
+
+  data() {
+  return {
+     
+      isModalOpens: true,
+    };
+  },
+
+  methods:{
+
+    openModals() {
+     
+     $('#popup-boxs').modal('show');
+     
+   },
+   closeModals() {
+   console.log('aaaaa');
+
+   this.shows = false;
+   $('#popup-boxs').modal('hide');
+     
+    
+   },
+
+  }
+
 };
 </script>
 <style scoped>

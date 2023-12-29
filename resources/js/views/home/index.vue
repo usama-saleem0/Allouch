@@ -1,25 +1,29 @@
 <template>
-  <div>
-    <Nav />
-    <div class="masthead">
+  <div class="bg_image">
+    
+    <!-- <div class="masthead">
       <div class="text-center text-white">
         <h1 class="py-5 home-title">
           Welcome Influencer Marketing System
         </h1>
       </div>
-    </div>
-    <div class="container">
-      <div class="text-center py-5 min-vh-50">
+    </div> -->
+    <div class="container acc">
+      <div class="text-center py-5">
         
           <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
            Register
           </button> -->
 
-          <button type="button" class="btn btn-primary" @click="openModal">
-            <!-- <a href="#popup-box"> 
-            Click to Open Popup Box !
-        </a> -->
-           Register
+          <button type="button" class="btn" @click="openModal" style="color: black;
+    font-size: 11px;
+    font-family: sans-serif;
+    border: 1px solid black;
+    font-weight: bold;
+    margin-right: 10px;
+    box-shadow: rgb(0 0 0 / 85%) 1.95px 1.95px 2.6px;">
+          
+           Start for free
           </button>
         <!-- <router-link to="/admin" class="btn btn-primary">
           Go to dashboard <i class="fas fa-chevron-right"></i
@@ -34,7 +38,7 @@
 
 
     </div>
-    <Footer />
+   
   </div>
 </template>
 
@@ -80,6 +84,31 @@ export default {
 </script>
 
 <style>
+body{
+  width: 100%;
+    height:100%;
+  background-image: url(/images/Lanfing.png);
+  background-size: cover;
+  overflow: scroll;
+}
+.acc{
+    padding: 27px ;
+  }
+
+@media screen and (max-width: 1440px){
+
+  .acc{
+    padding: 0px !important;
+  }
+}
+
+
+/* .bg_image{
+  width: 100%;
+    height:100%;
+    background-image: url(/images/Lanfing.png);
+   
+} */
 
 .modal-dialog {
     /* min-width: 1290px; */

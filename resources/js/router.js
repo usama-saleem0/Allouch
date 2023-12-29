@@ -118,6 +118,17 @@ let router = new Router({
             }
         },
 
+
+        {
+            path: "/chat",
+            name: "admin",
+            component: () => import("./views/admin/chat.vue"),
+            meta: {
+                requiresAuth: true,
+                layout: AdminLayout
+            }
+        },
+
         {
             path: "/admin/dashborad4",
             name: "admin",

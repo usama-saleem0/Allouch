@@ -56,7 +56,7 @@ class RegisterController extends Controller
         $product = User::where('id', $request->user_id)->first();
         if($product){
 
-            $product->brand = $request->input('bio');
+            $product->bio = $request->input('bio');
             $product->facebook = $request->input('facebook') ? $request->input('facebook'):'' ;
             $product->instagram = $request->input('instagram')? $request->input('instagram'):'';
             $product->linkdin = $request->input('linkdin') ? $request->input('linkdin'):'';

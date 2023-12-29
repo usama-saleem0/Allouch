@@ -1,6 +1,6 @@
 <template>
 <section class="form-1-sec">
-        <div class="main-form">
+        <div class="main-form" v-if="showss">
             <div class="form-img">
                 <img src="/images/logo.png" alt="">
             </div>
@@ -88,13 +88,23 @@
             </div>
           
         </div>
+        <div v-if="final">
+      <Final  @cancel="closeModal"/>
+      
+    </div>
     </section>
 </template>
 
 <script>
- import { get , byMethod} from '../admin/components/lib/api'
+ import { get , byMethod} from '../admin/components/lib/api';
+ import Final from "../register/formz.vue"
 export default {
   name: "Borders",
+
+  components: {
+   
+    Final
+},
 
   props: {
     userId: {
@@ -109,6 +119,8 @@ export default {
                 imageUrl: null,
                 file: null,
                 form: {},
+                showss:true,
+                final:false,
               
               
               
@@ -116,6 +128,18 @@ export default {
         },
 
         methods:{
+
+          closeModal() {
+    console.log('avcd');
+
+    this.shows = false;
+    $('#popup-box').modal('hide');
+
+    window.location.reload();
+      
+     
+    },
+
           handleFileChange(event) {
       this.file = event.target.files[0];
       this.imageUrl = URL.createObjectURL(this.file);
@@ -136,6 +160,9 @@ export default {
     },
 
 
+    
+
+
     save(){
                 const formData = new FormData();
     formData.append('image', this.file); 
@@ -152,8 +179,11 @@ export default {
                 byMethod(this.method, '/api/profile' , formData)
                      .then((res) => {
                        
-                         if(res.data && res.data.saved) {
-                            this.$router.push('/brands');
+                         if(res.data.data) {
+                          console.log(res.data.data)
+                          this.showss = false;
+                          this.final = true;
+                            // this.$router.push('/brands');
                           
                          }
                      })

@@ -318,7 +318,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 *{
     padding: 0;
     margin: 0;
@@ -389,7 +389,7 @@ export default {
     font-family: sans-serif;
     font-size: 40px;
     font-style: normal;
-    font-weight: bold;
+    font-weight: 800;
     line-height: normal;
     margin: 0px;
 }
@@ -847,7 +847,7 @@ button.llo {
     font-family: sans-serif;
     font-size: 35px;
     font-style: normal;
-    font-weight: bold;
+    font-weight: 800;
     line-height: normal;
     margin: 0px;
 }
@@ -955,7 +955,7 @@ button.llo {
     font-family: sans-serif;
     font-size: 30px;
     font-style: normal;
-    font-weight: bold;
+    font-weight: 800;
     line-height: normal;
     margin: 0px;
 }

@@ -1304,6 +1304,26 @@ button.Add {
     max-width: 1170px;
     margin: 0 auto;
 }
+.div-1 h2 {
+    color: #000;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    margin: 0px;
+    width: 80%;
+}
+.rol-para h2 {
+    color: #000;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 0px;
+}
+
 .rol-3 p {
     margin: 0px;
     color: #000;
@@ -1317,7 +1337,7 @@ button.Add {
 .rol-1 h2 {
     color: #1B1C1D;
     font-family: sans-serif;
-    font-size: 45px;
+    font-size: 38px;
     font-style: normal;
     font-weight: bold;
     line-height: normal;
@@ -1379,7 +1399,7 @@ button.Add {
 .short-card h2 {
     color: #000;
     font-family: sans-serif;
-    font-size: 32px;
+    font-size: 25px;
     font-style: normal;
     font-weight: bold;
     line-height: normal;
@@ -1436,7 +1456,7 @@ button.Add {
 .divs h3 {
     color: #000;
     font-family: sans-serif;
-    font-size: 30px;
+    font-size: 28px;
     font-style: normal;
     font-weight: 700;
     line-height: 24px;

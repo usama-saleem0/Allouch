@@ -16,8 +16,8 @@
                 
                 <div class="form-main form">
                     <div class="fromr-btn">
-                        <button class="Influencer">As Influencer</button>
-                        <button class="Brand">As Brand</button>
+                        <button class="Influencer" :style="{ backgroundColor: bgColor1 }" @click="datas('Influencer')">As Influencer</button>
+                        <button class="Brand" :style="{ backgroundColor: bgColor2 }" @click="datas('Brand')">As Brand</button>
                         <a href="#">No Account ?<span @click="singup">Sign up</span></a>
                     </div>
                     <h2>Sign in</h2>
@@ -84,10 +84,15 @@ export default {
   
   data() {
     return {
+        bgColor1:'#FFF',
+        bgColor2:'#FFF',
+
         show:true,
         singups:false,
       email: "",
       password: "",
+      auth: "",
+
       verificationStatus: this.$route.query.verification_status ? true : false,
       verificationMessage: '',
       verificationAlertClasses: {
@@ -106,17 +111,37 @@ export default {
     }
   },
   methods: {
+
+    datas(e){
+        this.auth = e;
+        if(e == 'Influencer'){
+
+            this.bgColor1 = '#F96';
+            this.bgColor2 = '#FFF';
+        }
+
+        if(e == 'Brand'){
+
+this.bgColor1 = '#FFF';
+this.bgColor2 = '#F96';
+}
+
+    },
     async login() {
       try {
         const response = await axios.post("login", {
           email: this.email,
           password: this.password,
+          auttype: this.auth,
         });
 
         localStorage.setItem("token", response.data.token);
         this.$store.dispatch("user", response.data.user);
         this.$emit('cancel');
-        this.$router.push("/admin/dashborad3");
+        if(response.data.user.auth_type =='Influencer'){
+                console.log(response.data.user.auth_type);
+                this.$router.push("/admin/dashborad3");
+        }
       } catch (error) {
         notify.authError(error);
       }
@@ -409,7 +434,7 @@ form.form-main h2 {
 button.Influencer {
     border-radius: 6px;
     border: 1px solid #000;
-    background: #FFF;
+    /* background: #FFF; */
     box-shadow: 2px 2px 0px 0px #1B1C1D;
     padding: 11px 10px 9px 10px;
     color: #000;
@@ -424,10 +449,10 @@ button.Influencer {
 button.Brand {
     border-radius: 6px;
     border: 1px solid #000;
-    background: #F96;
+    /* background: #F96; */
     box-shadow: 2px 2px 0px 0px #1B1C1D;
     padding: 11px 26px 9px 26px;
-    color: #FFF;
+    color: black;
     text-align: center;
     font-family: sans-serif;
     font-size: 16px;

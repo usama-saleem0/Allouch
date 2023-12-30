@@ -7,7 +7,9 @@
         <div class="col-12 coloum">
           <div class="row cent">
         <div class="col" style="margin-bottom: 10px;margin-top: 10px;">
-        <img src="/images/Ellipse.png" class="imgs"/><span class="sp">{{ chatname }}</span>
+           
+        <img src="/images/Ellipse.png" class="imgs"/>
+        <span class="sp">{{ chatname }}</span>
         
         
       </div>
@@ -56,12 +58,12 @@ line-height: normal;
           <h2>Influencer Profile</h2>
           <div class="row id-box ">
             <div class="col-6 text-center">
-
-            <img src="/images/id.png" alt="">
+                <img  :src="'/uploads/' + model.image" alt="">
+            <!-- <img src="/images/id.png" alt=""> -->
           </div>
           <div class="col-6">
-            <h2>Alex Smith</h2>
-            <h3>@Alex Smith</h3>
+            <h2>{{ model.user_name }}</h2>
+            <h3>{{ model.email }}</h3>
             <button class="buttons" @click="profile">
               <p class="buttonp">Profile</p><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
   <path d="M2.51273 5.45272C3.05053 5.44321 3.5365 5.41563 4.01914 5.49884C4.07002 5.5074 4.12898 5.47935 4.18272 5.46318C4.44757 5.38329 4.71338 5.37236 4.98299 5.44131C5.21742 5.50122 5.4566 5.44986 5.69388 5.46746C6.06002 5.49456 6.42426 5.39566 6.78803 5.4142C7.08427 5.42942 7.38384 5.42466 7.67818 5.47079C7.82749 5.49409 7.96871 5.50217 8.12135 5.46366C8.2873 5.42229 8.45183 5.52167 8.62396 5.52167C8.81322 5.52167 8.99962 5.56922 9.18126 5.62343C9.38478 5.68382 9.43613 5.86831 9.28778 6.0181C9.06143 6.24682 8.76567 6.34715 8.45944 6.39185C8.20599 6.42894 7.94732 6.45033 7.69197 6.46365C7.42188 6.47744 7.14989 6.57064 6.87599 6.48029C6.82892 6.4646 6.77043 6.46127 6.72288 6.47411C6.40429 6.56161 6.07286 6.50264 5.75189 6.56541C5.65299 6.5849 5.54457 6.57825 5.44376 6.56256C5.30396 6.54068 5.16987 6.54449 5.03673 6.58823C4.8665 6.64434 4.69722 6.57302 4.52651 6.57634C4.3539 6.57967 4.18272 6.58585 4.01914 6.62722C3.76189 6.69284 3.50607 6.65623 3.25547 6.6296C3.02913 6.60583 2.81087 6.6258 2.58786 6.6315C2.37721 6.63721 2.15705 6.65528 1.94973 6.61867C1.71435 6.57682 1.61211 6.36189 1.52604 6.1655C1.44901 5.98957 1.55743 5.85975 1.67583 5.73327C1.85034 5.54639 2.05148 5.44653 2.31064 5.46413C2.39528 5.46983 2.48135 5.45414 2.51416 5.45224L2.51273 5.45272Z" fill="white"/>
@@ -76,7 +78,7 @@ line-height: normal;
           
 
           <div class="para-box">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In semper pharetra ligula finibus malesuada. Nullam vitae diam viverra, vehicula ligula vitae, eleifend mi. Suspendisse tempus eros eu ligula aliquam</p>
+            <p>{{ model.bio }}</p>
              
            
 
@@ -89,6 +91,10 @@ line-height: normal;
 </template>
 
 <script>
+
+import Vue from 'vue'
+
+import { get , byMethod} from '../admin/components/lib/api'
 export default {
     name: 'admin',
 
@@ -100,6 +106,7 @@ export default {
         form:{},
         chatname:'Christiana Adams',
         model:[],
+        model:{},
         method:'POST',
         messages: [],
         chat_user:'',
@@ -112,6 +119,17 @@ export default {
               
             }
         },
+
+        created(){
+        
+        get('/getuser')
+              .then((res) => {
+                
+                 this.setData(res)
+
+              })
+          
+        }, 
 
         methods:{
 
@@ -151,6 +169,16 @@ export default {
           const chatBox = document.getElementById('chat-box');
           chatBox.scrollTop = chatBox.scrollHeight;
         },
+
+        setData(res) {
+        
+        Vue.set(this.$data, 'model', res.data.data)
+        console.log(res.data.data)
+        
+       
+
+      //   console.log(res.data)
+    },
 
         }
 }
@@ -358,6 +386,7 @@ box-shadow: 4px 4px 0px 2px #1B1C1D;
 .page-1 {
     width: 100%;
     background-color: #F5F3EA;
+    padding: 30px;
 }
 
 .contanir {
@@ -698,7 +727,14 @@ button.llo {
 /* .../ */
 
 
+.id-box img {
+    width: 80%;
+    border-radius: 50%;
+    max-height: 140px;
+   
+    object-fit: cover;
 
+}
 
 
 .box-2 h2 {
@@ -729,7 +765,7 @@ button.llo {
     padding: 20px 0px 4px 0px;
 }
 
-.id-box h3 {color: #000;font-family: sans-serif;font-size: 16px;font-style: normal;font-weight: 500;line-height: normal;}
+.id-box h3 {color: #000;font-family: sans-serif;font-size: 12px;font-style: normal;font-weight: 500;line-height: normal;}
 
 .titel-box {
     width: 100%;
@@ -970,6 +1006,8 @@ button.Add {
 }
 
 @media screen and (max-width: 1440px){
+
+    .id-box h3 {color: #000;font-family: sans-serif;font-size: 10px;font-style: normal;font-weight: 500;line-height: normal;}
   .contanir {
     width: 100%;
     max-width: 1170px;
@@ -1205,6 +1243,11 @@ button.Add {
 }
 .id-box img {
     width: 100%;
+  
+    border-radius: 50%;
+    max-height: 130px;
+    object-fit: cover;
+
 }
 .id-box h2 {
     color: #000;
@@ -1293,6 +1336,7 @@ button.Add {
 }
 }
 @media screen and (max-width: 1024px){
+    .id-box h3 {color: #000;font-family: sans-serif;font-size: 10px;font-style: normal;font-weight: 500;line-height: normal;}
   .page-1 {
     width: 100%;
     background-color: #F5F3EA;
@@ -1327,6 +1371,7 @@ button.Add {
 }
 }
 @media screen and (max-width: 768px){
+    .id-box h3 {color: #000;font-family: sans-serif;font-size: 10px;font-style: normal;font-weight: 500;line-height: normal;}
   .cards {
     border-radius: 16px;
     border: 2px solid #000;
@@ -1379,6 +1424,7 @@ button.Add {
 }
 }
 @media screen and (max-width: 425px){
+    .id-box h3 {color: #000;font-family: sans-serif;font-size: 8px;font-style: normal;font-weight: 500;line-height: normal;}
   .page-1 {
     width: 100%;
     background-color: #F5F3EA;

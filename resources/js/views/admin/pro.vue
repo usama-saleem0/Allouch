@@ -48,6 +48,7 @@
 
           <div class="para-box">
             <p>{{ model.bio }}</p>
+            
              
             <button @click="profile">
               <p>Profile</p><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
@@ -178,7 +179,7 @@ export default {
 }
 
 .box-2 {
-    height: 100%;
+    height: 100% !important;
     flex-shrink: 0;
     border-radius: 20px;
     background: #FFF;
@@ -564,6 +565,7 @@ button.llo {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .para-box p {
@@ -1690,7 +1692,7 @@ button.Add {
     align-items: flex-start;
 }
 .box-2 {
-    height: 100%;
+    height: 100% !important;
     flex-shrink: 0;
     border-radius: 20px;
     background: #FFF;
@@ -1719,7 +1721,7 @@ button.Add {
     width: 100%;
 }
 .box-2 {
-    height: 720px;
+    height: 100% !important;
     flex-shrink: 0;
     border-radius: 20px;
     background: #FFF;
@@ -1790,7 +1792,7 @@ button.Add {
     justify-content: space-between;
 }
 .box-2 {
-    height: 720px;
+    height: 100% !important;
     flex-shrink: 0;
     border-radius: 20px;
     background: #FFF;
@@ -1938,7 +1940,7 @@ button.Add {
     padding: 30px 0px 0px 0px;
 }
 .box-2 {
-    height: 100%;
+    height: 100% !important;
     flex-shrink: 0;
     border-radius: 20px;
     background: #FFF;

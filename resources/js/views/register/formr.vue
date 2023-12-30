@@ -15,8 +15,8 @@
                 <img src="/images/Character.png" alt="">
                 <div action="" class="form-main form">
                     <div class="fromr-btn">
-                        <button class="Influencer" @click="auths('Influencer')">As Influencer</button>
-                        <button class="Brand" @click="auths('Brand')">As Brand</button>
+                        <button class="Influencer" @click="auths('Influencer')" :style="{ backgroundColor: bgColor1 }">As Influencer</button>
+                        <button class="Brand" @click="auths('Brand')" :style="{ backgroundColor: bgColor2 }">As Brand</button>
                         <a href="#">Have an Account ?<span>Sign in</span></a>
                     </div>
                     <h2>Sign up</h2>
@@ -86,6 +86,9 @@ export default {
 
   data() {
     return {
+
+        bgColor1:'#FFF',
+        bgColor2:'#FFF',
     shows:true,
     uploads:false,
       form: {},
@@ -108,6 +111,11 @@ export default {
   },
 
   methods: {
+    // datas(e){
+    //     this.auth = e;
+      
+
+    // },
 
     closeModal() {
     console.log('avcd');
@@ -119,6 +127,18 @@ export default {
     },
     auths(e){
         this.auth_type = e;
+
+        if(e == 'Influencer'){
+
+            this.bgColor1 = '#F96';
+            this.bgColor2 = '#FFF';
+            }
+
+            if(e == 'Brand'){
+
+            this.bgColor1 = '#FFF';
+            this.bgColor2 = '#F96';
+            }
 
     },
 
@@ -426,7 +446,7 @@ button.button-20 p {
 button.Influencer {
     border-radius: 6px;
     border: 1px solid #000;
-    background: #FFF;
+    /* background: #FFF; */
     box-shadow: 2px 2px 0px 0px #1B1C1D;
     padding: 11px 10px 9px 10px;
     color: #000;
@@ -441,10 +461,10 @@ button.Influencer {
 button.Brand {
     border-radius: 6px;
     border: 1px solid #000;
-    background: #F96;
+    /* background: #F96; */
     box-shadow: 2px 2px 0px 0px #1B1C1D;
     padding: 11px 26px 9px 26px;
-    color: #FFF;
+    color: #000;
     text-align: center;
     font-family: sans-serif;
     font-size: 16px;

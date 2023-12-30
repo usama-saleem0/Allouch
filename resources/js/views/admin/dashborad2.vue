@@ -201,7 +201,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .page-1 {
     width: 100%;
     background-color: #F5F3EA;

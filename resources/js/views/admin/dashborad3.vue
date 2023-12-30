@@ -216,6 +216,8 @@
 
           <div class="para-box">
             <p>{{ model.bio }}</p>
+           
+
              
             <button @click="profile">
               <p>Profile</p><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
@@ -291,11 +293,12 @@ export default {
 <style scoped>
 
 .id-box img {
-    width: 50%;
+    width: 47%;
     border-radius: 50%;
    
     max-height: 190px;
     min-height: 190px;
+    object-fit: cover;
 }
 .page-1 {
     width: 100%;
@@ -740,6 +743,7 @@ button.llo {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .para-box p {
@@ -1781,11 +1785,12 @@ button.Add {
 } */
 
 .id-box img {
-    width: 53%;
+    width: 50%;
     border-radius: 50%;
    
     max-height: 150px;
     min-height: 150px;
+    object-fit: cover;
 }
 .id-box h2 {
     color: #000;

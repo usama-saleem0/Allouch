@@ -23,10 +23,32 @@
 
 
   <ul class="ul-list">
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Dashboard</a></li>
-    <li><a href="#">Subscription’s</a></li>
-    <li><a href="#">Courses</a></li>
+    <li>
+      <router-link class="nav-link" to="/">
+          <!-- <i class="fas fa-fw fa-tachometer-alt"></i> -->
+          <a href="#">Home</a></router-link
+        >
+      </li>
+    <li>
+      
+      <router-link class="nav-link" to="/influncer/dashborad">
+          <!-- <i class="fas fa-fw fa-tachometer-alt"></i> -->
+          <a href="#">Dashboard</a></router-link
+        >
+      </li>
+    <li>
+      <router-link class="nav-link" to="/sponsorship">
+          <!-- <i class="fas fa-fw fa-tachometer-alt"></i> -->
+          <a href="#">Subscription’s</a></router-link
+        >
+      
+    </li>
+    <li>
+      <router-link class="nav-link" to="/courses">
+          <!-- <i class="fas fa-fw fa-tachometer-alt"></i> -->
+          <a href="#">Courses</a></router-link
+        >
+      </li>
   </ul>
     <!-- Topbar Navbar -->
     <ul class="navbar-nav ml-auto">
@@ -147,6 +169,7 @@
           data-toggle="dropdown"
           aria-haspopup="true"
           aria-expanded="false"
+          @click="chats"
         >
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
         <path d="M2 22V4C2 3.45 2.196 2.97933 2.588 2.588C2.98 2.19667 3.45067 2.00067 4 2H20C20.55 2 21.021 2.196 21.413 2.588C21.805 2.98 22.0007 3.45067 22 4V16C22 16.55 21.8043 17.021 21.413 17.413C21.0217 17.805 20.5507 18.0007 20 18H6L2 22ZM6 14H14V12H6V14ZM6 11H18V9H6V11ZM6 8H18V6H6V8Z" fill="#FF9966"/>
@@ -155,7 +178,7 @@
           <span class="badge badge-danger badge-counter">7</span>
         </a>
         <!-- Dropdown - Messages -->
-        <div
+        <!-- <div
           class="
             dropdown-list dropdown-menu dropdown-menu-right
             shadow
@@ -219,8 +242,9 @@
             <div class="dropdown-list-image mr-3">
               <img
                 class="rounded-circle"
-                src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
+                src="/images/Characters.png"
                 alt="..."
+                style="object-fit: scale-down;"
               />
               <div class="status-indicator bg-success"></div>
             </div>
@@ -235,7 +259,7 @@
           <a class="dropdown-item text-center small text-gray-500" href="#"
             >Read More Messages</a
           >
-        </div>
+        </div> -->
       </li>
 
       <div class="topbar-divider d-none d-sm-block"></div>
@@ -308,14 +332,26 @@ export default {
     logout() {
       localStorage.removeItem("token");
       this.$store.dispatch("user", null);
-      this.$router.push("/login");
+      this.$router.push("/");
     },
+
+    chats(){
+      this.$router.push('/chat')
+    }
   },
 };
 </script>
 
 
 <style scoped>
+
+.topbar .dropdown-list .dropdown-header {
+    background-color: #f96 !important;
+    border: 1px solid #f96 !important;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    color: #fff;
+}
 .heads{
   color: rgb(0, 0, 0);
     font-family: fantasy;
@@ -337,7 +373,7 @@ ul.ul-list {
     display: flex;
     justify-content: flex-end;
     width: 30%;
-    gap: 30px;
+    gap: 20px;
     margin: 0px;
 }
 
@@ -352,7 +388,8 @@ ul.ul-list li a {
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
-    line-height: 24px; /* 150% */
+    line-height: 24px;
+    padding: 0px !important; /* 150% */
 }
 
 .navbar.navbar-expand.navbar-light.topbar.static-top {
@@ -398,7 +435,7 @@ ul.ul-list li a{
     color: #000;
     color: #222;
     font-family: sans-serif;
-    font-size: 14px;
+    font-size: 13px;
     font-style: normal;
     font-weight: 500;
     line-height: 24px;
@@ -451,6 +488,7 @@ ul.ul-list li a{
     font-style: normal;
     font-weight: 500;
     line-height: 24px;
+    padding: 0px !important;
 }
 .navbar.navbar-expand.navbar-light.topbar.static-top{
     display: flex;

@@ -140,7 +140,10 @@ this.bgColor2 = '#F96';
         this.$emit('cancel');
         if(response.data.user.auth_type =='Influencer'){
                 console.log(response.data.user.auth_type);
-                this.$router.push("/admin/dashborad3");
+                this.$router.push("/influncer/dashborad").then(() => {
+                    location.reload();
+
+});;
         }
       } catch (error) {
         notify.authError(error);

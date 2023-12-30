@@ -89,7 +89,7 @@ let router = new Router({
             }
         },
         {
-            path: "/admin/dashborad1",
+            path: "/sponsorship",
             name: "admin",
             component: () => import("./views/admin/dashborad1.vue"),
             meta: {
@@ -97,10 +97,18 @@ let router = new Router({
                 layout: AdminLayout
             }
         },
-
+        {
+            path: "/entrefrom",
+            name: "admin",
+            component: () => import("./views/admin/entreform.vue"),
+            meta: {
+                requiresAuth: true,
+                layout: AdminLayout
+            }
+        },
 
         {
-            path: "/admin/dashborad2",
+            path: "/courses",
             name: "admin",
             component: () => import("./views/admin/dashborad2.vue"),
             meta: {
@@ -109,7 +117,7 @@ let router = new Router({
             }
         },
         {
-            path: "/admin/dashborad3",
+            path: "/influncer/dashborad",
             name: "admin",
             component: () => import("./views/admin/dashborad3.vue"),
             meta: {

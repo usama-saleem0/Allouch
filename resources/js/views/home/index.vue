@@ -95,6 +95,16 @@ body{
     padding: 27px ;
   }
 
+  section.form-1-sec {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100% !important;
+    align-content: center;
+}
+
+
 @media screen and (max-width: 1440px){
 
   .acc{

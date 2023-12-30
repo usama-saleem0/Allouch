@@ -21,6 +21,13 @@
    <img class="images" src="/images/logo.png"/>
    <h2 class="heads">Welcome Alex!! Resume Your Influencer Journey</h2>
 
+
+  <ul class="ul-list">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Dashboard</a></li>
+    <li><a href="#">Subscription’s</a></li>
+    <li><a href="#">Courses</a></li>
+  </ul>
     <!-- Topbar Navbar -->
     <ul class="navbar-nav ml-auto">
       <!-- Nav Item - Search Dropdown (Visible Only XS) -->
@@ -71,7 +78,10 @@
           aria-haspopup="true"
           aria-expanded="false"
         >
-          <i class="fas fa-bell fa-fw"></i>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M6 19V10C6 8.4087 6.63214 6.88258 7.75736 5.75736C8.88258 4.63214 10.4087 4 12 4C13.5913 4 15.1174 4.63214 16.2426 5.75736C17.3679 6.88258 18 8.4087 18 10V19M6 19H18M6 19H4M18 19H20M11 22H13" stroke="#FF9966" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M12 4C12.5523 4 13 3.55228 13 3C13 2.44772 12.5523 2 12 2C11.4477 2 11 2.44772 11 3C11 3.55228 11.4477 4 12 4Z" stroke="#FF9966" stroke-width="2.5"/>
+        </svg>
           <!-- Counter - Alerts -->
           <span class="badge badge-danger badge-counter">3+</span>
         </a>
@@ -138,7 +148,9 @@
           aria-haspopup="true"
           aria-expanded="false"
         >
-          <i class="fas fa-envelope fa-fw"></i>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M2 22V4C2 3.45 2.196 2.97933 2.588 2.588C2.98 2.19667 3.45067 2.00067 4 2H20C20.55 2 21.021 2.196 21.413 2.588C21.805 2.98 22.0007 3.45067 22 4V16C22 16.55 21.8043 17.021 21.413 17.413C21.0217 17.805 20.5507 18.0007 20 18H6L2 22ZM6 14H14V12H6V14ZM6 11H18V9H6V11ZM6 8H18V6H6V8Z" fill="#FF9966"/>
+        </svg>
           <!-- Counter - Messages -->
           <span class="badge badge-danger badge-counter">7</span>
         </a>
@@ -239,13 +251,14 @@
           aria-haspopup="true"
           aria-expanded="false"
         >
-          <span class="mr-2 d-none d-lg-inline text-gray-600 small"
-            >{{ user.first_name }} {{ user.last_name }}</span
-          >
-          <img
-            class="img-profile rounded-circle"
-            src="img/undraw_profile.svg"
-          />
+          <!-- <span class="mr-2 d-none d-lg-inline text-gray-600 small"
+            >{{ user.first_name }} {{ user.last_name }}</span -->
+          <!-- > -->
+          <!-- <img
+            
+            src="/img/undraw_profile.svg"
+          /> -->
+          <img class="img-profile rounded-circle" :src="'/uploads/' + user.image" alt="">
         </a>
         <!-- Dropdown - User Information -->
         <div
@@ -320,11 +333,58 @@ export default {
     padding-left: 140px !important;
     padding-right: 140px !important;
 }
-.images{
-  padding-top: 10px;
-    width: 17%;
+ul.ul-list {
+    display: flex;
+    justify-content: flex-end;
+    width: 30%;
+    gap: 30px;
+    margin: 0px;
 }
 
+ul.ul-list li {
+    list-style: none;
+}
+
+ul.ul-list li a {
+    color: #000;
+    color: #222;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
+}
+
+.navbar.navbar-expand.navbar-light.topbar.static-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+}
+
+h2.heads {
+    width: 40% !important;
+    margin: 0px !important;
+}
+
+img.images {
+    padding-top: 0px !important;
+    width: 14% !important;
+}
+@media screen and (max-width: 1600px){
+  .heads{
+    color: rgb(0, 0, 0);
+    font-family: fantasy;
+    font-size: 24px !important;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 20px;
+    padding: 10px;
+ 
+}
+}
 @media screen and (max-width: 1440px){
 
   .topbar {
@@ -334,20 +394,36 @@ export default {
     padding-right: 75px !important;
 }
 
+ul.ul-list li a{
+    color: #000;
+    color: #222;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+}
+
 .images{
   padding-top: 5px;
     width: 17%;
 }
-
-.heads{
-  color: rgb(0, 0, 0);
+ul.ul-list[data-v-7bfd2830] {
+    display: flex;
+    justify-content: flex-end;
+    width: 30%;
+    gap: 15px;
+    margin: 0px ;
+}
+.heads[data-v-7bfd2830] {
+    color: rgb(0, 0, 0);
     font-family: fantasy;
-    font-size: 24px;
+    font-size: 22px !important;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    padding: 10px;
     margin-top: 20px;
+    padding: 10px;
 }
 }
 
@@ -356,7 +432,45 @@ export default {
     width: 30%;
     padding-bottom: 12px;
 }
-
+h2.heads {
+    width: 60% !important;
+    margin: 0px !important;
+}
+ul.ul-list {
+    display: flex;
+    justify-content: flex-end;
+    width: 30%;
+    gap: 8px !important;
+    margin: 0px;
+}
+ul.ul-list li a{
+    color: #000;
+    color: #222;
+    font-family: sans-serif;
+    font-size: 12px !important;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+}
+.navbar.navbar-expand.navbar-light.topbar.static-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+    padding-left: 35px !important;
+    padding-right: 35px !important;
+}
+.heads[data-v-7bfd2830][data-v-7bfd2830] {
+    color: rgb(0, 0, 0);
+    font-family: fantasy;
+    font-size: 16px !important;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 20px;
+    padding: 10px;
+}
 }
 
 @media screen and (max-width: 768px){

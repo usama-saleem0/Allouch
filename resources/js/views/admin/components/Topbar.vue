@@ -2,13 +2,13 @@
   <div
     class="
       navbar navbar-expand navbar-light
-      bg-white
+     
       topbar
       
       static-top
-      shadow
+      
     "
-  >
+ style="background-color: #F5F3EA;" >
     <!-- Sidebar Toggle (Topbar) -->
     <button
       id="sidebarToggleTop"
@@ -18,32 +18,8 @@
     </button>
 
     <!-- Topbar Search -->
-    <form
-      class="
-        d-none d-sm-inline-block
-        form-inline
-        mr-auto
-        ml-md-3
-        my-2 my-md-0
-        mw-100
-        navbar-search
-      "
-    >
-      <div class="input-group">
-        <input
-          type="text"
-          class="form-control bg-light border-0 small"
-          placeholder="Search for..."
-          aria-label="Search"
-          aria-describedby="basic-addon2"
-        />
-        <div class="input-group-append">
-          <button class="btn btn-primary" type="button">
-            <i class="fas fa-search fa-sm"></i>
-          </button>
-        </div>
-      </div>
-    </form>
+   <img class="images" src="/images/logo.png"/>
+   <h2 class="heads">Welcome Alex!! Resume Your Influencer Journey</h2>
 
     <!-- Topbar Navbar -->
     <ul class="navbar-nav ml-auto">
@@ -302,7 +278,9 @@
         </div>
       </li>
     </ul>
+    
   </div>
+  
 </template>
 
 <script>
@@ -322,3 +300,76 @@ export default {
   },
 };
 </script>
+
+
+<style scoped>
+.heads{
+  color: rgb(0, 0, 0);
+    font-family: fantasy;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 20px;
+    padding: 10px;
+
+}
+.topbar {
+    height: 6.375rem !important;
+   
+    padding-left: 140px !important;
+    padding-right: 140px !important;
+}
+.images{
+  padding-top: 10px;
+    width: 17%;
+}
+
+@media screen and (max-width: 1440px){
+
+  .topbar {
+    height: 4.375rem !important;
+   
+    padding-left: 75px !important;
+    padding-right: 75px !important;
+}
+
+.images{
+  padding-top: 5px;
+    width: 17%;
+}
+
+.heads{
+  color: rgb(0, 0, 0);
+    font-family: fantasy;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 10px;
+    margin-top: 20px;
+}
+}
+
+@media screen and (max-width: 1024px){
+  .images{
+    width: 30%;
+    padding-bottom: 12px;
+}
+
+}
+
+@media screen and (max-width: 768px){
+
+  .heads{
+    display: none;
+  }
+
+  .images{
+   display: none;
+}
+
+ 
+}
+
+</style>

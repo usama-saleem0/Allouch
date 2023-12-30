@@ -284,11 +284,11 @@ function chartBarDemo() {
   var myBarChart = new Chart(ctx, {
     type: "bar",
     data: {
-      labels: ["January", "February", "March", "April", "May", "June"],
+      labels: ["MON", "TUE", "WED", "THU", "FRI", "SAT"],
       datasets: [{
         label: "Revenue",
-        backgroundColor: "#4e73df",
-        hoverBackgroundColor: "#2e59d9",
+        backgroundColor: "#FF9966",
+        hoverBackgroundColor: "#FF5757",
         borderColor: "#4e73df",
         data: [4215, 5312, 6251, 7841, 9821, 14984]
       }]

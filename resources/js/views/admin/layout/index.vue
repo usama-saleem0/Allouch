@@ -10,11 +10,13 @@
       <div id="content">
         <!-- Start of Topbar -->
         <Topbar />
+        
         <!-- End of Topbar -->
 
         <!-- Begin Page Content -->
         <div class="container-fluid" style="padding-right: 0px !important; padding-left: 0px !important;
 ">
+<hr>
           <router-view></router-view>
         </div>
         <!-- /.container-fluid -->
@@ -61,3 +63,16 @@ export default {
   },
 };
 </script>
+
+
+<style scoped>
+
+hr {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    border: 0;
+    border-top: 1px solid #FF9966;
+   
+    background-color: #FF9966;
+}
+</style>

@@ -141,7 +141,11 @@
                 </div>
             </div>
             <div class="new-3">
-                <div class="dashbord-card"></div>
+                <div class="dashbord-card">
+                    <div class="chart-bar">
+              <canvas id="myBarChart"></canvas>
+            </div>
+                </div>
                 <div class="conting-card">
                     <h2>OverView</h2>
                     <div class="divs">
@@ -166,9 +170,9 @@
         <div class="box-2">
           <h2>Influencer Profile</h2>
           <div class="id-box">
-            <img src="/images/id.png" alt="">
-            <h2>Alex Smith</h2>
-            <h3>@Alex Smith</h3>
+            <img :src="'/uploads/' + model.image" alt="">
+            <h2>{{ model.user_name }}</h2>
+            <h3>{{ model.email }}</h3>
           </div>
 
           <div class="contact-box">
@@ -176,12 +180,12 @@
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
   <path opacity="0.3" d="M20 8L12 13L4 8V18H20V8ZM20 6H4L12 10.99L20 6Z" fill="#FF9966"/>
   <path d="M4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20ZM20 6L12 10.99L4 6H20ZM4 8L12 13L20 8V18H4V8Z" fill="#FF9966"/>
-</svg><p>Alex@example.com</p>
+</svg><p>{{ model.email }}</p>
             </div>
             <div class="contact">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
   <path d="M6.62 10.79C8.06 13.62 10.38 15.93 13.21 17.38L15.41 15.18C15.68 14.91 16.08 14.82 16.43 14.94C17.55 15.31 18.76 15.51 20 15.51C20.55 15.51 21 15.96 21 16.51V20C21 20.55 20.55 21 20 21C10.61 21 3 13.39 3 4C3 3.45 3.45 3 4 3H7.5C8.05 3 8.5 3.45 8.5 4C8.5 5.25 8.7 6.45 9.07 7.57C9.18 7.92 9.1 8.31 8.82 8.59L6.62 10.79Z" fill="#FF9966"/>
-</svg><p>111-222-333</p>
+</svg><p>{{ model.contact }}</p>
             </div>
           </div>
 
@@ -190,20 +194,20 @@
             <div class="id-titel">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
   <path d="M18.9 0H1.1C0.808262 0 0.528473 0.115893 0.322183 0.322183C0.115893 0.528473 0 0.808262 0 1.1V18.9C0 19.1917 0.115893 19.4715 0.322183 19.6778C0.528473 19.8841 0.808262 20 1.1 20H10.68V12.25H8.08V9.25H10.68V7C10.6261 6.47176 10.6885 5.93813 10.8627 5.43654C11.0369 4.93495 11.3188 4.47755 11.6885 4.09641C12.0582 3.71528 12.5068 3.41964 13.0028 3.23024C13.4989 3.04083 14.0304 2.96225 14.56 3C15.3383 2.99521 16.1163 3.03528 16.89 3.12V5.82H15.3C14.04 5.82 13.8 6.42 13.8 7.29V9.22H16.8L16.41 12.22H13.8V20H18.9C19.0445 20 19.1875 19.9715 19.321 19.9163C19.4544 19.861 19.5757 19.78 19.6778 19.6778C19.78 19.5757 19.861 19.4544 19.9163 19.321C19.9715 19.1875 20 19.0445 20 18.9V1.1C20 0.955546 19.9715 0.812506 19.9163 0.679048C19.861 0.54559 19.78 0.424327 19.6778 0.322183C19.5757 0.220038 19.4544 0.139013 19.321 0.0837326C19.1875 0.0284524 19.0445 0 18.9 0Z" fill="#FF5757"/>
-</svg> <p>@Alex Smith</p>
+</svg> <p>{{ model.facebook ? model.facebook:'No Facebook Id' }}</p>
             </div>
 
             <div class="id-titel">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
   <path d="M13.028 2C14.153 2.003 14.724 2.009 15.217 2.023L15.411 2.03C15.635 2.038 15.856 2.048 16.123 2.06C17.187 2.11 17.913 2.278 18.55 2.525C19.21 2.779 19.766 3.123 20.322 3.678C20.8305 4.1779 21.224 4.78259 21.475 5.45C21.722 6.087 21.89 6.813 21.94 7.878C21.952 8.144 21.962 8.365 21.97 8.59L21.976 8.784C21.991 9.276 21.997 9.847 21.999 10.972L22 11.718V13.028C22.0025 13.7574 21.9948 14.4868 21.977 15.216L21.971 15.41C21.963 15.635 21.953 15.856 21.941 16.122C21.891 17.187 21.721 17.912 21.475 18.55C21.2247 19.2178 20.8312 19.8226 20.322 20.322C19.822 20.8303 19.2173 21.2238 18.55 21.475C17.913 21.722 17.187 21.89 16.123 21.94C15.8857 21.9512 15.6484 21.9612 15.411 21.97L15.217 21.976C14.724 21.99 14.153 21.997 13.028 21.999L12.282 22H10.973C10.2433 22.0025 9.51355 21.9949 8.78403 21.977L8.59003 21.971C8.35264 21.962 8.1153 21.9517 7.87803 21.94C6.81403 21.89 6.08803 21.722 5.45003 21.475C4.7827 21.2244 4.17824 20.8308 3.67903 20.322C3.17007 19.8223 2.77625 19.2176 2.52503 18.55C2.27803 17.913 2.11003 17.187 2.06003 16.122C2.04889 15.8847 2.03889 15.6474 2.03003 15.41L2.02503 15.216C2.0066 14.4868 1.99827 13.7574 2.00003 13.028V10.972C1.99724 10.2426 2.00457 9.5132 2.02203 8.784L2.02903 8.59C2.03703 8.365 2.04703 8.144 2.05903 7.878C2.10903 6.813 2.27703 6.088 2.52403 5.45C2.77514 4.7819 3.16975 4.17702 3.68003 3.678C4.17912 3.16947 4.78317 2.77599 5.45003 2.525C6.08803 2.278 6.81303 2.11 7.87803 2.06C8.14403 2.048 8.36603 2.038 8.59003 2.03L8.78403 2.024C9.51322 2.00623 10.2426 1.99857 10.972 2.001L13.028 2ZM12 7C10.6739 7 9.40218 7.52678 8.46449 8.46447C7.52681 9.40215 7.00003 10.6739 7.00003 12C7.00003 13.3261 7.52681 14.5979 8.46449 15.5355C9.40218 16.4732 10.6739 17 12 17C13.3261 17 14.5979 16.4732 15.5356 15.5355C16.4732 14.5979 17 13.3261 17 12C17 10.6739 16.4732 9.40215 15.5356 8.46447C14.5979 7.52678 13.3261 7 12 7ZM12 9C12.394 8.99993 12.7841 9.07747 13.1481 9.22817C13.5121 9.37887 13.8429 9.5998 14.1215 9.87833C14.4001 10.1569 14.6212 10.4875 14.772 10.8515C14.9228 11.2154 15.0005 11.6055 15.0005 11.9995C15.0006 12.3935 14.9231 12.7836 14.7724 13.1476C14.6217 13.5116 14.4007 13.8423 14.1222 14.121C13.8437 14.3996 13.513 14.6206 13.149 14.7714C12.7851 14.9223 12.395 14.9999 12.001 15C11.2054 15 10.4423 14.6839 9.87971 14.1213C9.3171 13.5587 9.00103 12.7956 9.00103 12C9.00103 11.2044 9.3171 10.4413 9.87971 9.87868C10.4423 9.31607 11.2054 9 12.001 9M17.251 5.5C16.9195 5.5 16.6016 5.6317 16.3671 5.86612C16.1327 6.10054 16.001 6.41848 16.001 6.75C16.001 7.08152 16.1327 7.39946 16.3671 7.63388C16.6016 7.8683 16.9195 8 17.251 8C17.5825 8 17.9005 7.8683 18.1349 7.63388C18.3693 7.39946 18.501 7.08152 18.501 6.75C18.501 6.41848 18.3693 6.10054 18.1349 5.86612C17.9005 5.6317 17.5825 5.5 17.251 5.5Z" fill="#FF5757"/>
-</svg><p>@Alex Smith</p>
+</svg><p>{{ model.instagram ? model.instagram:'No Instagram Id' }}</p>
             </div>
 
 
             <div class="id-titel">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
   <path d="M16 0C16.5304 0 17.0391 0.210714 17.4142 0.585786C17.7893 0.960859 18 1.46957 18 2V16C18 16.5304 17.7893 17.0391 17.4142 17.4142C17.0391 17.7893 16.5304 18 16 18H2C1.46957 18 0.960859 17.7893 0.585786 17.4142C0.210714 17.0391 0 16.5304 0 16V2C0 1.46957 0.210714 0.960859 0.585786 0.585786C0.960859 0.210714 1.46957 0 2 0H16ZM15.5 15.5V10.2C15.5 9.33539 15.1565 8.5062 14.5452 7.89483C13.9338 7.28346 13.1046 6.94 12.24 6.94C11.39 6.94 10.4 7.46 9.92 8.24V7.13H7.13V15.5H9.92V10.57C9.92 9.8 10.54 9.17 11.31 9.17C11.6813 9.17 12.0374 9.3175 12.2999 9.58005C12.5625 9.8426 12.71 10.1987 12.71 10.57V15.5H15.5ZM3.88 5.56C4.32556 5.56 4.75288 5.383 5.06794 5.06794C5.383 4.75288 5.56 4.32556 5.56 3.88C5.56 2.95 4.81 2.19 3.88 2.19C3.43178 2.19 3.00193 2.36805 2.68499 2.68499C2.36805 3.00193 2.19 3.43178 2.19 3.88C2.19 4.81 2.95 5.56 3.88 5.56ZM5.27 15.5V7.13H2.5V15.5H5.27Z" fill="#FF5757"/>
-</svg><p>@Alex Smith</p>
+</svg><p>{{ model.linkdin ? model.linkdin:'No Linkdin Id' }}</p>
             </div>
 
 
@@ -211,7 +215,7 @@
           </div>
 
           <div class="para-box">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In semper pharetra ligula finibus malesuada. Nullam vitae diam viverra, vehicula ligula vitae, eleifend mi. Suspendisse tempus eros eu ligula aliquam</p>
+            <p>{{ model.bio }}</p>
              
             <button @click="profile">
               <p>Profile</p><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
@@ -229,13 +233,24 @@
 </template>
 
 <script>
+import Vue from 'vue'
+import chartBarDemo from "../../chart/demo/chart-bar-demo";
+import { get , byMethod} from '../admin/components/lib/api'
 export default {
     name: 'admin',
+
+    mounted() {
+   
+    chartBarDemo();
+  },
 
 
     data () {
             return {
                 method:'POST',
+                model:{},
+                model:'',
+
                
                
               
@@ -243,8 +258,27 @@ export default {
               
             }
         },
+        created(){
+        
+        get('/getuser')
+              .then((res) => {
+                
+                 this.setData(res)
+
+              })
+          
+        }, 
 
         methods:{
+            setData(res) {
+        
+              Vue.set(this.$data, 'model', res.data.data)
+              console.log(res.data.data)
+              
+             
+
+            //   console.log(res.data)
+          },
 
             profile(){
                 this.$router.push('/admin/dashborad4')
@@ -255,9 +289,18 @@ export default {
 </script>
 
 <style scoped>
+
+.id-box img {
+    width: 50%;
+    border-radius: 50%;
+   
+    max-height: 190px;
+    min-height: 190px;
+}
 .page-1 {
     width: 100%;
     background-color: #F5F3EA;
+    padding: 30px;
 }
 
 .contanir {
@@ -600,6 +643,8 @@ button.llo {
     color: #fff;
 }
 
+
+
 /* .../ */
 
 
@@ -659,6 +704,9 @@ button.llo {
     font-weight: 500;
     line-height: normal;
     margin: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .contact-box {
     width: 100%;
@@ -940,7 +988,7 @@ button.llo {
     font-family: sans-serif;
     font-size: 42px;
     font-style: normal;
-    font-weight: bold;
+    font-weight: 1000;
     line-height: normal;
     margin: 0px;
     padding: 12px 0px 5px 0px;
@@ -949,7 +997,7 @@ button.llo {
 .short-card h3 {
     color: #000;
     font-family: sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -1051,7 +1099,7 @@ button.llo {
     font-family: sans-serif;
     font-size: 55px;
     font-style: normal;
-    font-weight: bold;
+    font-weight: 1000;
     line-height: normal;
     text-align: center;
 }
@@ -1156,7 +1204,7 @@ button.llo {
     font-family: sans-serif;
     font-size: 38px;
     font-style: normal;
-    font-weight: bold;
+    font-weight: 1000;
     line-height: normal;
     margin: 0px;
     padding: 5px 0px 0px 0px;
@@ -1299,6 +1347,15 @@ button.Add {
 }
 
 @media screen and (max-width: 1440px){
+
+    .id-box h3 {
+    color: #000;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
   .contanir {
     width: 100%;
     max-width: 1170px;
@@ -1317,7 +1374,7 @@ button.Add {
 .rol-para h2 {
     color: #000;
     font-family: sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -1328,7 +1385,7 @@ button.Add {
     margin: 0px;
     color: #000;
     font-family: sans-serif;
-    font-size: 16px;
+    font-size: 13px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -1339,7 +1396,7 @@ button.Add {
     font-family: sans-serif;
     font-size: 38px;
     font-style: normal;
-    font-weight: bold;
+    font-weight: 1000;
     line-height: normal;
     text-align: center;
 }
@@ -1385,7 +1442,7 @@ button.Add {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 0px;
+    padding-top: 3px;
 }
 .short-card p {
     color: #000;
@@ -1401,7 +1458,7 @@ button.Add {
     font-family: sans-serif;
     font-size: 25px;
     font-style: normal;
-    font-weight: bold;
+    font-weight: 1000;
     line-height: normal;
     margin: 0px;
     padding: 0px 0px 0px 0px;
@@ -1719,8 +1776,16 @@ button.Add {
     align-items: center;
     padding: 50px 0px 80px 0px;
 }
-.id-box img {
+/* .id-box img {
     width: 40%;
+} */
+
+.id-box img {
+    width: 53%;
+    border-radius: 50%;
+   
+    max-height: 150px;
+    min-height: 150px;
 }
 .id-box h2 {
     color: #000;
@@ -1741,7 +1806,7 @@ button.Add {
 .contact p {
     color: #000;
     font-family: sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -1750,11 +1815,14 @@ button.Add {
 .id-titel p {
     color: #000;
     font-family: sans-serif;
-    font-size: 12px;
+    font-size: 10px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
     margin: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .id-titel svg {
     width: 18px;
@@ -1771,7 +1839,7 @@ button.Add {
     color: #000;
     text-align: center;
     font-family: sans-serif;
-    font-size: 16px;
+    font-size: 13px;
     font-style: normal;
     font-weight: 500;
     line-height: 24px;
@@ -1918,6 +1986,50 @@ button.Add {
 }
 }
 @media screen and (max-width: 425px){
+    .short-card h3 {
+    color: #000;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0px;
+}
+
+.id-titel p {
+    color: #000;
+    font-family: sans-serif;
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.contact p {
+    color: #000;
+    font-family: sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0px;
+}
+
+.rol-1 p {
+    color: #000;
+    font-family: sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    margin: 0px;
+    padding-bottom: 12px;
+}
+
+
   .page-1 {
     width: 100%;
     background-color: #F5F3EA;
@@ -2055,7 +2167,7 @@ button.Add {
 .rol-para h2 {
     color: #000;
     font-family: sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -2085,10 +2197,10 @@ button.Add {
     height: 15px;
 }
 .Enrolled p {
-    font-size: 9px;
+    font-size: 7px;
 }
 .Reviews p {
-    font-size: 9px;
+    font-size: 7px;
 }
 .Enrolled svg {
     width: 18px;
@@ -2123,7 +2235,7 @@ button.Add {
 .dashbord-card {
     background: #FFF;
     box-shadow: 4px 0px 24px 0px rgba(0, 0, 0, 0.25);
-    height: 350px;
+    height: 100%;
     flex-shrink: 0;
     width: 90%;
     border-radius: 20px;

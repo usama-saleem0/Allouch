@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api;
+use App\Http\Controllers\ProfileController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +27,6 @@ Route::post('api/profile', [Api\RegisterController::class, 'profile']);
 Route::group(['middleware' => ['auth:api']], function () {
     Route::get('user', [Api\AuthController::class, 'user']);
 
-
+    Route::get('getuser', [ProfileController::class, 'getuser']);
    
 });

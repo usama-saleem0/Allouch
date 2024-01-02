@@ -4,6 +4,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Paypalcontroller;
+
 
 
 /*
@@ -27,6 +29,19 @@ Route::post('api/profile', [Api\RegisterController::class, 'profile']);
 Route::post('brand_register', [Api\RegisterController::class, 'brand_register']);
 Route::post('businesstype', [Api\RegisterController::class, 'businesstype']);
 Route::post('country', [Api\RegisterController::class, 'country']);
+
+
+
+Route::get('process-transaction', [Paypalcontroller::class, 'processTransaction'])->name('processTransaction');
+
+
+Route::post('create-transaction', [Paypalcontroller::class, 'createTransaction'])->name('createTransaction');
+
+Route::get('create-transaction', [Paypalcontroller::class, 'createTransaction'])->name('createTransaction');
+// Route::get('process-transaction', [Paypalcontroller::class, 'processTransaction'])->name('processTransaction');
+Route::get('success-transaction', [Paypalcontroller::class, 'successTransaction'])->name('successTransaction');
+Route::get('cancel-transaction', [Paypalcontroller::class, 'cancelTransaction'])->name('cancelTransaction');
+
 
 
 

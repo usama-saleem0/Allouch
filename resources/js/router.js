@@ -99,6 +99,16 @@ let router = new Router({
         },
 
         {
+            path: "/pay",
+            name: "admin",
+            component: () => import("./views/admin/paypal.vue"),
+            meta: {
+                requiresAuth: true,
+                layout: AdminLayout
+            }
+        },
+
+        {
             path: "/Branddashoboard",
             name: "admin",
             component: () => import("./views/admin/branddashboard.vue"),

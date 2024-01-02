@@ -194,10 +194,11 @@ this.form.auth_type = 'brand'
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100% !important;
 }
 
-.main-form {
-    width: 1290px;
+.main-forms {
+    width: 67% !important;
     height: 900px;
     background-image: url(/images/Up.png);
     padding: 10px 40px ;
@@ -221,10 +222,10 @@ this.form.auth_type = 'brand'
 .from-titel {width: 32%;padding-top: 60px;}
 
 .from-box {
-    width: 40%;
+    width: 44%;
     position: absolute;
     z-index: 1;
-    right: 35px;
+    right: 0px;
     display: flex;
     top: 35px;
     align-items: center;
@@ -277,7 +278,7 @@ this.form.auth_type = 'brand'
     border-radius: 40px;
     background: #FFF;
     box-shadow: 0px 4px 35px 0px rgba(0, 0, 0, 0.08);
-    width: 533px;
+    width: 100%;
     height: 703px;
     flex-shrink: 0;
     z-index: 1;
@@ -498,7 +499,15 @@ button.Brand {
     font-weight: 700;
     line-height: 24px; /* 150% */
 }
+@media screen and (max-width: 1600px){
+    .main-form[data-v-208aaa41] {
+    width: 67%;
+    height: 850px;
+    background-image: url(/images/Up.png);
+    padding: 10px 40px;
+}
 
+}
 </style>
 
 

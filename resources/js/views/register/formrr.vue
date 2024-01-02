@@ -182,13 +182,17 @@ this.bgColor2 = '#F96';
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .main-form {
-    width: 1290px;
+    width: 67%;
     height: 900px;
     background-image: url(/images/Up.png);
-    padding: 10px 40px ;
+    padding: 10px 40px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .main-box {
     width: 100%;
@@ -209,10 +213,10 @@ this.bgColor2 = '#F96';
 .from-titel {width: 32%;padding-top: 60px;}
 
 .from-box {
-    width: 40%;
+    width: 44%;
     position: absolute;
     z-index: 1;
-    right: 35px;
+    right: 0px;
     display: flex;
     top: 35px;
     align-items: center;
@@ -265,7 +269,7 @@ this.bgColor2 = '#F96';
     border-radius: 40px;
     background: #FFF;
     box-shadow: 0px 4px 35px 0px rgba(0, 0, 0, 0.08);
-    width: 533px;
+    width: 100%;
     height: 703px;
     flex-shrink: 0;
     z-index: 1;
@@ -276,7 +280,7 @@ this.bgColor2 = '#F96';
     padding: 30px;
 }
 
-.from-box img {position: absolute;right: 255px;top: 0px; width: 100%;}
+.from-box img {position: absolute;right: 315px;top: 30px; width: 90%;}
 
 .card-box {
     width: 100%;
@@ -488,6 +492,222 @@ button.Brand {
     font-family: sans-serif;
     font-weight: 700;
     line-height: 24px; /* 150% */
+}
+@media screen and (max-width: 1600px){
+    .main-form[data-v-208aaa41] {
+    width: 67%;
+    height: 785px;
+    background-image: url(/images/Up.png);
+    padding: 10px 40px;
+    border-radius: 50px;
+}
+.from-titel h1[data-v-208aaa41] {
+    color: #1C1D1E;
+    font-family: sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.from-titel[data-v-208aaa41] {
+    width: 38%;
+    padding-top: 60px;
+}
+.main-box[data-v-208aaa41] {
+    width: 100%;
+    display: flex;
+    position: relative;
+    gap: 110px;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.form[data-v-208aaa41] {
+    border-radius: 40px;
+    background: #FFF;
+    box-shadow: 0px 4px 35px 0px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    height: 615px;
+    flex-shrink: 0;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+}
+button.Influencer[data-v-208aaa41] {
+    border-radius: 6px;
+    border: 1px solid #000;
+    /* background: #FFF; */
+    box-shadow: 2px 2px 0px 0px #1B1C1D;
+    padding: 8px 8px 8px 8px;
+    color: #000;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+}
+button.Brand[data-v-208aaa41] {
+    border-radius: 6px;
+    border: 1px solid #000;
+    /* background: #F96; */
+    box-shadow: 2px 2px 0px 0px #1B1C1D;
+    padding: 8px 20px 8px 20px;
+    color: black;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+}
+.input-group input[data-v-208aaa41] {
+    border-radius: 9px;
+    border: 1px solid #ADADAD;
+    background: #FFF;
+    padding: 15px;
+}
+.from-box img[data-v-208aaa41] {
+    position: absolute;
+    right: 250px;
+    top: 110px;
+    width: 90%;
+}
+.from-box[data-v-208aaa41] {
+    width: 40%;
+    position: absolute;
+    z-index: 1;
+    right: 0px;
+    display: flex;
+    top: 35px;
+    align-items: center;
+}
+}
+@media screen and (max-width: 1440px){
+    .from-titel h1[data-v-208aaa41] {
+    color: #1C1D1E;
+    font-family: sans-serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.from-titel h3[data-v-208aaa41] {
+    color: #1B1C1D;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    font-size: 20px;
+    padding: 8px 0px;
+}
+.main-form[data-v-208aaa41][data-v-208aaa41] {
+    width: 67%;
+    height: 785px;
+    background-image: url(/images/Up.png);
+    padding: 10px 30px;
+    border-radius: 50px;
+}
+button.Influencer[data-v-208aaa41][data-v-208aaa41] {
+    border-radius: 6px;
+    border: 1px solid #000;
+    /* background: #FFF; */
+    box-shadow: 2px 2px 0px 0px #1B1C1D;
+    padding: 8px 8px 8px 8px;
+    color: #000;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+}
+button.Brand[data-v-208aaa41][data-v-208aaa41] {
+    border-radius: 6px;
+    border: 1px solid #000;
+    /* background: #F96; */
+    box-shadow: 2px 2px 0px 0px #1B1C1D;
+    padding: 8px 20px 8px 20px;
+    color: black;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+}
+.fromr-btn a[data-v-208aaa41] {
+    color: gray;
+    width: 32%;
+    font-size: 14px;
+}
+.fromr-btn a span[data-v-208aaa41] {
+    color: #F96;
+}
+.input-group label[data-v-208aaa41] {
+    color: #000;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-bottom: 10px;
+}
+.input-group input[data-v-208aaa41][data-v-208aaa41] {
+    border-radius: 9px;
+    border: 1px solid #ADADAD;
+    background: #FFF;
+    padding: 10px;
+}
+.form[data-v-208aaa41][data-v-208aaa41] {
+    border-radius: 40px;
+    background: #FFF;
+    box-shadow: 0px 4px 35px 0px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    height: 485px;
+    flex-shrink: 0;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.card[data-v-208aaa41] {
+    width: 120px;
+    height: 120px;
+    flex-shrink: 0;
+    border-radius: 9px;
+    background: #F96;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.from-card h2[data-v-208aaa41] {
+    color: #000;
+    font-family: sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.from-card a p[data-v-208aaa41] {
+    color: #000;
+    font-family: Anton;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.card-box[data-v-208aaa41] {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 18px 0px;
+}
 }
 </style>
 

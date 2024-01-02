@@ -70,18 +70,26 @@
       <Upload :user-id="user_id" @cancel="closeModal"/>
       
     </div>
+
+    <div v-if="uploads2">
+      <Uploads :user-id="user_id" @cancel="closeModal"/>
+      
+    </div>
     </section>
 </template>
 
 <script>
 import { get , byMethod} from '../admin/components/lib/api'
 import Upload from "../register/profile.vue";
+import Uploads from "./branddetail.vue";
+
 export default {
   name: "Form",
 
   components: {
    
-    Upload
+    Upload,
+    Uploads
  },
 
   data() {
@@ -91,6 +99,8 @@ export default {
         bgColor2:'#FFF',
     shows:true,
     uploads:false,
+    uploads2:false,
+
       form: {},
       method: 'POST',
       user_name: "",
@@ -151,7 +161,7 @@ this.form.email = this.email;
 
 this.form.contact = this.contact;
 this.form.password = this.password;
-this.form.auth_type = 'brand'
+this.form.auth_type = this.auth_type;
 
 
 // console.log(this.form);
@@ -163,11 +173,20 @@ this.form.auth_type = 'brand'
             .then((res) => {
 
 
-                if(res.data.data) {
-                    console.log(res.data.data.id)
+                if(res.data.data.auth_type == 'Influencer') {
+                    // console.log(res.data.data.id)
                     this.user_id = res.data.data.id;
                     this.shows = false;
                     this.uploads = true;
+
+                    // this.$router.push(`/register/company/${this.company_id}`);
+                }
+
+                if(res.data.data.auth_type == 'Brand') {
+                    // console.log(res.data.data.id)
+                    this.user_id = res.data.data.id;
+                    this.shows = false;
+                    this.uploads2 = true;
 
                     // this.$router.push(`/register/company/${this.company_id}`);
                 }

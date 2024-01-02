@@ -184,7 +184,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 .cent{
   background-color: #FF9966;
@@ -731,6 +731,8 @@ button.llo {
     width: 80%;
     border-radius: 50%;
     max-height: 140px;
+    min-height: 140px;
+
    
     object-fit: cover;
 
@@ -1246,6 +1248,8 @@ button.Add {
   
     border-radius: 50%;
     max-height: 130px;
+    min-height: 130px;
+
     object-fit: cover;
 
 }

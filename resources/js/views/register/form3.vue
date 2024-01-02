@@ -1,6 +1,6 @@
 <template>
     <section class="form-1-sec">
-        <div class="main-form">
+        <div class="main-form" v-if="sho">
             <div class="form-img">
                 <img src="/images/logo.png" alt="">
             </div>
@@ -112,7 +112,7 @@
   </defs>
 </svg><h2>Canada</h2></div>
                     <div class="input-group-2" @click="datas('Other' , 8)" :style="{ backgroundColor: bgColor8 }"><h2>Other</h2></div>
-                    <button class="form-btn">
+                    <button class="form-btn" @click="save">
                         <p>Start for free </p>
                         <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
                             <path d="M2.51254 5.45272C3.05034 5.44321 3.53631 5.41563 4.01895 5.49884C4.06983 5.5074 4.12879 5.47935 4.18253 5.46318C4.44738 5.38329 4.71319 5.37236 4.9828 5.44131C5.21723 5.50122 5.45642 5.44986 5.6937 5.46746C6.05983 5.49456 6.42408 5.39566 6.78785 5.4142C7.08408 5.42942 7.38366 5.42466 7.678 5.47079C7.82731 5.49409 7.96852 5.50217 8.12116 5.46366C8.28711 5.42229 8.45164 5.52167 8.62378 5.52167C8.81304 5.52167 8.99943 5.56922 9.18108 5.62343C9.38459 5.68382 9.43594 5.86831 9.28759 6.0181C9.06124 6.24682 8.76549 6.34715 8.45926 6.39185C8.20581 6.42894 7.94713 6.45033 7.69178 6.46365C7.42169 6.47744 7.1497 6.57064 6.8758 6.48029C6.82873 6.4646 6.77025 6.46127 6.72269 6.47411C6.4041 6.56161 6.07268 6.50264 5.75171 6.56541C5.65281 6.5849 5.54438 6.57825 5.44357 6.56256C5.30377 6.54068 5.16968 6.54449 5.03654 6.58823C4.86631 6.64434 4.69704 6.57302 4.52632 6.57634C4.35371 6.57967 4.18253 6.58585 4.01895 6.62722C3.7617 6.69284 3.50588 6.65623 3.25528 6.6296C3.02894 6.60583 2.81068 6.6258 2.58767 6.6315C2.37702 6.63721 2.15686 6.65528 1.94954 6.61867C1.71416 6.57682 1.61193 6.36189 1.52586 6.1655C1.44883 5.98957 1.55725 5.85975 1.67565 5.73327C1.85015 5.54639 2.05129 5.44653 2.31045 5.46413C2.39509 5.46983 2.48116 5.45414 2.51397 5.45224L2.51254 5.45272Z" fill="white"/>
@@ -131,18 +131,41 @@
             </div>
           
         </div>
+
+        <div v-if="fin">
+      <Final :user-id="user_id" @cancel="closeModal"/>
+      
+    </div>
     </section>
 </template>
 
 <script>
+import { get , byMethod} from '../admin/components/lib/api'
+import Final from "./formz.vue";
 export default {
   name: "Borders",
 
+  components: {
+   
+    Final
+
+},
+
+  props: {
+    userId: {
+      type: Number,
+      required: true,
+    },
+  },
+
   data() {
     return {
+      sho:true,
+      fin:false,
+      method:'POST',
         form: {
-      company: '',
-      id: ''
+     
+      
     },
      
      method: 'POST',
@@ -263,6 +286,49 @@ export default {
 
 
     },
+
+    closeModal() {
+    console.log('avcdssss');
+
+    this.showw = false;
+    $('#popup-box').modal('hide');
+    window.location.reload();
+      
+     
+    },
+
+    save(){
+
+
+this.form.userId = this.userId;
+this.form.country = this.company_type;
+
+
+
+
+
+    byMethod(this.method, 'country' , this.form)
+        .then((res) => {
+
+
+            if(res.data.data) {
+                // console.log(res.data.data.id)
+                this.user_id = res.data.data.user_id;
+                this.sho = false;
+                this.fin = true;
+
+                // this.$router.push(`/register/company/${this.company_id}`);
+            }
+
+        })
+        .catch((error) => {
+            if(error.response.status === 422) {
+                this.errors = error.response.data.errors
+            }
+            this.isProcessing = false
+        })
+
+},
 
   }
 };

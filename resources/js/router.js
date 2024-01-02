@@ -97,6 +97,26 @@ let router = new Router({
                 layout: AdminLayout
             }
         },
+
+        {
+            path: "/Branddashoboard",
+            name: "admin",
+            component: () => import("./views/admin/branddashboard.vue"),
+            meta: {
+                requiresAuth: true,
+                layout: AdminLayout
+            }
+        },
+
+        {
+            path: "/Brandmerchandise",
+            name: "admin",
+            component: () => import("./views/admin/merchandise.vue"),
+            meta: {
+                requiresAuth: true,
+                layout: AdminLayout
+            }
+        },
         {
             path: "/entrefrom",
             name: "admin",

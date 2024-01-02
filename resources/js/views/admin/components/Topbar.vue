@@ -29,24 +29,38 @@
           <a href="#">Home</a></router-link
         >
       </li>
-    <li>
+    <li v-if="user && user.auth_type === 'Influencer'">
       
       <router-link class="nav-link" to="/influncer/dashborad">
           <!-- <i class="fas fa-fw fa-tachometer-alt"></i> -->
           <a href="#">Dashboard</a></router-link
         >
       </li>
-    <li>
+      <li v-if="user && user.auth_type === 'Brand'">
+      
+      <router-link class="nav-link" to="/Branddashoboard">
+          <!-- <i class="fas fa-fw fa-tachometer-alt"></i> -->
+          <a href="#">Dashboard</a></router-link
+        >
+      </li>
+    <li v-if="user && user.auth_type === 'Influencer'">
       <router-link class="nav-link" to="/sponsorship">
           <!-- <i class="fas fa-fw fa-tachometer-alt"></i> -->
           <a href="#">Subscription’s</a></router-link
         >
       
     </li>
-    <li>
+    <li v-if="user && user.auth_type === 'Influencer'">
       <router-link class="nav-link" to="/courses">
           <!-- <i class="fas fa-fw fa-tachometer-alt"></i> -->
           <a href="#">Courses</a></router-link
+        >
+      </li>
+
+      <li v-if="user && user.auth_type === 'Brand'">
+      <router-link class="nav-link" to="/Brandmerchandise">
+          <!-- <i class="fas fa-fw fa-tachometer-alt"></i> -->
+          <a href="#">Merchandise</a></router-link
         >
       </li>
   </ul>
@@ -278,11 +292,12 @@
           <!-- <span class="mr-2 d-none d-lg-inline text-gray-600 small"
             >{{ user.first_name }} {{ user.last_name }}</span -->
           <!-- > -->
-          <!-- <img
+          <img v-if="user && user.auth_type === 'Brand'" 
+          class="img-profile rounded-circle"
             
-            src="/img/undraw_profile.svg"
-          /> -->
-          <img class="img-profile rounded-circle" :src="'/uploads/' + user.image" alt="">
+            src="images/Characters.png"
+          />
+          <img v-if="user && user.auth_type === 'Influencer'" class="img-profile rounded-circle" :src="'/uploads/' + user.image" alt="">
         </a>
         <!-- Dropdown - User Information -->
         <div
@@ -325,6 +340,8 @@ import { mapGetters } from "vuex";
 
 export default {
   name: "Topbar",
+ 
+
   computed: {
     ...mapGetters(["user"]),
   },

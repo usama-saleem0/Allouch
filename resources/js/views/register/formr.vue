@@ -518,15 +518,7 @@ button.Brand {
     font-weight: 700;
     line-height: 24px; /* 150% */
 }
-@media screen and (max-width: 1600px){
-    .main-form[data-v-208aaa41] {
-    width: 67%;
-    height: 850px;
-    background-image: url(/images/Up.png);
-    padding: 10px 40px;
-}
 
-}
 </style>
 
 

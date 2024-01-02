@@ -15,6 +15,21 @@ class ProfileController extends Controller
      }
 
 
+     public function getinfluencer(){
+      // dd(auth()->user());
+        if(auth()->user()->auth_type =='Brand'){
+       
+
+         $data = User::where('auth_type' , 'Influencer')->get();
+      }
+      else{
+         $data = User::where('auth_type' , 'Brand')->get();
+
+      }
+      return response()->json(['influencer' => $data]);
+     }
+
+
      public function edit_profile(Request $request){
       //  dd($request->image);
 

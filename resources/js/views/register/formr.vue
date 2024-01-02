@@ -216,7 +216,7 @@ this.form.auth_type = this.auth_type;
     height: 100% !important;
 }
 
-.main-forms {
+.main-form {
     width: 67% !important;
     height: 900px;
     background-image: url(/images/Up.png);
@@ -519,6 +519,14 @@ button.Brand {
     line-height: 24px; /* 150% */
 }
 
+@media screen and (max-width: 1600px){
+    .main-form[data-v-208aaa41] {
+    width: 67%;
+    height: 850px;
+    background-image: url(/images/Up.png);
+    padding: 10px 40px;
+}
+}
 </style>
 
 

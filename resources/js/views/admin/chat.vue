@@ -8,7 +8,9 @@
           <div class="row cent">
         <div class="col" style="margin-bottom: 10px;margin-top: 10px;">
            
-        <img src="/images/Ellipse.png" class="imgs"/>
+        <img v-if="inf_img" :src="'/uploads/' + inf_img" class="imgs"/>
+        <img v-else src='/images/Characters.png' class="imgs"/>
+
         <span class="sp">{{ chatname }}</span>
         
         
@@ -54,6 +56,9 @@ line-height: normal;
      
        
         </div> -->
+        <div class="col">
+            <div class="row" style="    display: flex;
+    justify-content: center;">
         <div class="box-2">
           <h2>Influencer Profile</h2>
           <div class="row id-box ">
@@ -71,9 +76,11 @@ line-height: normal;
 </svg>
             </button>
           </div>
+
+          
           </div>
 
-         
+
 
           
 
@@ -84,8 +91,61 @@ line-height: normal;
 
           </div>
         </div>
-       </div>
     </div>
+    <br>
+    <div class="div"  v-for="inf in influencer">
+    <div class="row" style="       display: flex;
+    justify-content: space-between;
+    margin-left: 5px;
+    width: 100%; ">
+
+        <div class="row ahtis" >
+            <div class="col-2">
+                <a>
+                <img v-if="inf.image" class="imges" :src="'/uploads/' + inf.image" alt="">
+                <img v-else class="imges" src='/images/Characters.png' alt="">
+
+                <span v-if="inf.chat_count > 0" class="badge badge-danger badge-counter pos">{{ inf.chat_count }}</span>
+                </a>
+            </div>
+            <div class="col-7" >
+                <span class="sss">{{ inf.user_name ? inf.user_name:'Influencer'}}</span>
+                <br>
+                <span class="ss">{{ inf.bio ? 'Influencer' :'Influencer'}}</span>
+
+            </div>
+
+            <div class="col-3">
+                <button class="buts" @click="setitem(inf)">Chat</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+
+      
+
+        
+          <!-- <div class="row">
+            <div class="col">
+                <img :src="'/uploads/' + model.image" alt="">
+            </div>
+            <div class="col">
+                <span>Christiana Adams</span>
+            </div>
+
+            <div class="col">
+                <button class="buttonsss">Chat</button>
+            </div>
+        </div> -->
+         
+
+        
+       </div>
+       
+    </div>
+    
    </div>
  
 </template>
@@ -105,11 +165,16 @@ export default {
               userselect:false,
         form:{},
         chatname:'Christiana Adams',
+        inf_img:'Ellipse.png',
         model:[],
         model:{},
         method:'POST',
         messages: [],
+        influencer:[],
         chat_user:'',
+        chatter:{},
+        intervalId: null,
+        
         // form: [],
 
         newMessage: '',
@@ -121,17 +186,63 @@ export default {
         },
 
         created(){
+            console.log('aaaa');
         
         get('/getuser')
               .then((res) => {
                 
+                this.influncer();
                  this.setData(res)
 
-              })
+              });
+              
+
+             
+
+            
           
         }, 
 
+     
+      
+
         methods:{
+
+
+            setitem(e){
+                
+                this.chatname = e.user_name;
+                this.reciever_id = e.id;
+                this.inf_img = e.image;
+                this.chatter = e;
+
+                console.log(this.chatter);
+
+                get('/getchat?id=' + e.id)
+                .then((res) => {
+                  // console.log(res.data.camp)
+
+                  Vue.set(this.$data, 'messages', res.data.data)
+                  Vue.set(this.$data, 'chat_user', res.data.chat_user)
+                  this.influncer();
+
+                })
+            },
+
+            influncer(){
+                console.log('abbbb');
+
+                get('/getinfluencer')
+              .then((res) => {
+
+                console.log(res.data.influencer)
+                Vue.set(this.$data, 'influencer', res.data.influencer)
+
+                
+               
+
+              })
+            },
 
             profile(){
                 this.$router.push('/admin/dashborad4')
@@ -147,23 +258,28 @@ export default {
 
          
           }
+          this.form.reciever_id = this.reciever_id;
+          this.form.reciever_name = this.chatname;
+
           this.form.message = this.newMessage;
-          // console.log(this.newMessage)
-          // byMethod(this.method, 'chats', this.form)
-          //           .then((res) => {
-          //             if(res.data && res.data.saved) {
-          //               get('/getuserchat')
-          //     .then((res) => {
+          console.log(this.newMessage)
+          byMethod(this.method, 'chats', this.form)
+                    .then((res) => {
+                      if(res.data && res.data.saved) {
+                        this.influncer();
+            //             get('/getuserchat')
+            //   .then((res) => {
+               
                 
-          //        this.setData(res)
+              
 
-          //     })
+            //   })
                         
-          //             }
-          //           })
-          //           this.newMessage = '';
+                      }
+                    })
+                    this.newMessage = '';
 
-          this.newMessage = '';
+        //   this.newMessage = '';
         },
         scrollChatToBottom() {
           const chatBox = document.getElementById('chat-box');
@@ -173,18 +289,97 @@ export default {
         setData(res) {
         
         Vue.set(this.$data, 'model', res.data.data)
-        console.log(res.data.data)
+        // console.log(res.data.data)
         
        
 
       //   console.log(res.data)
     },
 
-        }
+        },
+
+        mounted() {
+   
+
+    
+  
+
+  
+        this.setitem(this.chatter);
+        
+        this.intervalId = setInterval(() => {
+            if(this.chatter.id){
+                this.setitem(this.chatter);
+
+            }
+          
+      console.log('fffffffsssssss',this.chatter);
+    }, 3000);
+
+
+    
+    
+  },
+
+  beforeDestroy() {
+    
+    clearInterval(this.intervalId);
+  },
 }
 </script>
 
 <style scoped>
+.pos{
+    position: absolute;
+    left: 42px;
+    bottom: -3px;
+}
+
+.imges{
+    width: 100%;
+    max-height: 45px;
+    min-height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.ahtis{
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; margin-bottom: 20px;
+}
+
+.buts{
+    display: flex;
+    width: 102px;
+    height: 34px;
+    padding: 5px 24px 5px 23px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 6px;
+    border: 1px solid #000;
+    background: #F96;
+    box-shadow: 2px 2px 0px 0px #1B1C1D;
+    color: white;
+}
+.ss{
+    color: #000;
+    font-family: DM Sans;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.sss{
+    color: #000;
+    font-family: fantasy;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
 
 .cent{
   background-color: #FF9966;
@@ -273,7 +468,16 @@ export default {
   height: 55px;
     /* margin-left: 10px; */
     padding: 0px 10px 0px 10px;
+    height: 55px;
+    /* margin-left: 10px; */
+    padding: 0px 10px 0px 10px;
+    /* width: 24%; */
+    max-width: 80px;
+    min-width: 80px;
+    border-radius: 50%;
+    object-fit: cover;
 }
+
 
 .blacktr{
   color: white;
@@ -377,6 +581,7 @@ export default {
     color: black;
     border-radius: 16px;
 border: 2px solid #000;
+padding-left: 15px;
 
 
 
@@ -439,7 +644,7 @@ box-shadow: 4px 4px 0px 2px #1B1C1D;
     border-radius: 20px;
     background: #FFF;
     box-shadow: 0px 10px 54px 0px rgba(0, 0, 0, 0.25);
-    width: 30%;
+    width: 90%;
     padding: 30px;
 }
 
@@ -866,6 +1071,12 @@ button.llo {
     padding-top: 15px;
 }
 @media screen and (max-width: 1600px){
+    .ahtis{
+    width: 450px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; margin-bottom: 10px;
+}
   .contanir {
     width: 100%;
     max-width: 1440px;
@@ -1008,6 +1219,19 @@ button.Add {
 }
 
 @media screen and (max-width: 1440px){
+    .imges{
+    width: 150%;
+    max-height: 50px;
+    min-height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+    .ahtis{
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; margin-bottom: 20px;
+}
 
     .id-box h3 {color: #000;font-family: sans-serif;font-size: 10px;font-style: normal;font-weight: 500;line-height: normal;}
   .contanir {
@@ -1335,7 +1559,7 @@ button.Add {
     border-radius: 20px;
     background: #FFF;
     box-shadow: 0px 10px 54px 0px rgba(0, 0, 0, 0.25);
-    width: 30%;
+    width: 90%;
     padding: 24px;
 }
 }
@@ -1365,7 +1589,7 @@ button.Add {
     border-radius: 20px;
     background: #FFF;
     box-shadow: 0px 10px 54px 0px rgba(0, 0, 0, 0.25);
-    width: 42%;
+    width: 90%;
     padding: 24px;
 }
 .btn-2 {
@@ -1414,7 +1638,7 @@ button.Add {
     border-radius: 20px;
     background: #FFF;
     box-shadow: 0px 10px 54px 0px rgba(0, 0, 0, 0.25);
-    width: 58%;
+    width: 90%;
     padding: 24px;
 }
 .Sponsorship {

@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Paypalcontroller;
+use App\Http\Controllers\ChatController;
+
 
 
 
@@ -50,6 +52,14 @@ Route::group(['middleware' => ['auth:api']], function () {
     Route::post('api/edit_profile', [ProfileController::class, 'edit_profile']);
 
     Route::get('getuser', [ProfileController::class, 'getuser']);
+    Route::get('getinfluencer', [ProfileController::class, 'getinfluencer']);
+
+    Route::get('getuserchat', [ChatController::class, 'getuser']);
+
+    Route::post('chats', [ChatController::class, 'chats']);
+
+    Route::get('getchat', [ChatController::class, 'getchat']);
+
     
    
 });

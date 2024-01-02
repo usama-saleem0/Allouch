@@ -1,6 +1,6 @@
 <template>
  
-    <section class="form-1-sec">
+    <section class="form-2-sec">
       <div class="main-form" v-if="shows">
         <div class="logo-from">
             <img src="/images/logo.png" alt="">
@@ -70,26 +70,18 @@
       <Upload :user-id="user_id" @cancel="closeModal"/>
       
     </div>
-
-    <div v-if="uploads2">
-      <Uploads :user-id="user_id" @cancel="closeModal"/>
-      
-    </div>
     </section>
 </template>
 
 <script>
 import { get , byMethod} from '../admin/components/lib/api'
 import Upload from "../register/profile.vue";
-import Uploads from "./branddetail.vue";
-
 export default {
   name: "Form",
 
   components: {
    
-    Upload,
-    Uploads
+    Upload
  },
 
   data() {
@@ -99,8 +91,6 @@ export default {
         bgColor2:'#FFF',
     shows:true,
     uploads:false,
-    uploads2:false,
-
       form: {},
       method: 'POST',
       user_name: "",
@@ -161,7 +151,7 @@ this.form.email = this.email;
 
 this.form.contact = this.contact;
 this.form.password = this.password;
-this.form.auth_type = this.auth_type;
+this.form.auth_type = 'brand'
 
 
 // console.log(this.form);
@@ -173,20 +163,11 @@ this.form.auth_type = this.auth_type;
             .then((res) => {
 
 
-                if(res.data.data.auth_type == 'Influencer') {
-                    // console.log(res.data.data.id)
+                if(res.data.data) {
+                    console.log(res.data.data.id)
                     this.user_id = res.data.data.id;
                     this.shows = false;
                     this.uploads = true;
-
-                    // this.$router.push(`/register/company/${this.company_id}`);
-                }
-
-                if(res.data.data.auth_type == 'Brand') {
-                    // console.log(res.data.data.id)
-                    this.user_id = res.data.data.id;
-                    this.shows = false;
-                    this.uploads2 = true;
 
                     // this.$router.push(`/register/company/${this.company_id}`);
                 }
@@ -208,19 +189,20 @@ this.form.auth_type = this.auth_type;
     margin: 0;
     box-sizing: border-box;
  }
- section.form-1-sec {
+ section.form-2-sec {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100% !important;
+
+
 }
 
-.main-forms {
-    width: 67% !important;
+.main-form {
+    width: 100%;
     height: 900px;
     background-image: url(/images/Up.png);
-    padding: 10px 40px ;
+    padding: 10px 40px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .main-box {
     width: 100%;
@@ -275,7 +257,7 @@ this.form.auth_type = this.auth_type;
 
 .from-titel p {
     color: #1B1C1D;
-   
+  
     font-size: 13px;
     font-style: normal;
     font-weight: 300;
@@ -308,7 +290,7 @@ this.form.auth_type = this.auth_type;
     padding: 30px;
 }
 
-.from-box img {position: absolute;right: 255px;top: 0px; width: 100%; }
+.from-box img {position: absolute;right: 315px;top: 30px; width: 90%;}
 
 .card-box {
     width: 100%;
@@ -454,7 +436,7 @@ button.button-20 p {
     line-height: 24px; /* 150% */
 }
 
-.form-main h2 {
+form.form-main h2 {
     color: #1B1C1D;
     font-family: sans-serif;
     font-size: 55px;
@@ -463,6 +445,8 @@ button.button-20 p {
     line-height: normal;
     margin: 0px;
 }
+
+
 button.Influencer {
     border-radius: 6px;
     border: 1px solid #000;
@@ -484,7 +468,7 @@ button.Brand {
     /* background: #F96; */
     box-shadow: 2px 2px 0px 0px #1B1C1D;
     padding: 11px 26px 9px 26px;
-    color: #000;
+    color: black;
     text-align: center;
     font-family: sans-serif;
     font-size: 16px;
@@ -518,7 +502,541 @@ button.Brand {
     font-weight: 700;
     line-height: 24px; /* 150% */
 }
+@media screen and (max-width: 1600px){
+    .main-form {
+    width: 100%;
+    height: 785px;
+    background-image: url(/images/Up.png);
+    padding: 10px 40px;
+    border-radius: 50px;
+}
+.input-group-1 input {
+    border-radius: 9px;
+    border: 1px solid #ADADAD;
+    background: #FFF;
+    padding: 15px;
+}
+.fromr-btn a[data-v-0ea660fe] {
+    color: gray;
+    width: 32%;
+    font-size: 14px;
+}
+.from-titel h1 {
+    color: #1C1D1E;
+    font-family: sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.from-titel {
+    width: 38%;
+    padding-top: 60px;
+}
+.main-box{
+    width: 100%;
+    display: flex;
+    position: relative;
+    gap: 110px;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.form {
+    border-radius: 40px;
+    background: #FFF;
+    box-shadow: 0px 4px 35px 0px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    height: 615px;
+    flex-shrink: 0;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+}
+button.Influencer {
+    border-radius: 6px;
+    border: 1px solid #000;
 
+    box-shadow: 2px 2px 0px 0px #1B1C1D;
+    padding: 8px 8px 8px 8px;
+    color: #000;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+}
+button.Brand {
+    border-radius: 6px;
+    border: 1px solid #000;
+
+    box-shadow: 2px 2px 0px 0px #1B1C1D;
+    padding: 8px 20px 8px 20px;
+    color: black;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+}
+.input-group input {
+    border-radius: 9px;
+    border: 1px solid #ADADAD;
+    background: #FFF;
+    padding: 15px;
+}
+.from-box img {
+    position: absolute;
+    right: 250px;
+    top: 110px;
+    width: 90%;
+}
+.from-box {
+    width: 40%;
+    position: absolute;
+    z-index: 1;
+    right: 0px;
+    display: flex;
+    top: 35px;
+    align-items: center;
+}
+}
+@media screen and (max-width: 1440px){
+    .from-titel h1 {
+    color: #1C1D1E;
+    font-family: sans-serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.input-group-1 input[data-v-0ea660fe] {
+    border-radius: 9px;
+    border: 1px solid #ADADAD;
+    background: #FFF;
+    padding: 10px;
+}
+.input-group-1 label[data-v-0ea660fe] {
+    color: #000;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-bottom: 10px;
+}
+.fromr-btn a[data-v-0ea660fe][data-v-0ea660fe] {
+    color: gray;
+    width: 32%;
+    font-size: 12px;
+}
+
+.from-titel h3 {
+    color: #1B1C1D;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    font-size: 20px;
+    padding: 8px 0px;
+}
+.main-form {
+    width: 100%;
+    height: 650px;
+    background-image: url(/images/Up.png);
+    padding: 10px 30px;
+    border-radius: 50px;
+}
+button.Influencer {
+    border-radius: 6px;
+    border: 1px solid #000;
+    /* background: #FFF; */
+    box-shadow: 2px 2px 0px 0px #1B1C1D;
+    padding: 6px;
+    color: #000;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 15px;
+}
+button.Brand {
+    border-radius: 6px;
+    border: 1px solid #000;
+    /* background: #F96; */
+    box-shadow: 2px 2px 0px 0px #1B1C1D;
+    padding:6px 12px;
+    color: black;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 15px;
+}
+.fromr-btn a {
+    color: gray;
+    width: 32%;
+    font-size: 14px;
+}
+.fromr-btn a span {
+    color: #F96;
+}
+.input-group label {
+    color: #000;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-bottom: 10px;
+}
+.input-group input {
+    border-radius: 9px;
+    border: 1px solid #ADADAD;
+    background: #FFF;
+    padding: 10px;
+}
+.form {
+    border-radius: 40px;
+    background: #FFF;
+    box-shadow: 0px 4px 35px 0px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    height: 485px;
+    flex-shrink: 0;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.card {
+    width: 115px;
+    height: 115px;
+    flex-shrink: 0;
+    border-radius: 9px;
+    background: #F96;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.from-card h2 {
+    color: #000;
+    font-family: sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.from-card a p {
+    color: #000;
+    font-family: Anton;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.card-box {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 18px 0px;
+}
+.main-box {
+    width: 100%;
+    display: flex;
+    position: relative;
+    gap: 90px;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.from-box img {
+    position: absolute;
+    right: 230px;
+    top: 45px;
+    width: 85%;
+}
+}
+@media screen and (max-width: 1366px){
+    .logo-from img {
+    width: 20%;
+}
+.input-group-1 input[data-v-0ea660fe] {
+    border-radius: 5px;
+    border: 1px solid #ADADAD;
+    background: #FFF;
+    padding: 8px;
+    font-size: 12px;
+}
+.from-titel h1 {
+    color: #1C1D1E;
+    font-family: sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.from-titel h3 {
+    color: #1B1C1D;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    font-size: 18px;
+    padding: 8px 0px;
+}
+.from-titel {
+    width: 32%;
+    padding-top: 40px;
+}
+.from-titel p {
+    color: #1B1C1D;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+.card {
+    width: 110px;
+    height: 110px;
+    flex-shrink: 0;
+    border-radius: 9px;
+    background: #F96;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.from-card h2 {
+    color: #000;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.card p {
+    color: #1B1C1D;
+    font-family: Poppins;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.card img {
+    width: 45%;
+}
+.from-card a p {
+    color: #000;
+    font-family: Anton;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.from-card a svg {
+    width: 20px;
+    height: 20px;
+}
+.card-box {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 15px 0px;
+}
+.main-form {
+    width: 100%;
+    height: 560px;
+    background-image: url(/images/Up.png);
+    padding: 10px 25px;
+    border-radius: 45px;
+}
+.input-group label {
+    color: #000;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-bottom: 8px;
+}
+button.button-20 {
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid #000;
+    background: #F96;
+    box-shadow: 2px 2px 0px 0px #1B1C1D;
+    display: flex;
+    height: 38px;
+    padding: 10px 0px;
+    justify-content: center;
+    align-items: center;
+    gap: 7.647px;
+    flex-shrink: 0;
+}
+button.button-20 p {
+    color: #FFF;
+    text-align: center;
+    font-family: DM Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+}
+.form-main.form p {
+    font-size: 12px;
+}
+.form {
+    border-radius: 30px;
+    background: #FFF;
+    box-shadow: 0px 4px 35px 0px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    height: 420px;
+    flex-shrink: 0;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px;
+}
+.main-box {
+    width: 100%;
+    display: flex;
+    position: relative;
+    gap: 75px;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.input-group input {
+    border-radius: 5px;
+    border: 1px solid #ADADAD;
+    background: #FFF;
+    padding: 8px;
+    font-size: 12px;
+}
+.from-box img {
+    position: absolute;
+    right: 230px;
+    top: 45px;
+    width: 75%;
+}
+}
+@media screen and (max-width: 1024px){
+    section.form-1-sec[data-v-208aaa41] {
+    width: 90%;
+}
+}
+@media screen and (max-width: 768px){
+    .main-form {
+    width: 100%;
+    height: 100%;
+    background-image: url(/images/Up.png);
+    padding: 10px 25px;
+    border-radius: 25px;
+}
+.main-box {
+    width: 100%;
+    display: flex;
+    position: relative;
+    gap: 25px;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.from-titel {
+    width: 48%;
+    padding-top: 40px;
+    text-align: center;
+}
+.from-box {
+    width: 55%;
+    position: relative;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    margin-left: 90px;
+}
+.from-card {
+    width: 50%;
+    padding-top: 70px;
+}
+.from-box img {
+    position: absolute;
+    right: 250px;
+    top: 15px;
+    width: 70%;
+    bottom: 0px;
+}
+}
+@media screen and (max-width: 425px){
+    .main-form {
+    width: 100%;
+    height: 100%;
+    background-image: url(/images/Up.png);
+    padding: 10px 15px;
+    border-radius: 24px;
+}
+.main-box {
+    width: 100%;
+    display: flex;
+    position: relative;
+    gap: 24px;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.from-titel {
+    width: 100%;
+    padding-top: 40px;
+    text-align: center;
+}
+.from-box {
+    width: 100%;
+    position: relative;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    margin-left: 0px;
+}
+.from-card {
+    width: 100%;
+    padding-top: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.from-box img {
+    position: absolute;
+    right: 250px;
+    top: 15px;
+    width: 70%;
+    bottom: 0px;
+    display: none;
+}
+.card-box {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 15px 0px;
+    justify-content: center;
+}
+.logo-from img {
+    width: 40%;
+}
+}
 </style>
+
 
 

@@ -30,8 +30,13 @@
         ></router-link> -->
       </div>
      
-    <div id="popup-box" class="modal" v-if="isModalOpen">
-      <Details @cancel="closeModal"/>
+    <div id="popup-box" class="modal" v-if="isModalOpen" >
+      <div style="display: flex;
+    padding-left: 0px;
+    justify-content: space-evenly;">
+
+        <Details @cancel="closeModal"/>
+      </div>
       
     </div>
 
@@ -83,7 +88,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 body{
   width: 100%;
     height:100%;
@@ -97,11 +102,7 @@ body{
 
   section.form-1-sec {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
    
-    align-content: center;
 }
 
 
@@ -158,15 +159,7 @@ body{
             align-items: center;
             display: flex;
             justify-content: center; 
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(254, 126, 126, 0.7);
-            transition: all 0.4s;
-            visibility: hidden;
-            opacity: 0;
+            
         } */
         .content {
             position: absolute;

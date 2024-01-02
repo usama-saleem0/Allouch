@@ -31,12 +31,7 @@
 </svg></span>
       </div>
       <div class="drop-zone" v-else>
-        <img class="image-preview" :src="imageUrl" alt="Uploaded Image" style="width: 100%;
-    min-width: 443px;
-    min-height: 278px;
-    border-radius: 5px;
-    max-width: 443px;
-    max-height: 278px;" />
+        <img class="image-preview" :src="imageUrl" alt="Uploaded Image"/>
       </div>
     </div>
 
@@ -237,7 +232,7 @@ export default {
     padding-left: 40px; /* Adjust this value based on the width of your SVG icon */
   }
 .main-form {
-    width: 1290px;
+    width: 100%;
     height: 900px;
     border-radius: 50px;
     background-image: url(/images/Sign\ Up.png);
@@ -476,5 +471,487 @@ div#app {
     font-weight: 400;
     line-height: normal;
     padding-bottom: 10px;
+}
+img.image-preview {
+    width: 100%;
+    min-width: 443px;
+    min-height: 278px;
+    border-radius: 5px;
+    max-width: 443px;
+    max-height: 278px;
+}
+
+@media screen and (max-width: 1600px){
+  .form-titel h2[data-v-273194bc] {
+    color: #1C1D1E;
+    font-family: sans-serif;
+    font-size: 29px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+img.image-preview[data-v-273194bc] {
+    width: 100%;
+    min-width: 394px;
+    min-height: 180px;
+    border-radius: 5px;
+    max-width: 443px;
+    max-height: 180px;
+}
+.form-1[data-v-273194bc] {
+    width: 63%;
+    height: 606px;
+    flex-shrink: 0;
+    border-radius: 24px;
+    background: #FFF;
+    box-shadow: 0px 4px 35px 0px rgba(0, 0, 0, 0.08);
+    z-index: 1;
+    position: relative;
+    padding: 24px 25px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.main-form[data-v-273194bc] {
+    width: 100%;
+    height: 785px;
+    border-radius: 50px;
+    background-image: url(/images/Sign\ Up.png);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px 0px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.form-titel[data-v-273194bc] {
+    width: 28%;
+    display: flex;
+    justify-content: flex-end;
+}
+.drop-zone[data-v-273194bc][data-v-273194bc] {
+    width: 100%;
+    height: 180px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 9px;
+    border: 1px solid #FF5757;
+    background: #FFF;
+}
+a.form-last[data-v-273194bc] {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    gap: 14px;
+    padding-top: 20px;
+}
+.imgss[data-v-273194bc] {
+    position: absolute;
+    left: 160px;
+    bottom: 0px;
+    width: 32%;
+}
+}
+@media screen and (max-width: 1440px){
+  .main-form[data-v-273194bc][data-v-273194bc] {
+    width: 100%;
+    height: 650px;
+    border-radius: 50px;
+    background-image: url(/images/Sign\ Up.png);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 25px 0px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+img.image-preview[data-v-273194bc] {
+    width: 100%;
+    min-width: 318px;
+    min-height: 124px;
+    border-radius: 5px;
+    max-width: 443px;
+    max-height: 124px;
+}
+.drop-zone[data-v-273194bc][data-v-273194bc][data-v-273194bc] {
+    width: 100%;
+    height: 125px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 9px;
+    border: 1px solid #FF5757;
+    background: #FFF;
+    justify-content: center;
+}
+.input-group-2 input[data-v-273194bc] {
+    border-radius: 9px;
+    border: 1px solid #ADADAD;
+    background: #FFF;
+    color: #808080;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    padding: 10px;
+}
+.img-input label[data-v-273194bc] {
+    color: #000;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-bottom: 10px;
+}
+.input-group-2 label[data-v-273194bc] {
+    color: #000;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-bottom: 10px;
+}
+.input-3 label[data-v-273194bc] {
+    color: #000;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 100%;
+    padding-bottom: 10px;
+}
+.form-1[data-v-273194bc][data-v-273194bc] {
+    width: 58%;
+    height: 485px;
+    flex-shrink: 0;
+    border-radius: 24px;
+    background: #FFF;
+    box-shadow: 0px 4px 35px 0px rgba(0, 0, 0, 0.08);
+    z-index: 1;
+    position: relative;
+    padding: 24px 25px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.imgss[data-v-273194bc][data-v-273194bc] {
+    position: absolute;
+    left: 160px;
+    bottom: 0px;
+    width: 30%;
+}
+a.form-last p[data-v-273194bc] {
+    color: #000;
+    font-family: Anton;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    cursor: pointer;
+}
+}
+@media screen and (max-width: 1366px){
+  .main-form[data-v-273194bc][data-v-273194bc][data-v-273194bc] {
+    width: 100%;
+    height: 560px;
+    border-radius: 45px;
+    background-image: url(/images/Sign\ Up.png);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 25px 0px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.form-1[data-v-273194bc][data-v-273194bc][data-v-273194bc] {
+    width:55%;
+    height: 420px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: #FFF;
+    box-shadow: 0px 4px 35px 0px rgba(0, 0, 0, 0.08);
+    z-index: 1;
+    position: relative;
+    padding: 20px 24px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+img.image-preview[data-v-273194bc][data-v-273194bc] {
+    width: 100%;
+    min-width: 282px;
+    min-height: 108px;
+    border-radius: 5px;
+    max-width: 443px;
+    max-height: 108px;
+}
+a.form-last p[data-v-273194bc][data-v-273194bc] {
+    color: #000;
+    font-family: Anton;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    cursor: pointer;
+}
+a.form-last[data-v-273194bc][data-v-273194bc] svg {
+    width: 20px;
+    height: 20px;
+}
+button.form-btn[data-v-273194bc] {
+    width: 100%;
+    display: flex;
+    height: 38px;
+    padding: 10px 0px;
+    justify-content: center;
+    align-items: center;
+    gap: 7.647px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    border: 1px solid #000;
+    background: #F96;
+    box-shadow: 2px 2px 0px 0px #1B1C1D;
+}
+button.form-btn p[data-v-273194bc] {
+    color: #FFF;
+    text-align: center;
+    font-family: DM Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+}
+.drop-zone[data-v-273194bc][data-v-273194bc][data-v-273194bc][data-v-273194bc] {
+    width: 100%;
+    height: 110px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 9px;
+    border: 1px solid #FF5757;
+    background: #FFF;
+    justify-content: center;
+}
+.img-input label[data-v-273194bc][data-v-273194bc] {
+    color: #000;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-bottom: 8px;
+}
+.input-group-2 label[data-v-273194bc][data-v-273194bc] {
+    color: #000;
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-bottom: 8px;
+}
+.input-3 label[data-v-273194bc][data-v-273194bc] {
+    color: #000;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 100%;
+    padding-bottom: 8px;
+}
+.input-group-2 input[data-v-273194bc][data-v-273194bc] {
+    border-radius: 9px;
+    border: 1px solid #ADADAD;
+    background: #FFF;
+    color: #808080;
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    padding: 8px;
+}
+.input-3 input[data-v-273194bc] {
+    width: 28%;
+    border-radius: 9px;
+    border: 1px solid #ADADAD;
+    padding: 8px 8px 8px 35px !important;
+}
+.imgss[data-v-273194bc][data-v-273194bc][data-v-273194bc] {
+    position: absolute;
+    left: 170px;
+    bottom: 0px;
+    
+    width: 26%;
+}
+
+}
+@media screen and (max-width: 768px){
+  .main-form[data-v-273194bc][data-v-273194bc][data-v-273194bc][data-v-273194bc] {
+    width: 100%;
+    height: 560px;
+    border-radius: 24px;
+    background-image: url(/images/Sign\ Up.png);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 25px 0px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.main-form[data-v-273194bc][data-v-273194bc][data-v-273194bc][data-v-273194bc] {
+    width: 100%;
+    height: 100%;
+    border-radius: 24px;
+    background-image: url(/images/Sign\ Up.png);
+    position: relative;
+    display: flex;
+    gap: 25px 0px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+.form-titel[data-v-273194bc][data-v-273194bc] {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.form-1[data-v-273194bc][data-v-273194bc][data-v-273194bc][data-v-273194bc] {
+    width: 50%;
+    height: 420px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: #FFF;
+    box-shadow: 0px 4px 35px 0px rgba(0, 0, 0, 0.08);
+    z-index: 1;
+    position: relative;
+    padding: 20px 24px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.imgss[data-v-273194bc][data-v-273194bc][data-v-273194bc][data-v-273194bc][data-v-273194bc] {
+    position: relative;
+    left: 85px;
+    bottom: 0px;
+    width: 33%;
+}
+.form-box[data-v-273194bc][data-v-273194bc] {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+a.form-last[data-v-273194bc][data-v-273194bc] {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    gap: 14px;
+    padding-top: 20px;
+}
+img.image-preview[data-v-273194bc][data-v-273194bc][data-v-273194bc] {
+    width: 100%;
+    min-width: 288px;
+    min-height: 108px;
+    border-radius: 5px;
+    max-width: 443px;
+    max-height: 108px;
+}
+}
+@media screen and (max-width: 425px){
+
+.main-form[data-v-273194bc][data-v-273194bc][data-v-273194bc][data-v-273194bc][data-v-273194bc] {
+    width: 100%;
+    height: 100%;
+    border-radius: 24px;
+    background-image: url(/images/Sign\ Up.png);
+    position: relative;
+    display: flex;
+    gap: 25px 0px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    padding: 20px;
+}
+div#popup-box {
+    padding-right: 0px;
+}
+.form-img img[data-v-273194bc] {
+    width: 40%;
+}
+.form-titel h2[data-v-273194bc][data-v-273194bc] {
+    color: #1C1D1E;
+    font-family: sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+.imgss[data-v-273194bc][data-v-273194bc][data-v-273194bc][data-v-273194bc][data-v-273194bc][data-v-273194bc] {
+    position: relative;
+    left: 85px;
+    bottom: 0px;
+    width: 33%;
+    display: none;
+}
+.form-1[data-v-273194bc][data-v-273194bc][data-v-273194bc][data-v-273194bc][data-v-273194bc] {
+    width: 100%;
+    height: 420px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: #FFF;
+    box-shadow: 0px 4px 35px 0px rgba(0, 0, 0, 0.08);
+    z-index: 1;
+    position: relative;
+    padding: 20px 24px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
 }
 </style>

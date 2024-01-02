@@ -63,7 +63,7 @@
             </div>
         </div>
       </div>
-      <div v-if="singups">
+      <div v-if="singups" style="display: flex; justify-content: center">
       <Singup @cancel="closeModal"/>
       
     </div>
@@ -186,15 +186,13 @@ this.bgColor2 = '#F96';
     box-sizing: border-box;
  }
  section.form-1-sec {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 67%;
+   
 
 }
 
 .main-form {
-    width: 67%;
+    width: 100%;
     height: 900px;
     background-image: url(/images/Up.png);
     padding: 10px 40px;
@@ -502,7 +500,7 @@ button.Brand {
 }
 @media screen and (max-width: 1600px){
     .main-form[data-v-208aaa41] {
-    width: 67%;
+    width: 100%;
     height: 785px;
     background-image: url(/images/Up.png);
     padding: 10px 40px;
@@ -611,7 +609,7 @@ button.Brand[data-v-208aaa41] {
     padding: 8px 0px;
 }
 .main-form[data-v-208aaa41][data-v-208aaa41] {
-    width: 67%;
+    width: 100%;
     height: 650px;
     background-image: url(/images/Up.png);
     padding: 10px 30px;
@@ -622,28 +620,28 @@ button.Influencer[data-v-208aaa41][data-v-208aaa41] {
     border: 1px solid #000;
     /* background: #FFF; */
     box-shadow: 2px 2px 0px 0px #1B1C1D;
-    padding: 5px 8px 5px 8px;
+    padding: 6px;
     color: #000;
     text-align: center;
     font-family: sans-serif;
     font-size: 12px;
     font-style: normal;
     font-weight: 700;
-    line-height: 24px;
+    line-height: 15px;
 }
 button.Brand[data-v-208aaa41][data-v-208aaa41] {
     border-radius: 6px;
     border: 1px solid #000;
     /* background: #F96; */
     box-shadow: 2px 2px 0px 0px #1B1C1D;
-    padding: 5px 20px 5px 20px;
+    padding: 6px 12px ;
     color: black;
     text-align: center;
     font-family: sans-serif;
     font-size: 12px;
     font-style: normal;
     font-weight: 700;
-    line-height: 24px;
+    line-height: 15px;
 }
 .fromr-btn a[data-v-208aaa41] {
     color: gray;
@@ -811,7 +809,7 @@ button.Brand[data-v-208aaa41][data-v-208aaa41] {
     padding: 15px 0px;
 }
 .main-form[data-v-208aaa41][data-v-208aaa41][data-v-208aaa41] {
-    width: 68%;
+    width: 100%;
     height: 560px;
     background-image: url(/images/Up.png);
     padding: 10px 25px;
@@ -889,17 +887,13 @@ button.button-20 p[data-v-208aaa41] {
 }
 }
 @media screen and (max-width: 1024px){
-    .main-form[data-v-208aaa41][data-v-208aaa41][data-v-208aaa41][data-v-208aaa41] {
-    width: 92%;
-    height: 560px;
-    background-image: url(/images/Up.png);
-    padding: 10px 25px;
-    border-radius: 45px;
+    section.form-1-sec[data-v-208aaa41] {
+    width: 90%;
 }
 }
 @media screen and (max-width: 768px){
     .main-form[data-v-208aaa41][data-v-208aaa41][data-v-208aaa41][data-v-208aaa41][data-v-208aaa41] {
-    width: 90%;
+    width: 100%;
     height: 100%;
     background-image: url(/images/Up.png);
     padding: 10px 25px;
@@ -942,7 +936,7 @@ button.button-20 p[data-v-208aaa41] {
 }
 @media screen and (max-width: 425px){
     .main-form[data-v-208aaa41][data-v-208aaa41][data-v-208aaa41][data-v-208aaa41][data-v-208aaa41][data-v-208aaa41] {
-    width: 90%;
+    width: 100%;
     height: 100%;
     background-image: url(/images/Up.png);
     padding: 10px 15px;

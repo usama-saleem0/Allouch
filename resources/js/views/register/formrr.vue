@@ -145,6 +145,14 @@ this.bgColor2 = '#F96';
 
 });;
         }
+
+        if(response.data.user.auth_type =='Brand'){
+                console.log(response.data.user.auth_type);
+                this.$router.push("/Branddashoboard").then(() => {
+                    location.reload();
+
+});;
+        }
       } catch (error) {
         notify.authError(error);
       }

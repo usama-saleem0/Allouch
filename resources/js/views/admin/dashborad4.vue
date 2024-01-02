@@ -405,6 +405,8 @@ export default {
     margin-top: -80px;
     border-radius: 50%;
     max-height: 155px;
+    min-height: 155px;
+
     -o-object-fit: cover;
     object-fit: cover;
 }
@@ -1049,6 +1051,8 @@ button.llo {
     margin-top: -80px;
     border-radius: 50%;
     max-height: 115px;
+    min-height: 115px;
+
     object-fit: cover;
 }
 .list-titel p {
@@ -1059,7 +1063,7 @@ button.llo {
     font-weight: 700;
     line-height: 24px;
     margin: 0px;
-    padding-right: 0px;
+    padding-right: 20px;
 }
 .list-id h2 {
     color: #000;
@@ -1619,6 +1623,8 @@ button.llo {
     margin-top: -80px;
     border-radius: 50%;
     max-height: 115px;
+    min-height: 115px;
+
     object-fit: cover;
 }
 .list-1[data-v-fdc95946] {

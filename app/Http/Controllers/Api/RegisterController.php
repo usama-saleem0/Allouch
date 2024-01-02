@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Api;
 
 use App\Models\User;
+use App\Models\Branddetail;
+
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use App\Http\Requests\RegisterRequest;
@@ -76,5 +78,49 @@ class RegisterController extends Controller
           
         }
         return response()->json(['data'=>$request->user_id]);
+    }
+
+    public function brand_register(Request $request){
+        // dd($request->all());
+
+        $data = new Branddetail;
+        $data->firstname = $request->first_name;
+        $data->lastname = $request->last_name;
+        $data->location = $request->location;
+        $data->company = $request->company;
+        $data->website = $request->website;
+        $data->contact = $request->contact;
+        $data->user_id = $request->userId;
+
+        $data->save();
+
+        return response()->json(['data'=>$data]);
+
+
+
+
+
+
+    }
+
+    public function businesstype(Request $request){
+
+        $data = Branddetail::where('user_id' , $request->userId)->first();
+        $data->business_type = $request->businesstype;
+
+        $data->save();
+
+        return response()->json(['data'=>$data]);
+    }
+
+
+    public function country(Request $request){
+
+        $data = Branddetail::where('user_id' , $request->userId)->first();
+        $data->country = $request->country;
+
+        $data->save();
+
+        return response()->json(['data'=>$data]);
     }
 }

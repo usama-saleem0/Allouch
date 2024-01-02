@@ -10,7 +10,43 @@ class ProfileController extends Controller
      public function getuser(){
         // dd(auth()->user()->id);
 
-        $data = User::where('id' , auth()->user()->id)->first();
+        $data = User::with('brand')->where('id' , auth()->user()->id)->first();
         return response()->json(['data'=> $data]);
+     }
+
+
+     public function edit_profile(Request $request){
+      //  dd($request->image);
+
+      $request->validate([
+        
+         'image' => 'max:2048', 
+     ]);
+
+     if(isset($request->image)){
+
+        $filename = $request->file('image')->getClientOriginalName();
+        $imagePath =  $request->file('image')->move(public_path('uploads'), $filename);
+     }
+        
+         $data = User::where('id' , auth()->user()->id)->first();
+         $data->bio = $request->bio;
+         $data->facebook = $request->facebook;
+         $data->instagram = $request->instagram;
+         $data->linkdin = $request->linkdin;
+         $data->user_name = $request->username;
+         if(isset($request->image)){
+
+            $data->image = $filename;
+         }
+         $data->save();
+
+         return response()->json(['saved' => true]);
+
+
+
+
+
+
      }
 }

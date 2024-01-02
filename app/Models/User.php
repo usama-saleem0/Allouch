@@ -57,4 +57,10 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return config('auth.must_verify_email');
     }
+
+    public function brand()
+    {
+        return $this->belongsTo(Branddetail::class , 'id' , 'user_id');
+    
+    }
 }

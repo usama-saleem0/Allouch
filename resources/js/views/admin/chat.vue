@@ -570,9 +570,9 @@ export default {
       width: 88%;
     border-radius: 10px;
     height: 2em;
-    background-color: #FF9966;
+    background-color:transparent;
     border: none;
-
+    outline: none;
     color: black;
     }
 
@@ -1603,7 +1603,7 @@ button.Add {
     border-radius: 20px;
     background: #FFF;
     box-shadow: 0px 10px 54px 0px rgba(0, 0, 0, 0.25);
-    width: 90%;
+    width: 40%;
     padding: 24px;
 }
 .btn-2 {
@@ -1622,6 +1622,15 @@ button.Add {
     width: 44%;
     height: 260px;
     flex-shrink: 0;
+}
+.inp[data-v-0037c057] {
+    width: 85%;
+    border-radius: 10px;
+    height: 2em;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: black;
 }
 .card-box {
     width: 100%;
@@ -1652,7 +1661,7 @@ button.Add {
     border-radius: 20px;
     background: #FFF;
     box-shadow: 0px 10px 54px 0px rgba(0, 0, 0, 0.25);
-    width: 90%;
+    width: 55%;
     padding: 24px;
 }
 .Sponsorship {
@@ -1671,6 +1680,15 @@ button.Add {
     width: 100%;
     background-color: #F5F3EA;
     padding: 20px;
+}
+.inp[data-v-0037c057][data-v-0037c057] {
+    width: 75%;
+    border-radius: 10px;
+    height: 2em;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: black;
 }
 .yes {
     width: 50%;
@@ -1761,6 +1779,28 @@ button.Add {
     /* flex-direction: column; */
     align-items: center;
     padding: 20px 0px 25px 0px;
+}
+}
+@media screen and (max-width: 375px){
+    .inp[data-v-0037c057][data-v-0037c057] {
+    width: 70%;
+    border-radius: 10px;
+    height: 2em;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: black;
+}
+}
+@media screen and (max-width: 325px){
+    .inp[data-v-0037c057][data-v-0037c057] {
+    width: 64%;
+    border-radius: 10px;
+    height: 2em;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: black;
 }
 }
 </style>

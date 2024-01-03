@@ -891,11 +891,14 @@ button.button-20 p[data-v-208aaa41] {
 }
 @media screen and (max-width: 768px){
     .main-form[data-v-208aaa41][data-v-208aaa41][data-v-208aaa41][data-v-208aaa41][data-v-208aaa41] {
-    width: 100%;
+        width: 100%;
     height: 100%;
     background-image: url(/images/Up.png);
     padding: 10px 25px;
     border-radius: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .main-box[data-v-208aaa41][data-v-208aaa41][data-v-208aaa41][data-v-208aaa41] {
     width: 100%;

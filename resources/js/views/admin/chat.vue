@@ -93,6 +93,10 @@ line-height: normal;
         </div>
     </div>
     <br>
+    <h2 class="chat-para">Chat</h2>
+    <div class="col" style="overflow: scroll;
+    height: 200px;
+    overflow-x: hidden;">
     <div class="div"  v-for="inf in influencer">
     <div class="row" style="       display: flex;
     justify-content: space-between;
@@ -120,6 +124,7 @@ line-height: normal;
             </div>
         </div>
     </div>
+</div>
 </div>
 
     </div>
@@ -960,6 +965,15 @@ button.llo {
     align-items: center;
     padding: 20px 0px 25px 0px;
 }
+h2.chat-para {
+    color: #000;
+    font-family: sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+}
+
 
 .id-box h2 {
     color: #000;
@@ -1072,7 +1086,7 @@ button.llo {
 }
 @media screen and (max-width: 1600px){
     .ahtis{
-    width: 450px;
+    width: 430px;
     display: flex;
     justify-content: space-between;
     align-items: center; margin-bottom: 10px;
@@ -1227,7 +1241,7 @@ button.Add {
     object-fit: cover;
 }
     .ahtis{
-    width: 350px;
+    width: 315px;
     display: flex;
     justify-content: space-between;
     align-items: center; margin-bottom: 20px;

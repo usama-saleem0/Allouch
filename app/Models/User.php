@@ -63,4 +63,11 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->belongsTo(Branddetail::class , 'id' , 'user_id');
     
     }
+
+
+    public function package()
+    {
+        return $this->hasMany(Package::class ,'user_id' , 'id');
+    
+    }
 }

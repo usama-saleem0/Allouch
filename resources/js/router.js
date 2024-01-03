@@ -168,7 +168,7 @@ let router = new Router({
         },
 
         {
-            path: "/admin/dashborad4",
+            path: "/admin/dashborad4/:id",
             name: "admin",
             component: () => import("./views/admin/dashborad4.vue"),
             meta: {

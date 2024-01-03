@@ -6,6 +6,8 @@ use App\Http\Controllers\Api;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Paypalcontroller;
 use App\Http\Controllers\ChatController;
+use App\Http\Controllers\MerchandiseController;
+
 
 
 
@@ -52,6 +54,8 @@ Route::group(['middleware' => ['auth:api']], function () {
     Route::post('api/edit_profile', [ProfileController::class, 'edit_profile']);
 
     Route::get('getuser', [ProfileController::class, 'getuser']);
+    Route::get('getprofile', [ProfileController::class, 'getprofile']);
+
     Route::get('getpackage', [ProfileController::class, 'getpackage']);
 
     Route::post('api/package', [ProfileController::class, 'package']);
@@ -61,6 +65,8 @@ Route::group(['middleware' => ['auth:api']], function () {
     Route::get('getuserchat', [ChatController::class, 'getuser']);
 
     Route::post('chats', [ChatController::class, 'chats']);
+    Route::post('api/merchandise', [MerchandiseController::class, 'addmerchandise']);
+
 
     Route::get('getchat', [ChatController::class, 'getchat']);
     

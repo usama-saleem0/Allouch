@@ -5,7 +5,7 @@
                     <img src="/images/logo.png" alt="">
                 </div>
                 <div class="form-titel">
-                    <h2>step-2</h2>
+                    <h2>Add Merchandise</h2>
                 </div>
                 <div class="form-box">
                     <img class="imgss" src="/images/Character.png" alt="">
@@ -24,9 +24,10 @@
          
         >
         <input type="file" id="file-input" ref="fileInput" style="display: none" @change="handleFileChange" accept="image/*">
-          <div class="image-drop-zone" v-if="!imageUrl"  >
+          <div class="image-drop-zone" v-if="!imageUrl"  style="display: flex;
+    justify-content: center;">
     
-            <span class="drop-zone__prompt" ><svg xmlns="http://www.w3.org/2000/svg" width="74" height="74" viewBox="0 0 74 74" fill="none">
+            <span class="drop-zone__prompt" ><svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 74 74" fill="none">
       <path d="M58.5833 40.0771H40.0833V58.5771H33.9166V40.0771H15.4166V33.9104H33.9166V15.4104H40.0833V33.9104H58.5833V40.0771Z" fill="#FF9966"/>
     </svg></span>
           </div>
@@ -37,27 +38,19 @@
     
       
       </div>
-                            <!-- <div id="app">
-        <div class="drop-zone" :class="{ 'drop-zone--over': isDragging }" @dragover.prevent="handleDragOver" @dragleave="handleDragLeave" @drop="handleDrop">
-          <span class="drop-zone__prompt" v-if="!thumbnail"><svg xmlns="http://www.w3.org/2000/svg" width="74" height="74" viewBox="0 0 74 74" fill="none">
-      <path d="M58.5833 40.0771H40.0833V58.5771H33.9166V40.0771H15.4166V33.9104H33.9166V15.4104H40.0833V33.9104H58.5833V40.0771Z" fill="#FF9966"/>
-    </svg></span>
-          <input type="file" name="myFile" class="drop-zone__input" @change="handleFileChange">
-          <div class="drop-zone__thumb" v-if="thumbnail" :style="{ 'background-image': `url('${thumbnail}')` }" :data-label="fileName"></div>
-        </div>
-      </div> -->
+                      
                         </div>
                         
                         <div class="input-group-2">
-                            <label for="text">Bio</label>
+                            <label for="text">Title</label>
                             <input type="text" placeholder="Write here
-                            " v-model="form.bio">
+                            " v-model="form.title">
                         </div>
                         <div class="input-3">
-                            <label for="text">Provide Social Media Handles</label>
-                            <input class="icon-input1" type="text" placeholder="" v-model="form.facebook">
-                            <input class="icon-input2" type="text" placeholder="" v-model="form.instagram">
-                            <input class="icon-input3" type="text" placeholder="" v-model="form.linkdin">
+                            <label for="text">Provide Product Details</label>
+                            <input class="icon-input1" placeholder="Price" type="number"  v-model="form.price">
+                            <input class="icon-input2" placeholder="Quatity" type="number"  v-model="form.quatity">
+                          
                         </div>
                         <button class="form-btn" @click="save">
                             <p>Start for free </p>
@@ -101,13 +94,7 @@
         Final
     },
     
-      props: {
-        userId: {
-          type: Number,
-          required: true,
-        },
-      },
-    
+   
       data () {
                 return {
                     method:'POST',
@@ -161,23 +148,21 @@
         save(){
                     const formData = new FormData();
         formData.append('image', this.file); 
-        formData.append('bio', this.form.bio);
-        formData.append('facebook', this.form.facebook);
-        formData.append('instagram', this.form.instagram);
-        formData.append('linkdin', this.form.linkdin);
-        formData.append('user_id', this.userId);
+        formData.append('title', this.form.title);
+        formData.append('price', this.form.price);
+        formData.append('quantity', this.form.quatity);
+       
     
     
        
     
          
-                    byMethod(this.method, '/api/profile' , formData)
+                    byMethod(this.method, '/api/merchandise' , formData)
                          .then((res) => {
                            
                              if(res.data.data) {
                               console.log(res.data.data)
-                              this.showss = false;
-                              this.final = true;
+                              this.$emit('cancel');
                                 // this.$router.push('/brands');
                               
                              }
@@ -213,13 +198,13 @@
         justify-content: center;
     }
     .icon-input1 {
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M20.9 2H3.1C2.80826 2 2.52847 2.11589 2.32218 2.32218C2.11589 2.52847 2 2.80826 2 3.1V20.9C2 21.1917 2.11589 21.4715 2.32218 21.6778C2.52847 21.8841 2.80826 22 3.1 22H12.68V14.25H10.08V11.25H12.68V9C12.6261 8.47176 12.6885 7.93813 12.8627 7.43654C13.0369 6.93495 13.3188 6.47755 13.6885 6.09641C14.0582 5.71528 14.5068 5.41964 15.0028 5.23024C15.4989 5.04083 16.0304 4.96225 16.56 5C17.3383 4.99521 18.1163 5.03528 18.89 5.12V7.82H17.3C16.04 7.82 15.8 8.42 15.8 9.29V11.22H18.8L18.41 14.22H15.8V22H20.9C21.0445 22 21.1875 21.9715 21.321 21.9163C21.4544 21.861 21.5757 21.78 21.6778 21.6778C21.78 21.5757 21.861 21.4544 21.9163 21.321C21.9715 21.1875 22 21.0445 22 20.9V3.1C22 2.95555 21.9715 2.81251 21.9163 2.67905C21.861 2.54559 21.78 2.42433 21.6778 2.32218C21.5757 2.22004 21.4544 2.13901 21.321 2.08373C21.1875 2.02845 21.0445 2 20.9 2Z' fill='%23FF5757'/%3E%3C/svg%3E");
+        /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M20.9 2H3.1C2.80826 2 2.52847 2.11589 2.32218 2.32218C2.11589 2.52847 2 2.80826 2 3.1V20.9C2 21.1917 2.11589 21.4715 2.32218 21.6778C2.52847 21.8841 2.80826 22 3.1 22H12.68V14.25H10.08V11.25H12.68V9C12.6261 8.47176 12.6885 7.93813 12.8627 7.43654C13.0369 6.93495 13.3188 6.47755 13.6885 6.09641C14.0582 5.71528 14.5068 5.41964 15.0028 5.23024C15.4989 5.04083 16.0304 4.96225 16.56 5C17.3383 4.99521 18.1163 5.03528 18.89 5.12V7.82H17.3C16.04 7.82 15.8 8.42 15.8 9.29V11.22H18.8L18.41 14.22H15.8V22H20.9C21.0445 22 21.1875 21.9715 21.321 21.9163C21.4544 21.861 21.5757 21.78 21.6778 21.6778C21.78 21.5757 21.861 21.4544 21.9163 21.321C21.9715 21.1875 22 21.0445 22 20.9V3.1C22 2.95555 21.9715 2.81251 21.9163 2.67905C21.861 2.54559 21.78 2.42433 21.6778 2.32218C21.5757 2.22004 21.4544 2.13901 21.321 2.08373C21.1875 2.02845 21.0445 2 20.9 2Z' fill='%23FF5757'/%3E%3C/svg%3E"); */
         background-repeat: no-repeat;
         background-position: 10px center;
         padding-left: 40px; /* Adjust this value based on the width of your SVG icon */
       }
       .icon-input2 {
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M13.028 2C14.153 2.003 14.724 2.009 15.217 2.023L15.411 2.03C15.635 2.038 15.856 2.048 16.123 2.06C17.187 2.11 17.913 2.278 18.55 2.525C19.21 2.779 19.766 3.123 20.322 3.678C20.8305 4.1779 21.2239 4.78259 21.475 5.45C21.722 6.087 21.89 6.813 21.94 7.878C21.952 8.144 21.962 8.365 21.97 8.59L21.976 8.784C21.991 9.276 21.997 9.847 21.999 10.972L22 11.718V13.028C22.0024 13.7574 21.9948 14.4868 21.977 15.216L21.971 15.41C21.963 15.635 21.953 15.856 21.941 16.122C21.891 17.187 21.721 17.912 21.475 18.55C21.2246 19.2178 20.8311 19.8226 20.322 20.322C19.8219 20.8303 19.2173 21.2238 18.55 21.475C17.913 21.722 17.187 21.89 16.123 21.94C15.8857 21.9512 15.6483 21.9612 15.411 21.97L15.217 21.976C14.724 21.99 14.153 21.997 13.028 21.999L12.282 22H10.973C10.2432 22.0025 9.51349 21.9949 8.78397 21.977L8.58997 21.971C8.35258 21.962 8.11524 21.9517 7.87797 21.94C6.81397 21.89 6.08797 21.722 5.44997 21.475C4.78264 21.2244 4.17818 20.8308 3.67897 20.322C3.17001 19.8223 2.77619 19.2176 2.52497 18.55C2.27797 17.913 2.10997 17.187 2.05997 16.122C2.04883 15.8847 2.03883 15.6474 2.02997 15.41L2.02497 15.216C2.00654 14.4868 1.9982 13.7574 1.99997 13.028V10.972C1.99718 10.2426 2.00451 9.5132 2.02197 8.784L2.02897 8.59C2.03697 8.365 2.04697 8.144 2.05897 7.878C2.10897 6.813 2.27697 6.088 2.52397 5.45C2.77508 4.7819 3.16969 4.17702 3.67997 3.678C4.17906 3.16947 4.78311 2.77599 5.44997 2.525C6.08797 2.278 6.81297 2.11 7.87797 2.06C8.14397 2.048 8.36597 2.038 8.58997 2.03L8.78397 2.024C9.51316 2.00623 10.2426 1.99857 10.972 2.001L13.028 2ZM12 7C10.6739 7 9.40211 7.52678 8.46443 8.46447C7.52675 9.40215 6.99997 10.6739 6.99997 12C6.99997 13.3261 7.52675 14.5979 8.46443 15.5355C9.40211 16.4732 10.6739 17 12 17C13.326 17 14.5978 16.4732 15.5355 15.5355C16.4732 14.5979 17 13.3261 17 12C17 10.6739 16.4732 9.40215 15.5355 8.46447C14.5978 7.52678 13.326 7 12 7ZM12 9C12.3939 8.99993 12.7841 9.07747 13.1481 9.22817C13.5121 9.37887 13.8428 9.5998 14.1214 9.87833C14.4001 10.1569 14.6211 10.4875 14.7719 10.8515C14.9227 11.2154 15.0004 11.6055 15.0005 11.9995C15.0005 12.3935 14.923 12.7836 14.7723 13.1476C14.6216 13.5116 14.4007 13.8423 14.1221 14.121C13.8436 14.3996 13.5129 14.6206 13.149 14.7714C12.785 14.9223 12.3949 14.9999 12.001 15C11.2053 15 10.4423 14.6839 9.87965 14.1213C9.31704 13.5587 9.00097 12.7956 9.00097 12C9.00097 11.2044 9.31704 10.4413 9.87965 9.87868C10.4423 9.31607 11.2053 9 12.001 9M17.251 5.5C16.9194 5.5 16.6015 5.6317 16.3671 5.86612C16.1327 6.10054 16.001 6.41848 16.001 6.75C16.001 7.08152 16.1327 7.39946 16.3671 7.63388C16.6015 7.8683 16.9194 8 17.251 8C17.5825 8 17.9004 7.8683 18.1349 7.63388C18.3693 7.39946 18.501 7.08152 18.501 6.75C18.501 6.41848 18.3693 6.10054 18.1349 5.86612C17.9004 5.6317 17.5825 5.5 17.251 5.5Z' fill='%23FF5757'/%3E%3C/svg%3E");
+        /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M13.028 2C14.153 2.003 14.724 2.009 15.217 2.023L15.411 2.03C15.635 2.038 15.856 2.048 16.123 2.06C17.187 2.11 17.913 2.278 18.55 2.525C19.21 2.779 19.766 3.123 20.322 3.678C20.8305 4.1779 21.2239 4.78259 21.475 5.45C21.722 6.087 21.89 6.813 21.94 7.878C21.952 8.144 21.962 8.365 21.97 8.59L21.976 8.784C21.991 9.276 21.997 9.847 21.999 10.972L22 11.718V13.028C22.0024 13.7574 21.9948 14.4868 21.977 15.216L21.971 15.41C21.963 15.635 21.953 15.856 21.941 16.122C21.891 17.187 21.721 17.912 21.475 18.55C21.2246 19.2178 20.8311 19.8226 20.322 20.322C19.8219 20.8303 19.2173 21.2238 18.55 21.475C17.913 21.722 17.187 21.89 16.123 21.94C15.8857 21.9512 15.6483 21.9612 15.411 21.97L15.217 21.976C14.724 21.99 14.153 21.997 13.028 21.999L12.282 22H10.973C10.2432 22.0025 9.51349 21.9949 8.78397 21.977L8.58997 21.971C8.35258 21.962 8.11524 21.9517 7.87797 21.94C6.81397 21.89 6.08797 21.722 5.44997 21.475C4.78264 21.2244 4.17818 20.8308 3.67897 20.322C3.17001 19.8223 2.77619 19.2176 2.52497 18.55C2.27797 17.913 2.10997 17.187 2.05997 16.122C2.04883 15.8847 2.03883 15.6474 2.02997 15.41L2.02497 15.216C2.00654 14.4868 1.9982 13.7574 1.99997 13.028V10.972C1.99718 10.2426 2.00451 9.5132 2.02197 8.784L2.02897 8.59C2.03697 8.365 2.04697 8.144 2.05897 7.878C2.10897 6.813 2.27697 6.088 2.52397 5.45C2.77508 4.7819 3.16969 4.17702 3.67997 3.678C4.17906 3.16947 4.78311 2.77599 5.44997 2.525C6.08797 2.278 6.81297 2.11 7.87797 2.06C8.14397 2.048 8.36597 2.038 8.58997 2.03L8.78397 2.024C9.51316 2.00623 10.2426 1.99857 10.972 2.001L13.028 2ZM12 7C10.6739 7 9.40211 7.52678 8.46443 8.46447C7.52675 9.40215 6.99997 10.6739 6.99997 12C6.99997 13.3261 7.52675 14.5979 8.46443 15.5355C9.40211 16.4732 10.6739 17 12 17C13.326 17 14.5978 16.4732 15.5355 15.5355C16.4732 14.5979 17 13.3261 17 12C17 10.6739 16.4732 9.40215 15.5355 8.46447C14.5978 7.52678 13.326 7 12 7ZM12 9C12.3939 8.99993 12.7841 9.07747 13.1481 9.22817C13.5121 9.37887 13.8428 9.5998 14.1214 9.87833C14.4001 10.1569 14.6211 10.4875 14.7719 10.8515C14.9227 11.2154 15.0004 11.6055 15.0005 11.9995C15.0005 12.3935 14.923 12.7836 14.7723 13.1476C14.6216 13.5116 14.4007 13.8423 14.1221 14.121C13.8436 14.3996 13.5129 14.6206 13.149 14.7714C12.785 14.9223 12.3949 14.9999 12.001 15C11.2053 15 10.4423 14.6839 9.87965 14.1213C9.31704 13.5587 9.00097 12.7956 9.00097 12C9.00097 11.2044 9.31704 10.4413 9.87965 9.87868C10.4423 9.31607 11.2053 9 12.001 9M17.251 5.5C16.9194 5.5 16.6015 5.6317 16.3671 5.86612C16.1327 6.10054 16.001 6.41848 16.001 6.75C16.001 7.08152 16.1327 7.39946 16.3671 7.63388C16.6015 7.8683 16.9194 8 17.251 8C17.5825 8 17.9004 7.8683 18.1349 7.63388C18.3693 7.39946 18.501 7.08152 18.501 6.75C18.501 6.41848 18.3693 6.10054 18.1349 5.86612C17.9004 5.6317 17.5825 5.5 17.251 5.5Z' fill='%23FF5757'/%3E%3C/svg%3E"); */
         background-repeat: no-repeat;
         background-position: 10px center;
         padding-left: 40px;
@@ -232,7 +217,7 @@
         padding-left: 40px; /* Adjust this value based on the width of your SVG icon */
       }
     .main-form {
-        width: 100%;
+        width: 67%;
         height: 900px;
         border-radius: 50px;
         background-image: url(/images/Sign\ Up.png);
@@ -267,10 +252,10 @@
     }
     
     .input-3 input {
-        width: 28%;
+        width: 48%;
         border-radius: 9px;
         border: 1px solid #ADADAD;
-        padding: 10px 10px 10px 40px;
+        padding: 10px 10px 10px 15px;
     }
     .form-titel {
         width: 30%;
@@ -409,7 +394,7 @@
         line-height: normal;
         cursor: pointer;
     }
-    .drop-zone[data-v-273194bc] {
+    .drop-zone {
         width: 100%;
         height: 280px;
         padding: 25px;
@@ -474,7 +459,7 @@
     }
     img.image-preview {
         width: 100%;
-        min-width: 443px;
+        min-width: 380px;
         min-height: 278px;
         border-radius: 5px;
         max-width: 443px;
@@ -482,7 +467,7 @@
     }
     
     @media screen and (max-width: 1600px){
-      .form-titel h2[data-v-273194bc] {
+      .form-titel h2 {
         color: #1C1D1E;
         font-family: sans-serif;
         font-size: 29px;
@@ -490,15 +475,15 @@
         font-weight: 800;
         line-height: normal;
     }
-    img.image-preview[data-v-273194bc] {
+    img.image-preview {
         width: 100%;
-        min-width: 394px;
+        min-width: 280px;
         min-height: 180px;
         border-radius: 5px;
         max-width: 443px;
         max-height: 180px;
     }
-    .form-1[data-v-273194bc] {
+    .form-1 {
         width: 63%;
         height: 606px;
         flex-shrink: 0;
@@ -513,8 +498,8 @@
         align-items: center;
         justify-content: space-between;
     }
-    .main-form[data-v-273194bc] {
-        width: 100%;
+    .main-form {
+        width: 67%;
         height: 785px;
         border-radius: 50px;
         background-image: url(/images/Sign\ Up.png);
@@ -527,12 +512,12 @@
         background-size: cover;
         background-repeat: no-repeat;
     }
-    .form-titel[data-v-273194bc] {
+    .form-titel {
         width: 28%;
         display: flex;
         justify-content: flex-end;
     }
-    .drop-zone[data-v-273194bc][data-v-273194bc] {
+    .drop-zone {
         width: 100%;
         height: 180px;
         padding: 25px;
@@ -548,7 +533,7 @@
         border: 1px solid #FF5757;
         background: #FFF;
     }
-    a.form-last[data-v-273194bc] {
+    a.form-last {
         width: 60%;
         display: flex;
         align-items: center;
@@ -557,7 +542,7 @@
         gap: 14px;
         padding-top: 20px;
     }
-    .imgss[data-v-273194bc] {
+    .imgss {
         position: absolute;
         left: 160px;
         bottom: 0px;
@@ -565,8 +550,16 @@
     }
     }
     @media screen and (max-width: 1440px){
-      .main-form[data-v-273194bc][data-v-273194bc] {
-        width: 100%;
+        .form-titel h2 {
+    color: #1C1D1E;
+    font-family: sans-serif;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+      .main-form {
+        width: 67%;
         height: 650px;
         border-radius: 50px;
         background-image: url(/images/Sign\ Up.png);
@@ -579,15 +572,15 @@
         background-size: cover;
         background-repeat: no-repeat;
     }
-    img.image-preview[data-v-273194bc] {
+    img.image-preview {
         width: 100%;
-        min-width: 318px;
+        min-width: 200px;
         min-height: 124px;
         border-radius: 5px;
         max-width: 443px;
         max-height: 124px;
     }
-    .drop-zone[data-v-273194bc][data-v-273194bc][data-v-273194bc] {
+    .drop-zone {
         width: 100%;
         height: 125px;
         padding: 25px;
@@ -603,7 +596,7 @@
         background: #FFF;
         justify-content: center;
     }
-    .input-group-2 input[data-v-273194bc] {
+    .input-group-2 input {
         border-radius: 9px;
         border: 1px solid #ADADAD;
         background: #FFF;
@@ -615,7 +608,7 @@
         line-height: normal;
         padding: 10px;
     }
-    .img-input label[data-v-273194bc] {
+    .img-input label {
         color: #000;
         font-family: sans-serif;
         font-size: 14px;
@@ -624,7 +617,7 @@
         line-height: normal;
         padding-bottom: 10px;
     }
-    .input-group-2 label[data-v-273194bc] {
+    .input-group-2 label {
         color: #000;
         font-family: Poppins;
         font-size: 14px;
@@ -633,7 +626,7 @@
         line-height: normal;
         padding-bottom: 10px;
     }
-    .input-3 label[data-v-273194bc] {
+    .input-3 label {
         color: #000;
         font-family: sans-serif;
         font-size: 14px;
@@ -643,7 +636,7 @@
         width: 100%;
         padding-bottom: 10px;
     }
-    .form-1[data-v-273194bc][data-v-273194bc] {
+    .form-1 {
         width: 58%;
         height: 485px;
         flex-shrink: 0;
@@ -658,13 +651,13 @@
         align-items: center;
         justify-content: space-between;
     }
-    .imgss[data-v-273194bc][data-v-273194bc] {
+    .imgss {
         position: absolute;
         left: 160px;
         bottom: 0px;
         width: 30%;
     }
-    a.form-last p[data-v-273194bc] {
+    a.form-last p {
         color: #000;
         font-family: Anton;
         font-size: 15px;
@@ -673,10 +666,21 @@
         line-height: normal;
         cursor: pointer;
     }
+
+   
     }
     @media screen and (max-width: 1366px){
-      .main-form[data-v-273194bc][data-v-273194bc][data-v-273194bc] {
-        width: 100%;
+
+        .form-titel h2 {
+    color: #1C1D1E;
+    font-family: sans-serif;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+      .main-form{
+        width: 67%;
         height: 560px;
         border-radius: 45px;
         background-image: url(/images/Sign\ Up.png);
@@ -689,7 +693,7 @@
         background-size: cover;
         background-repeat: no-repeat;
     }
-    .form-1[data-v-273194bc][data-v-273194bc][data-v-273194bc] {
+    .form-1 {
         width:55%;
         height: 420px;
         flex-shrink: 0;
@@ -704,15 +708,15 @@
         align-items: center;
         justify-content: space-between;
     }
-    img.image-preview[data-v-273194bc][data-v-273194bc] {
+    img.image-preview {
         width: 100%;
-        min-width: 282px;
+        min-width: 160px;
         min-height: 108px;
         border-radius: 5px;
         max-width: 443px;
         max-height: 108px;
     }
-    a.form-last p[data-v-273194bc][data-v-273194bc] {
+    a.form-last p {
         color: #000;
         font-family: Anton;
         font-size: 12px;
@@ -721,11 +725,11 @@
         line-height: normal;
         cursor: pointer;
     }
-    a.form-last[data-v-273194bc][data-v-273194bc] svg {
+    a.form-last svg {
         width: 20px;
         height: 20px;
     }
-    button.form-btn[data-v-273194bc] {
+    button.form-btn {
         width: 100%;
         display: flex;
         height: 38px;
@@ -739,7 +743,7 @@
         background: #F96;
         box-shadow: 2px 2px 0px 0px #1B1C1D;
     }
-    button.form-btn p[data-v-273194bc] {
+    button.form-btn p {
         color: #FFF;
         text-align: center;
         font-family: DM Sans;
@@ -748,7 +752,7 @@
         font-weight: 700;
         line-height: 24px;
     }
-    .drop-zone[data-v-273194bc][data-v-273194bc][data-v-273194bc][data-v-273194bc] {
+    .drop-zone {
         width: 100%;
         height: 110px;
         padding: 25px;
@@ -764,7 +768,7 @@
         background: #FFF;
         justify-content: center;
     }
-    .img-input label[data-v-273194bc][data-v-273194bc] {
+    .img-input label {
         color: #000;
         font-family: sans-serif;
         font-size: 12px;
@@ -773,7 +777,7 @@
         line-height: normal;
         padding-bottom: 8px;
     }
-    .input-group-2 label[data-v-273194bc][data-v-273194bc] {
+    .input-group-2 label {
         color: #000;
         font-family: Poppins;
         font-size: 12px;
@@ -782,7 +786,7 @@
         line-height: normal;
         padding-bottom: 8px;
     }
-    .input-3 label[data-v-273194bc][data-v-273194bc] {
+    .input-3 label {
         color: #000;
         font-family: sans-serif;
         font-size: 12px;
@@ -792,7 +796,7 @@
         width: 100%;
         padding-bottom: 8px;
     }
-    .input-group-2 input[data-v-273194bc][data-v-273194bc] {
+    .input-group-2 input {
         border-radius: 9px;
         border: 1px solid #ADADAD;
         background: #FFF;
@@ -804,23 +808,26 @@
         line-height: normal;
         padding: 8px;
     }
-    .input-3 input[data-v-273194bc] {
-        width: 28%;
+    .input-3 input {
+        width: 48%;
         border-radius: 9px;
         border: 1px solid #ADADAD;
-        padding: 8px 8px 8px 35px !important;
+        /* padding: 0px 8px 8px 35px !important; */
+        padding: 3px 0px 5px 3px !important;
     }
-    .imgss[data-v-273194bc][data-v-273194bc][data-v-273194bc] {
+    .imgss {
         position: absolute;
         left: 170px;
         bottom: 0px;
         
         width: 26%;
     }
+
+   
     
     }
     @media screen and (max-width: 768px){
-      .main-form[data-v-273194bc][data-v-273194bc][data-v-273194bc][data-v-273194bc] {
+      .main-form {
         width: 100%;
         height: 560px;
         border-radius: 24px;
@@ -834,7 +841,7 @@
         background-size: cover;
         background-repeat: no-repeat;
     }
-    .main-form[data-v-273194bc][data-v-273194bc][data-v-273194bc][data-v-273194bc] {
+    .main-form {
         width: 100%;
         height: 100%;
         border-radius: 24px;
@@ -849,12 +856,12 @@
         align-content: center;
         align-items: center;
     }
-    .form-titel[data-v-273194bc][data-v-273194bc] {
+    .form-titel {
         width: 100%;
         display: flex;
         justify-content: center;
     }
-    .form-1[data-v-273194bc][data-v-273194bc][data-v-273194bc][data-v-273194bc] {
+    .form-1 {
         width: 50%;
         height: 420px;
         flex-shrink: 0;
@@ -869,19 +876,19 @@
         align-items: center;
         justify-content: space-between;
     }
-    .imgss[data-v-273194bc][data-v-273194bc][data-v-273194bc][data-v-273194bc][data-v-273194bc] {
+    .imgss {
         position: relative;
         left: 85px;
         bottom: 0px;
         width: 33%;
     }
-    .form-box[data-v-273194bc][data-v-273194bc] {
+    .form-box {
         display: flex;
         width: 100%;
         flex-wrap: wrap;
         justify-content: flex-start;
     }
-    a.form-last[data-v-273194bc][data-v-273194bc] {
+    a.form-last {
         width: 100%;
         display: flex;
         align-items: center;
@@ -890,18 +897,27 @@
         gap: 14px;
         padding-top: 20px;
     }
-    img.image-preview[data-v-273194bc][data-v-273194bc][data-v-273194bc] {
+    img.image-preview {
         width: 100%;
-        min-width: 288px;
+        min-width: 90px;
         min-height: 108px;
         border-radius: 5px;
         max-width: 443px;
         max-height: 108px;
     }
+
+    .form-titel h2[data-v-129e143d] {
+    color: #1C1D1E;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
     }
     @media screen and (max-width: 425px){
     
-    .main-form[data-v-273194bc][data-v-273194bc][data-v-273194bc][data-v-273194bc][data-v-273194bc] {
+    .main-form {
         width: 100%;
         height: 100%;
         border-radius: 24px;
@@ -920,10 +936,10 @@
     div#popup-box {
         padding-right: 0px;
     }
-    .form-img img[data-v-273194bc] {
+    .form-img img {
         width: 40%;
     }
-    .form-titel h2[data-v-273194bc][data-v-273194bc] {
+    .form-titel h2 {
         color: #1C1D1E;
         font-family: sans-serif;
         font-size: 24px;
@@ -931,14 +947,14 @@
         font-weight: 800;
         line-height: normal;
     }
-    .imgss[data-v-273194bc][data-v-273194bc][data-v-273194bc][data-v-273194bc][data-v-273194bc][data-v-273194bc] {
+    .imgss {
         position: relative;
         left: 85px;
         bottom: 0px;
         width: 33%;
         display: none;
     }
-    .form-1[data-v-273194bc][data-v-273194bc][data-v-273194bc][data-v-273194bc][data-v-273194bc] {
+    .form-1 {
         width: 100%;
         height: 420px;
         flex-shrink: 0;

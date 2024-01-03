@@ -64,7 +64,8 @@
 <script>
 import Vue from 'vue'
 
-import { get , byMethod} from '../admin/components/lib/api'
+import { get , byMethod} from '../admin/components/lib/api';
+import { mapGetters } from "vuex";
 export default {
     name: 'profile',
 
@@ -83,6 +84,10 @@ export default {
               
             }
         },
+
+        computed: {
+    ...mapGetters(["user"]),
+  },
         created(){
         
         get('/getuser')
@@ -106,7 +111,7 @@ export default {
           },
 
             profile(){
-                this.$router.push('/admin/dashborad4')
+                this.$router.push(`/admin/dashborad4/${this.user.id}`)
             }
 
         }

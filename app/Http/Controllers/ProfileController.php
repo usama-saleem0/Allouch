@@ -114,4 +114,12 @@ class ProfileController extends Controller
       $data = Package::where('user_id' , auth()->user()->id)->get();
       return response()->json(['data' => $data]);
      }
+
+
+     public function getprofile(){
+      // dd(request()->id);
+
+      $data = User::with('brand' , 'package')->where('id' , request()->id)->first();
+      return response()->json(['data'=> $data]);
+     }
 }

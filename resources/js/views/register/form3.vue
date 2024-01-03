@@ -348,7 +348,7 @@ this.form.country = this.company_type;
 
 
 .main-form {
-    width: 1290px;
+    width: 100% !important;
     height: 900px;
     border-radius: 50px;
     background-image: url(/images/Sign\ Up.png);
@@ -457,7 +457,6 @@ a.form-last p {
     justify-content: center;
     align-items: center;
     width: 92%;
-    gap:15px;
 }
 
 .input-group-2 h2 {
@@ -468,5 +467,325 @@ a.form-last p {
     font-weight: 700;
     line-height: 24px; /* 150% */
     font-family: sans-serif;
+}
+
+
+@media screen and (max-width: 1600px){
+    .main-form {
+    width: 100%;
+    height: 785px;
+    border-radius: 50px;
+    background-image: url(/images/Sign\ Up.png);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px 0px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+form.form-1 {
+    width: 65%;
+    height: 600px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    background: #FFF;
+    box-shadow: 0px 4px 35px 0px rgba(0, 0, 0, 0.08);
+    z-index: 1;
+    position: relative;
+    padding:30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+a.form-last {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    gap: 14px;
+    padding-top: 20px;
+}
+.form-box img {
+    position: absolute;
+    left: 154px;
+    bottom: 0px;
+    width: 33%;
+}
+}
+
+@media screen and (max-width: 1440px){
+    .main-form {
+    width: 100%;
+    height: 650px;
+    border-radius: 50px;
+    background-image: url(/images/Sign\ Up.png);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px 0px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+form.form-1 {
+    width: 63%;
+    height: 510px;
+    flex-shrink: 0;
+    border-radius: 29px;
+    background: #FFF;
+    box-shadow: 0px 4px 35px 0px rgba(0, 0, 0, 0.08);
+    z-index: 1;
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.input-group-2 {
+    border-radius: 6px;
+    border: 1px solid #000;
+    background: #FFF;
+    box-shadow: 2px 2px 0px 0px #1B1C1D;
+    display: flex;
+    padding: 9px 0px 8px 0px;
+    justify-content: center;
+    align-items: center;
+    width: 92%;
+}
+.input-group-2 h2 {
+    color: #000;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    font-family: sans-serif;
+}
+button.form-btn {
+    width: 100%;
+    display: flex;
+    height: 40px;
+    padding: 8px 0px;
+    justify-content: center;
+    align-items: center;
+    gap: 7.647px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    border: 1px solid #000;
+    background: #F96;
+    box-shadow: 2px 2px 0px 0px #1B1C1D;
+}
+.form-box img {
+    position: absolute;
+    left: 145px;
+    bottom: 0px;
+    width: 30%;
+}
+}
+
+@media screen and (max-width: 1366px){
+    .main-form {
+    width: 100%;
+    height: 560px;
+    border-radius: 50px;
+    background-image: url(/images/Sign\ Up.png);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px 0px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.form-box img {
+    position: absolute;
+    left: 160px;
+    bottom: 0px;
+    width: 27%;
+}
+form.form-1 {
+    width: 63%;
+    height: 420px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    background: #FFF;
+    box-shadow: 0px 4px 35px 0px rgba(0, 0, 0, 0.08);
+    z-index: 1;
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+a.form-last {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    gap: 14px;
+    padding-top: 15px;
+}
+.input-group-2 {
+    border-radius: 6px;
+    border: 1px solid #000;
+    background: #FFF;
+    box-shadow: 2px 2px 0px 0px #1B1C1D;
+    display: flex;
+    padding: 10px 0px 10px 0px;
+    justify-content: center;
+    align-items: center;
+    width: 92%;
+}
+.input-group-2 h2 {
+    color: #000;
+    text-align: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 12px;
+    font-family: sans-serif;
+}
+button.form-btn {
+    width: 100%;
+    display: flex;
+    height: 34px;
+    padding: 8px 0px;
+    justify-content: center;
+    align-items: center;
+    gap: 7.647px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    border: 1px solid #000;
+    background: #F96;
+    box-shadow: 2px 2px 0px 0px #1B1C1D;
+}
+button.form-btn p {
+    color: #FFF;
+    text-align: center;
+    font-family: DM Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+}
+a.form-last svg {
+    width: 20px;
+    height: 20px;
+}
+a.form-last p {
+    color: #000;
+    font-family: Anton;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+a.form-last {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    gap: 10px;
+    padding-top: 15px;
+}
+}
+@media screen and (max-width: 768px){
+    .main-form {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    background-image: url(/images/Sign\ Up.png);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px 0px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 15px;
+}
+form.form-1 {
+    width: 68%;
+    height: 420px;
+    flex-shrink: 0;
+    border-radius: 24px;
+    background: #FFF;
+    box-shadow: 0px 4px 35px 0px rgba(0, 0, 0, 0.08);
+    z-index: 1;
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.form-titel h2 {
+    color: #1C1D1E;
+    font-family: sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+.form-box img {
+    position: absolute;
+    left: 90px;
+    bottom: 0px;
+    width: 35%;
+}
+}
+@media screen and (max-width: 425px){
+    .form-titel {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-box {
+    width: 100%;
+    padding: 0px 20px;
+}
+.form-box img {
+    position: absolute;
+    left: 90px;
+    bottom: 0px;
+    width: 35%;
+    display: none;
+}
+form.form-1 {
+    width: 100%;
+    height: 420px;
+    flex-shrink: 0;
+    border-radius: 24px;
+    background: #FFF;
+    box-shadow: 0px 4px 35px 0px rgba(0, 0, 0, 0.08);
+    z-index: 1;
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+a.form-last {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    gap: 10px;
+    padding-top: 15px;
+}
 }
 </style>

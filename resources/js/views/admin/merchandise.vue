@@ -1263,6 +1263,42 @@ button.Add {
     width: 30%;
     padding: 24px;
 }
+.poxs-box p[data-v-875b56d8] {
+    color: #000;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0px;
+}
+.poxs-box h2[data-v-875b56d8] {
+    color: #000;
+    font-family: fantasy;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0px;
+}
+.poxs-3[data-v-875b56d8] {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+.poxs-2[data-v-875b56d8] {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 15px;
+    background-image: url(/images/boxbg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 }
 @media screen and (max-width: 1024px){
   .page-1 {

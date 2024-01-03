@@ -20,7 +20,8 @@
                         <button class="Brand" :style="{ backgroundColor: bgColor2 }" @click="datas('Brand')">As Brand</button>
                         <a href="#">No Account ?<span @click="singup">Sign up</span></a>
                     </div>
-                    <h2>Sign in</h2>
+                    <h2 style="    font-family: fantasy;
+    color: #000;">Sign in</h2>
                     <div class="input-group">
                         <label for="text">Enter your username or email address</label>
                         <input type="text" placeholder="Username or email address" v-model="email">
@@ -195,13 +196,16 @@ this.bgColor2 = '#F96';
     width: 100%;
     height: 900px;
     background-image: url(/images/Up.png);
-    padding: 10px 40px ;
+    padding: 10px 40px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .main-box {
     width: 100%;
     display: flex;
     position: relative;
-    gap: 270px;
+    gap: 225px;
     justify-content: space-between;
     flex-direction: column;
 }
@@ -520,7 +524,7 @@ button.Brand {
     width: 100%;
     display: flex;
     position: relative;
-    gap: 110px;
+    gap: 140px;
     justify-content: space-between;
     flex-direction: column;
 }

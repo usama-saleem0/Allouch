@@ -122,4 +122,8 @@ class ProfileController extends Controller
       $data = User::with('brand' , 'package')->where('id' , request()->id)->first();
       return response()->json(['data'=> $data]);
      }
+
+     public function getinfluencers(){
+      $data = User::with('package')->where('auth_type' , 'Influencer')->get();
+     }
 }

@@ -61,6 +61,8 @@ Route::group(['middleware' => ['auth:api']], function () {
     Route::post('api/package', [ProfileController::class, 'package']);
 
     Route::get('getinfluencer', [ProfileController::class, 'getinfluencer']);
+    Route::get('get_influencers', [ProfileController::class, 'getinfluencers']);
+
 
     Route::get('getuserchat', [ChatController::class, 'getuser']);
 

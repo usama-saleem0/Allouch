@@ -19,7 +19,8 @@
                         <button class="Brand" @click="auths('Brand')" :style="{ backgroundColor: bgColor2 }">As Brand</button>
                         <a href="#">Have an Account ?<span>Sign in</span></a>
                     </div>
-                    <h2>Sign up</h2>
+                    <h2 style="    font-family: fantasy;
+    color: #000;">Sign up</h2>
                     <div class="input-group">
                         <label for="text">Email address</label>
                         <input type="text" placeholder="Username or email address" v-model="email">
@@ -208,10 +209,10 @@ this.form.auth_type = 'brand'
     width: 100%;
     display: flex;
     position: relative;
-    gap: 270px;
+    gap: 225px;
     justify-content: space-between;
     flex-direction: column;
-}
+}s
 
 .logo-from {
     width: 100%;
@@ -537,7 +538,7 @@ button.Brand {
     width: 100%;
     display: flex;
     position: relative;
-    gap: 110px;
+    gap: 140px;
     justify-content: space-between;
     flex-direction: column;
 }

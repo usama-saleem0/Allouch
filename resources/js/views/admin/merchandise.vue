@@ -5,11 +5,13 @@
        <div class="main">
         <div class="box-1">
           <div class="Sponsorship">
-            <h2>My Merchandise</h2>
+            <h2 class="main-para">My Merchandise</h2>
             <div class="card-box">
+
+
               <div class="cards">
                 <div class="pox-1">
-                  <h2>Basic One</h2>
+                  <h2>T-shirt</h2>
                   <div class="top-btn">
                     <button><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
   <path d="M12.0583 3.23158C12.0757 4.21754 12.1263 5.10849 11.9737 5.99333C11.958 6.08661 12.0095 6.1947 12.0391 6.29322C12.1856 6.77878 12.2056 7.2661 12.0792 7.76039C11.9694 8.19017 12.0635 8.62867 12.0313 9.06369C11.9816 9.73494 12.1629 10.4027 12.1289 11.0696C12.101 11.6127 12.1097 12.1619 12.0252 12.7016C11.9824 12.9753 11.9676 13.2342 12.0382 13.514C12.1141 13.8183 11.9319 14.1199 11.9319 14.4355C11.9319 14.7825 11.8447 15.1242 11.7453 15.4572C11.6346 15.8303 11.2964 15.9245 11.0218 15.6525C10.6024 15.2375 10.4185 14.6953 10.3365 14.1339C10.2685 13.6692 10.2293 13.195 10.2049 12.7268C10.1796 12.2317 10.0088 11.733 10.1744 11.2309C10.2032 11.1446 10.2093 11.0374 10.1857 10.9502C10.0253 10.3661 10.1334 9.75848 10.0184 9.17004C9.98262 8.98872 9.99481 8.78995 10.0236 8.60513C10.0637 8.34883 10.0567 8.103 9.97651 7.85891C9.87365 7.54682 10.0044 7.23647 9.99831 6.92351C9.99221 6.60706 9.98088 6.29323 9.90503 5.99333C9.78473 5.5217 9.85185 5.0527 9.90067 4.59327C9.94425 4.17831 9.90764 3.77817 9.89719 3.36931C9.88672 2.98312 9.85359 2.5795 9.92071 2.19941C9.99743 1.76788 10.3915 1.58045 10.7515 1.42266C11.0741 1.28143 11.3121 1.4802 11.5439 1.69727C11.8866 2.01719 12.0696 2.38595 12.0374 2.86108C12.0269 3.01625 12.0557 3.17405 12.0592 3.2342L12.0583 3.23158Z" fill="#1C1D1E"/>
@@ -21,40 +23,25 @@
 </svg><span>110 </span></button>
                   </div>
                 </div>
-                <div class="pox-2">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In semper pharetra ligula.</p>
-                  <h2>What’s Included</h2>
-                  <div class="pox-box">
-                    <div class="yes">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-  <path d="M21 7.00009L9 19.0001L3.5 13.5001L4.91 12.0901L9 16.1701L19.59 5.59009L21 7.00009Z" fill="black"/>
-</svg> <p>Marketing</p>
+                 <div class="poxs-2">
+                    <img src="/images/tshairt.png" alt="">
+                 </div>
+                 <div class="poxs-3">
+                    <div class="poxs-box">
+                        <p>Sold</p>
+                        <h2>300 Pieces</h2>
                     </div>
-                    <div class="yes">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-  <path d="M21 7.00009L9 19.0001L3.5 13.5001L4.91 12.0901L9 16.1701L19.59 5.59009L21 7.00009Z" fill="black"/>
-</svg> <p>Marketing</p>
+                    <div class="poxs-box">
+                        <p>Returned</p>
+                        <h2>300 Pieces</h2>
                     </div>
-                    <div class="yes">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-  <path d="M21 7.00009L9 19.0001L3.5 13.5001L4.91 12.0901L9 16.1701L19.59 5.59009L21 7.00009Z" fill="black"/>
-</svg> <p>Marketing</p>
-                    </div>
-                    <div class="yes">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-  <path d="M21 7.00009L9 19.0001L3.5 13.5001L4.91 12.0901L9 16.1701L19.59 5.59009L21 7.00009Z" fill="black"/>
-</svg> <p>Marketing</p>
-                    </div>
-                  </div>
-                  <div class="pox-3">
-                    <h2>Active Duration<br><span>04 Hours 20min</span></h2>
-                    <p>Price: 12$/HRs</p>
-                  </div>
-                </div>
+                 </div>
               </div>
+
+
               <div class="cards">
                 <div class="pox-1">
-                  <h2>Advance One</h2>
+                  <h2>T-shirt</h2>
                   <div class="top-btn">
                     <button><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
   <path d="M12.0583 3.23158C12.0757 4.21754 12.1263 5.10849 11.9737 5.99333C11.958 6.08661 12.0095 6.1947 12.0391 6.29322C12.1856 6.77878 12.2056 7.2661 12.0792 7.76039C11.9694 8.19017 12.0635 8.62867 12.0313 9.06369C11.9816 9.73494 12.1629 10.4027 12.1289 11.0696C12.101 11.6127 12.1097 12.1619 12.0252 12.7016C11.9824 12.9753 11.9676 13.2342 12.0382 13.514C12.1141 13.8183 11.9319 14.1199 11.9319 14.4355C11.9319 14.7825 11.8447 15.1242 11.7453 15.4572C11.6346 15.8303 11.2964 15.9245 11.0218 15.6525C10.6024 15.2375 10.4185 14.6953 10.3365 14.1339C10.2685 13.6692 10.2293 13.195 10.2049 12.7268C10.1796 12.2317 10.0088 11.733 10.1744 11.2309C10.2032 11.1446 10.2093 11.0374 10.1857 10.9502C10.0253 10.3661 10.1334 9.75848 10.0184 9.17004C9.98262 8.98872 9.99481 8.78995 10.0236 8.60513C10.0637 8.34883 10.0567 8.103 9.97651 7.85891C9.87365 7.54682 10.0044 7.23647 9.99831 6.92351C9.99221 6.60706 9.98088 6.29323 9.90503 5.99333C9.78473 5.5217 9.85185 5.0527 9.90067 4.59327C9.94425 4.17831 9.90764 3.77817 9.89719 3.36931C9.88672 2.98312 9.85359 2.5795 9.92071 2.19941C9.99743 1.76788 10.3915 1.58045 10.7515 1.42266C11.0741 1.28143 11.3121 1.4802 11.5439 1.69727C11.8866 2.01719 12.0696 2.38595 12.0374 2.86108C12.0269 3.01625 12.0557 3.17405 12.0592 3.2342L12.0583 3.23158Z" fill="#1C1D1E"/>
@@ -66,41 +53,24 @@
 </svg><span>110 </span></button>
                   </div>
                 </div>
-                <div class="pox-2">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In semper pharetra ligula.</p>
-                  <h2>What’s Included</h2>
-                  <div class="pox-box">
-                    <div class="yes">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-  <path d="M21 7.00009L9 19.0001L3.5 13.5001L4.91 12.0901L9 16.1701L19.59 5.59009L21 7.00009Z" fill="black"/>
-</svg> <p>Marketing</p>
+                 <div class="poxs-2">
+                    <img src="/images/tshairt.png" alt="">
+                 </div>
+                 <div class="poxs-3">
+                    <div class="poxs-box">
+                        <p>Sold</p>
+                        <h2>300 Pieces</h2>
                     </div>
-                    <div class="yes">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-  <path d="M21 7.00009L9 19.0001L3.5 13.5001L4.91 12.0901L9 16.1701L19.59 5.59009L21 7.00009Z" fill="black"/>
-</svg> <p>Marketing</p>
+                    <div class="poxs-box">
+                        <p>Returned</p>
+                        <h2>300 Pieces</h2>
                     </div>
-                    <div class="yes">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-  <path d="M21 7.00009L9 19.0001L3.5 13.5001L4.91 12.0901L9 16.1701L19.59 5.59009L21 7.00009Z" fill="black"/>
-</svg> <p>Marketing</p>
-                    </div>
-                    <div class="yes">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-  <path d="M21 7.00009L9 19.0001L3.5 13.5001L4.91 12.0901L9 16.1701L19.59 5.59009L21 7.00009Z" fill="black"/>
-</svg> <p>Marketing</p>
-                    </div>
-                  </div>
-                  <div class="pox-3">
-                    <h2>Active Duration<br><span>04 Hours 20min</span></h2>
-                    <p>Price: 12$/HRs</p>
-                  </div>
-                </div>
+                 </div>
               </div>
 
               <div class="cards">
                 <div class="pox-1">
-                  <h2>Premium One</h2>
+                  <h2>T-shirt</h2>
                   <div class="top-btn">
                     <button><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
   <path d="M12.0583 3.23158C12.0757 4.21754 12.1263 5.10849 11.9737 5.99333C11.958 6.08661 12.0095 6.1947 12.0391 6.29322C12.1856 6.77878 12.2056 7.2661 12.0792 7.76039C11.9694 8.19017 12.0635 8.62867 12.0313 9.06369C11.9816 9.73494 12.1629 10.4027 12.1289 11.0696C12.101 11.6127 12.1097 12.1619 12.0252 12.7016C11.9824 12.9753 11.9676 13.2342 12.0382 13.514C12.1141 13.8183 11.9319 14.1199 11.9319 14.4355C11.9319 14.7825 11.8447 15.1242 11.7453 15.4572C11.6346 15.8303 11.2964 15.9245 11.0218 15.6525C10.6024 15.2375 10.4185 14.6953 10.3365 14.1339C10.2685 13.6692 10.2293 13.195 10.2049 12.7268C10.1796 12.2317 10.0088 11.733 10.1744 11.2309C10.2032 11.1446 10.2093 11.0374 10.1857 10.9502C10.0253 10.3661 10.1334 9.75848 10.0184 9.17004C9.98262 8.98872 9.99481 8.78995 10.0236 8.60513C10.0637 8.34883 10.0567 8.103 9.97651 7.85891C9.87365 7.54682 10.0044 7.23647 9.99831 6.92351C9.99221 6.60706 9.98088 6.29323 9.90503 5.99333C9.78473 5.5217 9.85185 5.0527 9.90067 4.59327C9.94425 4.17831 9.90764 3.77817 9.89719 3.36931C9.88672 2.98312 9.85359 2.5795 9.92071 2.19941C9.99743 1.76788 10.3915 1.58045 10.7515 1.42266C11.0741 1.28143 11.3121 1.4802 11.5439 1.69727C11.8866 2.01719 12.0696 2.38595 12.0374 2.86108C12.0269 3.01625 12.0557 3.17405 12.0592 3.2342L12.0583 3.23158Z" fill="#1C1D1E"/>
@@ -112,37 +82,21 @@
 </svg><span>110 </span></button>
                   </div>
                 </div>
-                <div class="pox-2">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In semper pharetra ligula.</p>
-                  <h2>What’s Included</h2>
-                  <div class="pox-box">
-                    <div class="yes">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-  <path d="M21 7.00009L9 19.0001L3.5 13.5001L4.91 12.0901L9 16.1701L19.59 5.59009L21 7.00009Z" fill="black"/>
-</svg> <p>Marketing</p>
+                 <div class="poxs-2">
+                    <img src="/images/tshairt.png" alt="">
+                 </div>
+                 <div class="poxs-3">
+                    <div class="poxs-box">
+                        <p>Sold</p>
+                        <h2>300 Pieces</h2>
                     </div>
-                    <div class="yes">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-  <path d="M21 7.00009L9 19.0001L3.5 13.5001L4.91 12.0901L9 16.1701L19.59 5.59009L21 7.00009Z" fill="black"/>
-</svg> <p>Marketing</p>
+                    <div class="poxs-box">
+                        <p>Returned</p>
+                        <h2>300 Pieces</h2>
                     </div>
-                    <div class="yes">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-  <path d="M21 7.00009L9 19.0001L3.5 13.5001L4.91 12.0901L9 16.1701L19.59 5.59009L21 7.00009Z" fill="black"/>
-</svg> <p>Marketing</p>
-                    </div>
-                    <div class="yes">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-  <path d="M21 7.00009L9 19.0001L3.5 13.5001L4.91 12.0901L9 16.1701L19.59 5.59009L21 7.00009Z" fill="black"/>
-</svg> <p>Marketing</p>
-                    </div>
-                  </div>
-                  <div class="pox-3">
-                    <h2>Active Duration<br><span>04 Hours 20min</span></h2>
-                    <p>Price: 12$/HRs</p>
-                  </div>
-                </div>
+                 </div>
               </div>
+
             </div>
 
             <div class="btn-box">
@@ -348,16 +302,7 @@ export default {
     max-width: 1600px;
     margin: 0 auto;
 }
-.Sponsorship h2 {
-    color: #000;
-    font-family: sans-serif;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 24px; /* 150% */
-    padding-bottom: 25px;
-    margin: 0px ;
-}
+
 
 .card-box {
     width: 100%;
@@ -371,7 +316,7 @@ export default {
     background: #F96;
     box-shadow: 4px 4px 0px 2px #1B1C1D;
     width: 30%;
-    height: 369px;
+    height: 100%;
     flex-shrink: 0;
 }
 .main {
@@ -679,9 +624,52 @@ button.llo {
 }
 
 /* .../ */
+h2.main-para {
+    color: #000;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
+    padding-bottom: 20px;
+    margin: 0px;
+}
 
+.poxs-2 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    background-image: url(/images/boxbg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
+.poxs-2 img {
+    width: 55%;
+}
 
+.poxs-3 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.poxs-box p {color: #000;font-family: sans-serif;font-size: 18px;font-style: normal;font-weight: 400;line-height: normal;margin: 0px;}
+
+.poxs-box h2 {
+    color: #000;
+    font-family: fantasy;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0px;
+}
 
 
 .box-2 h2 {
@@ -1115,7 +1103,7 @@ button.Add {
     background: #F96;
     box-shadow: 4px 4px 0px 2px #1B1C1D;
     width: 30%;
-    height: 280px;
+    height: 100%;
     flex-shrink: 0;
 }
 .yes p {
@@ -1160,6 +1148,7 @@ button.Add {
     font-style: normal;
     font-weight: 700;
     line-height: 24px;
+    
 }
 .btn-2 {
     display: flex;
@@ -1316,7 +1305,7 @@ button.Add {
     background: #F96;
     box-shadow: 4px 4px 0px 2px #1B1C1D;
     width: 44%;
-    height: 260px;
+    height: 100%;
     flex-shrink: 0;
 }
 .card-box {
@@ -1380,7 +1369,7 @@ button.Add {
     background: #F96;
     box-shadow: 4px 4px 0px 2px #1B1C1D;
     width: 85%;
-    height: 260px;
+    height: 100%;
     flex-shrink: 0;
 }
 .btn-box {

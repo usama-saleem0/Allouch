@@ -159,7 +159,7 @@ export default {
 }
 
 .main-form {
-    width: 1290px;
+    width: 100%;
     height: 900px;
     border-radius: 50px;
     background-image: url(/images/Sign\ Up.png);
@@ -167,7 +167,10 @@ export default {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap:40px 0px ;
+    gap: 40px 0px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .form-img {
     width: 100%;
@@ -234,7 +237,7 @@ export default {
 
 .input-group-1 label {
     color: #000;
-    font-family: Poppins;
+    font-family: sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -247,7 +250,7 @@ export default {
     border: 1px solid #ADADAD;
     background: #FFF;
     color: #808080;
-    font-family: Poppins;
+    font-family: sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 300;
@@ -257,7 +260,7 @@ export default {
 
 .input-group-2 label {
     color: #000;
-    font-family: Poppins;
+    font-family: sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -270,7 +273,7 @@ export default {
     border: 1px solid #ADADAD;
     background: #FFF;
     color: #808080;
-    font-family: Poppins;
+    font-family: sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 300;
@@ -292,7 +295,7 @@ button.form-btn {
     box-shadow: 2px 2px 0px 0px #1B1C1D;
 }
 
-button.form-btn p {color: #FFF;text-align: center;font-family: DM Sans;font-size: 16px;font-style: normal;font-weight: 700;line-height: 24px; /* 150% */}
+button.form-btn p {color: #FFF;text-align: center;font-family: sans-serif;font-size: 16px;font-style: normal;font-weight: 700;line-height: 24px; /* 150% */}
 a.form-last {
     width: 60%;
     display: flex;
@@ -313,5 +316,390 @@ a.form-last p {
     line-height: normal;
     cursor: pointer;
 }
+@media screen and (max-width: 1600px){
+    .main-form {
+    width: 100%;
+    height: 785px;
+    border-radius: 50px;
+    background-image: url(/images/Sign\ Up.png);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px 0px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.form-1 {
+    width: 65%;
+    height: 600px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    background: #FFF;
+    box-shadow: 0px 4px 35px 0px rgba(0, 0, 0, 0.08);
+    z-index: 1;
+    position: relative;
+    padding: 30px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.form-box img {
+    position: absolute;
+    left: 160px;
+    bottom: 0px;
+    width: 32%;
+}
+.form-titel h2 {
+    color: #1C1D1E;
+    font-family: sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+}
 
+@media screen and (max-width: 1440px){
+    .main-form {
+    width: 100%;
+    height: 650px;
+    border-radius: 50px;
+    background-image: url(/images/Sign\ Up.png);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px 0px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.form-1 {
+    width: 63%;
+    height: 480px;
+    flex-shrink: 0;
+    border-radius: 29px;
+    background: #FFF;
+    box-shadow: 0px 4px 35px 0px rgba(0, 0, 0, 0.08);
+    z-index: 1;
+    position: relative;
+    padding: 20px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+a.form-last {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    gap: 14px;
+    padding-top: 15px;
+}
+.input-group-1 label {
+    color: #000;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-bottom: 5px;
+}
+.input-group-2 label {
+    color: #000;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-bottom: 5px;
+}
+.input-group-2 input {
+    border-radius: 5px;
+    border: 1px solid #ADADAD;
+    background: #FFF;
+    color: #808080;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    padding: 10px;
+}.input-group-1 input {
+    border-radius: 5px;
+    border: 1px solid #ADADAD;
+    background: #FFF;
+    color: #808080;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    padding: 10px;
+}
+button.form-btn {
+    width: 100%;
+    display: flex;
+    height: 42px;
+    padding: 10px 0px;
+    justify-content: center;
+    align-items: center;
+    gap: 7.647px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    border: 1px solid #000;
+    background: #F96;
+    box-shadow: 2px 2px 0px 0px #1B1C1D;
+}
+a.form-last svg {
+    width: 30px;
+    height: 30px;
+}
+}
+
+@media screen and (max-width: 1366px){
+    .main-form {
+    width: 100%;
+    height: 560px;
+    border-radius: 44px;
+    background-image: url(/images/Sign\ Up.png);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px 0px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.form-1 {
+    width: 63%;
+    height: 420px;
+    flex-shrink: 0;
+    border-radius: 24px;
+    background: #FFF;
+    box-shadow: 0px 4px 35px 0px rgba(0, 0, 0, 0.08);
+    z-index: 1;
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.input-group-1 label {
+    color: #000;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-bottom: 5px;
+}
+.input-group-2 label {
+    color: #000;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-bottom: 5px;
+}
+.input-group-2 input {
+    border-radius: 5px;
+    border: 1px solid #ADADAD;
+    background: #FFF;
+    color: #808080;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    padding: 8px;
+}
+button.form-btn p {
+    color: #FFF;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px;
+}
+button.form-btn {
+    width: 100%;
+    display: flex;
+    height: 38px;
+    padding: 8px 0px;
+    justify-content: center;
+    align-items: center;
+    gap: 7.647px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    border: 1px solid #000;
+    background: #F96;
+    box-shadow: 2px 2px 0px 0px #1B1C1D;
+}
+.input-group-1 input {
+    border-radius: 5px;
+    border: 1px solid #ADADAD;
+    background: #FFF;
+    color: #808080;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    padding: 8px;
+}
+.form-box img {
+    position: absolute;
+    left: 162px;
+    bottom: 0px;
+    width: 27%;
+}
+a.form-last svg {
+    width: 20px;
+    height: 20px;
+}
+a.form-last {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    gap: 10px;
+    padding-top: 15px;
+}
+a.form-last p {
+    color: #000;
+    font-family: Anton;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    cursor: pointer;
+}
+}
+
+@media screen and (max-width: 768px){
+    .form-1 {
+    width: 68%;
+    height: 420px;
+    flex-shrink: 0;
+    border-radius: 24px;
+    background: #FFF;
+    box-shadow: 0px 4px 35px 0px rgba(0, 0, 0, 0.08);
+    z-index: 1;
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+button.form-btn{
+    width: 100%;
+    display: flex;
+    height: 32px;
+    padding: 8px 0px;
+    justify-content: center;
+    align-items: center;
+    gap: 7.647px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    border: 1px solid #000;
+    background: #F96;
+    box-shadow: 2px 2px 0px 0px #1B1C1D;
+}
+.main-form {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    background-image: url(/images/Sign\ Up.png);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px 0px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 12px;
+}
+.form-titel h2 {
+    color: #1C1D1E;
+    font-family: sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+.form-box img {
+    position: absolute;
+    left: 90px;
+    bottom: 0px;
+    width: 35%;
+}
+}
+@media screen and (max-width: 425px){
+    .main-form[data-v-10ef68ab] {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    background-image: url(/images/Sign\ Up.png);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px 0px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 12px 0px;
+}
+.form-box[data-v-10ef68ab] {
+    width: 100%;
+    padding: 0px 20px;
+}
+.form-img img[data-v-10ef68ab] {
+    width: 35%;
+}
+.form-1[data-v-10ef68ab] {
+    width: 100%;
+    height: 420px;
+    flex-shrink: 0;
+    border-radius: 24px;
+    background: #FFF;
+    box-shadow: 0px 4px 35px 0px rgba(0, 0, 0, 0.08);
+    z-index: 1;
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.form-box img[data-v-10ef68ab] {
+    position: absolute;
+    left: 90px;
+    bottom: 0px;
+    width: 35%;
+    display: none;
+}
+a.form-last[data-v-10ef68ab] {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    gap: 10px;
+    padding-top: 15px;
+}
+}
 </style>

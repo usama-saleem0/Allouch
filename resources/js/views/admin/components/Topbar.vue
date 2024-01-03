@@ -63,6 +63,13 @@
           <a href="#">Merchandise</a></router-link
         >
       </li>
+
+      <li v-if="user && user.auth_type === 'Brand'">
+      <router-link class="nav-link" to="/influncers">
+          
+          <a href="#">Influencers</a></router-link
+        >
+      </li>
   </ul>
     <!-- Topbar Navbar -->
     <ul class="navbar-nav ml-auto">
@@ -304,18 +311,11 @@
           class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
           aria-labelledby="userDropdown"
         >
-          <a class="dropdown-item" href="#">
+          <a class="dropdown-item"  @click="back">
             <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
             Profile
           </a>
-          <a class="dropdown-item" href="#">
-            <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-            Settings
-          </a>
-          <a class="dropdown-item" href="#">
-            <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-            Activity Log
-          </a>
+         
           <div class="dropdown-divider"></div>
           <a
             class="dropdown-item"
@@ -354,6 +354,10 @@ export default {
 
     chats(){
       this.$router.push('/chat')
+    },
+
+    back(){
+      this.$router.go(-1);
     }
   },
 };

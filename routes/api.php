@@ -62,6 +62,12 @@ Route::group(['middleware' => ['auth:api']], function () {
 
     Route::get('getinfluencer', [ProfileController::class, 'getinfluencer']);
     Route::get('get_influencers', [ProfileController::class, 'getinfluencers']);
+    Route::get('get_all_influencers', [ProfileController::class, 'getallinfluencers']);
+
+    Route::get('getmerchandise', [MerchandiseController::class, 'getmerchandise']);
+    Route::get('getmerchandises', [MerchandiseController::class, 'getmerchandises']);
+
+
 
 
     Route::get('getuserchat', [ChatController::class, 'getuser']);

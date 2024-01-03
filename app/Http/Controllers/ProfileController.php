@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Package;
+use App\Models\Chat;
+
+
 
 
 class ProfileController extends Controller
@@ -25,7 +28,10 @@ class ProfileController extends Controller
          $data = User::where('auth_type' , 'Influencer')->get();
       }
       else{
-         $data = User::where('auth_type' , 'Brand')->get();
+
+         $chat = Chat::where('reciever_id' , auth()->user()->id)->pluck('sender_id')->unique();
+         // dd($chat);
+         $data = User::whereIn('id', $chat)->get();
 
       }
       return response()->json(['influencer' => $data]);
@@ -124,6 +130,15 @@ class ProfileController extends Controller
      }
 
      public function getinfluencers(){
-      $data = User::with('package')->where('auth_type' , 'Influencer')->get();
+      $data = User::with('package')->where('auth_type' , 'Influencer')->limit(3)->get();
+      return response()->json(['data' => $data]);
      }
+
+
+     public function getallinfluencers(){
+      $data = User::with('package')->where('auth_type' , 'Influencer')->get();
+      return response()->json(['data' => $data]);
+     }
+
+     
 }

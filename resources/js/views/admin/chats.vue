@@ -179,6 +179,7 @@ export default {
         chat_user:'',
         chatter:{},
         intervalId: null,
+        idObject:{},
         
         // form: [],
 
@@ -191,7 +192,7 @@ export default {
         },
 
         created(){
-            console.log('aaaa');
+         
         
         get('/getuser')
               .then((res) => {
@@ -202,8 +203,10 @@ export default {
               });
               
 
-             
+              const idObject = JSON.parse(this.$route.params.id);
 
+              console.log('aaaa' , idObject );
+                this.setitem(idObject); 
             
           
         }, 

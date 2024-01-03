@@ -158,9 +158,41 @@ let router = new Router({
 
 
         {
+            path: "/influncers",
+            name: "admin",
+            component: () => import("./views/admin/influencer_page.vue"),
+            meta: {
+                requiresAuth: true,
+                layout: AdminLayout
+            }
+        },
+
+
+        {
             path: "/chat",
             name: "admin",
             component: () => import("./views/admin/chat.vue"),
+            meta: {
+                requiresAuth: true,
+                layout: AdminLayout
+            }
+        },
+
+        {
+            path: "/chats",
+            name: "chats",
+            component: () => import("./views/admin/chats.vue"),
+            meta: {
+                requiresAuth: true,
+                layout: AdminLayout
+            }
+        },
+
+
+        {
+            path: "/allmerchandise",
+            name: "chats",
+            component: () => import("./views/admin/allmerchandise.vue"),
             meta: {
                 requiresAuth: true,
                 layout: AdminLayout

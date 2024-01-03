@@ -5,7 +5,7 @@
        <div class="main">
         <div class="box-1">
             <div class="Sponsorship">
-            <h2 class="spon-para"> Top Performers</h2>
+            <h2 class="spon-para"> Influencers</h2>
             <div class="card-box">
                 <div class="cards" v-for="item in model" @click="profile_page(item.id)">
                   <div class="poxi-1">
@@ -63,34 +63,9 @@
 
             
           </div>
-            <div class="new-3">
-                <div class="dashbord-card">
-                    <div class="chart-bar">
-              <canvas id="myBarChart"></canvas>
-            </div>
-                </div>
-                <div class="conting-card">
-                    <h2>OverView</h2>
-                    <div class="divs">
-                        <h2>Total Unique Users</h2>
-                        <h3>20.3k</h3>
-                    </div>
-                    <div class="divs">
-                        <h2>Total Unique Users</h2>
-                        <h3>20.3k</h3>
-                    </div>
-                    <div class="divs">
-                        <h2>Total Unique Users</h2>
-                        <h3>20.3k</h3>
-                    </div>
-                    <div class="divs">
-                        <h2>Total Unique Users</h2>
-                        <h3>20.3k</h3>
-                    </div>
-                </div>
-            </div>
+           
         </div>
-      <Profile/>
+      
        </div>
     </div>
    </div>
@@ -99,21 +74,15 @@
 
 <script>
 import Vue from 'vue'
-import chartBarDemo from "../../chart/demo/chart-bar-demo";
+
 import { get , byMethod} from '../admin/components/lib/api'
-import Profile from "./brandprofile.vue";
+
 export default {
     name: 'admin',
-    components: {
-   
-   Profile
-},
+ 
 
 
-    mounted() {
-   
-    chartBarDemo();
-  },
+  
 
 
     data () {
@@ -133,7 +102,7 @@ export default {
         },
         created(){
         
-        get('/get_influencers')
+        get('/get_all_influencers')
               .then((res) => {
                 
                  this.setData(res)
@@ -152,7 +121,6 @@ export default {
 
             //   console.log(res.data)
           },
-
 
           profile_page(e){
             this.$router.push(`/admin/dashborad4/${e}`)
@@ -173,9 +141,13 @@ export default {
 
 
 .card-box {
+   
+
     width: 100%;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px 0px;
 }
 
 .cards {
@@ -215,6 +187,8 @@ export default {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px 0px;
 }
 
 .cards {
@@ -237,7 +211,7 @@ export default {
 .box-1 {
     height: 100%;
     background: transparent;
-    width: 67%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -1054,8 +1028,8 @@ button.llo {
 }
 h2.spon-para {
     color: #000;
-    font-family: sans-serif;
-    font-size: 20px;
+    font-family: fantasy;
+    font-size: 30px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -1713,7 +1687,7 @@ button.Add {
 .box-1 {
     height: 100%;
     background: transparent;
-    width: 67%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -2167,8 +2141,8 @@ button.Add {
 }
 h2.spon-para {
     color: #000;
-    font-family: sans-serif;
-    font-size: 16px;
+    font-family: fantasy;
+    font-size: 30px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -2250,6 +2224,13 @@ h2.spon-para {
     flex-wrap: wrap;
     align-items: center;
     gap: 31px;
+
+
+    /* width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px 0px; */
 }
 .btn-box {
     width: 100%;

@@ -33,4 +33,16 @@ class MerchandiseController extends Controller
 
    }
 
+
+   public function getmerchandise(){
+      $data = Merchandise::where('user_id' , auth()->user()->id)->limit(3)->get();
+      return response()->json(['data' => $data]);
+     }
+
+
+     public function getmerchandises(){
+      $data = Merchandise::where('user_id' , auth()->user()->id)->get();
+      return response()->json(['data' => $data]);
+     }
+
 }

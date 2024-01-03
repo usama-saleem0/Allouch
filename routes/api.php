@@ -52,6 +52,10 @@ Route::group(['middleware' => ['auth:api']], function () {
     Route::post('api/edit_profile', [ProfileController::class, 'edit_profile']);
 
     Route::get('getuser', [ProfileController::class, 'getuser']);
+    Route::get('getpackage', [ProfileController::class, 'getpackage']);
+
+    Route::post('api/package', [ProfileController::class, 'package']);
+
     Route::get('getinfluencer', [ProfileController::class, 'getinfluencer']);
 
     Route::get('getuserchat', [ChatController::class, 'getuser']);
@@ -59,6 +63,7 @@ Route::group(['middleware' => ['auth:api']], function () {
     Route::post('chats', [ChatController::class, 'chats']);
 
     Route::get('getchat', [ChatController::class, 'getchat']);
+    
 
     
    

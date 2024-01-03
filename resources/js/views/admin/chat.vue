@@ -93,6 +93,7 @@ line-height: normal;
         </div>
     </div>
     <br>
+    <div class="col">
     <div class="div"  v-for="inf in influencer">
     <div class="row" style="       display: flex;
     justify-content: space-between;
@@ -120,6 +121,7 @@ line-height: normal;
             </div>
         </div>
     </div>
+</div>
 </div>
 
     </div>

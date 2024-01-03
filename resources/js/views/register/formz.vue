@@ -6,10 +6,10 @@
                 <img src="/images/logo.png" alt="">
           </div>
           <div class="row formz">
-            <div class="col-lg-5 col-md-12 col-sm-12">
+            <div class="col-lg-6 col-md-6 col-sm-12 imger">
               <img src="/images/Characters.png" alt="">
             </div>
-            <div class="col-lg-6 col-md-12 col-sm-12 form-titel">
+            <div class="col-lg-6 col-md-6 col-sm-12 form-titel">
               <h3>Thanks For Your Precious Time</h3>
               <h1>Please Wait I am Working On This</h1>
               <p>Brand Journey Start’s Here</p>
@@ -43,7 +43,7 @@ export default {
 .main-form {
     border-radius: 50px;
     background: #F96;
-    width: 1290px;
+    width: 100%;
     height: 900px;
     padding:20px 50px 0px 50px;
 }
@@ -113,6 +113,261 @@ export default {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+@media screen and (max-width: 1600px){
+    .main-form[data-v-0dc4e8ee] {
+    border-radius: 50px;
+    background: #F96;
+    width: 100%;
+    height: 770px;
+    padding: 20px 50px 0px 50px;
+}
+.form-titel h3[data-v-0dc4e8ee] {
+    color: #000;
+    font-family: sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.form-titel h1[data-v-0dc4e8ee] {
+    color: #000;
+    font-family: sans-serif;
+    font-size: 58px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding: 15px 0px;
+}
+.form-titel p[data-v-0dc4e8ee] {
+    color: #000;
+    font-family: sans-serif;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.imger img {
+    width: 100%;
+}
+.form-titel a p[data-v-0dc4e8ee] {
+    color: #000;
+    font-family: Anton;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+}
+@media screen and (max-width: 1440px){
+    .main-form[data-v-0dc4e8ee][data-v-0dc4e8ee] {
+    border-radius: 50px;
+    background: #F96;
+    width: 100%;
+    height: 650px;
+    padding: 20px 50px 0px 50px;
+}
+.form-titel h3[data-v-0dc4e8ee][data-v-0dc4e8ee] {
+    color: #000;
+    font-family: sans-serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.form-titel h1[data-v-0dc4e8ee][data-v-0dc4e8ee] {
+    color: #000;
+    font-family: sans-serif;
+    font-size: 52px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding: 15px 0px;
+}
+.form-titel p[data-v-0dc4e8ee][data-v-0dc4e8ee] {
+    color: #000;
+    font-family: sans-serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.col-lg-6.col-md-12.col-sm-12.imger img[data-v-0dc4e8ee] {
+    width: 93%;
+}
+.form-titel a p[data-v-0dc4e8ee][data-v-0dc4e8ee] {
+    color: #000;
+    font-family: Anton;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.imger img[data-v-0dc4e8ee] {
+    width: 93%;
+}
+}
+@media screen and (max-width: 1366px){
+    .main-form[data-v-0dc4e8ee][data-v-0dc4e8ee] {
+    border-radius:45px;
+    background: #F96;
+    width: 100%;
+    height: 560px;
+    padding: 20px 35px 0px 35px;
+}
+.form-titel h3[data-v-0dc4e8ee][data-v-0dc4e8ee] {
+    color: #000;
+    font-family: sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.form-titel h1[data-v-0dc4e8ee][data-v-0dc4e8ee] {
+    color: #000;
+    font-family: sans-serif;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding: 10px 0px;
+}
+.form-titel p[data-v-0dc4e8ee][data-v-0dc4e8ee] {
+    color: #000;
+    font-family: sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.col-lg-6.col-md-12.col-sm-12.imger img[data-v-0dc4e8ee] {
+    width: 80%;
+}
+.form-titel a p[data-v-0dc4e8ee][data-v-0dc4e8ee] {
+    color: #000;
+    font-family: Anton;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.imger img[data-v-0dc4e8ee] {
+    width: 80%;
+}
+}
+@media screen and (max-width: 768px){
+    .main-form[data-v-0dc4e8ee][data-v-0dc4e8ee][data-v-0dc4e8ee] {
+    border-radius: 25px;
+    background: #F96;
+    width: 100%;
+    height: 100%;
+    padding: 20px 30px 0px 30px;
+}
+.imger img[data-v-0dc4e8ee] {
+    width: 82%;
+}
+.form-titel h3[data-v-0dc4e8ee][data-v-0dc4e8ee][data-v-0dc4e8ee] {
+    color: #000;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.form-titel h1[data-v-0dc4e8ee][data-v-0dc4e8ee][data-v-0dc4e8ee] {
+    color: #000;
+    font-family: sans-serif;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding: 10px 0px;
+}
+.form-titel p[data-v-0dc4e8ee][data-v-0dc4e8ee][data-v-0dc4e8ee] {
+    color: #000;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.form-titel a svg[data-v-0dc4e8ee] {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+.form-titel a p[data-v-0dc4e8ee][data-v-0dc4e8ee][data-v-0dc4e8ee] {
+    color: #000;
+    font-family: Anton;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+}
+@media screen and (max-width: 425px){
+    .row.formz[data-v-0dc4e8ee] {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+    gap: 30px;
+    align-content: center;
+    padding-top: 30px;
+    }
+    .main-form[data-v-0dc4e8ee][data-v-0dc4e8ee][data-v-0dc4e8ee][data-v-0dc4e8ee] {
+    border-radius: 25px;
+    background: #F96;
+    width: 100%;
+    height: 100%;
+    padding: 20px 20px 0px 20px;
+}
+
+    .form-titel h3[data-v-0dc4e8ee][data-v-0dc4e8ee][data-v-0dc4e8ee][data-v-0dc4e8ee] {
+    color: #000;
+    font-family: sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+}
+.form-titel h1[data-v-0dc4e8ee][data-v-0dc4e8ee][data-v-0dc4e8ee][data-v-0dc4e8ee] {
+    color: #000;
+    font-family: sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding: 10px 0px;
+    text-align: center;
+}
+.form-titel p[data-v-0dc4e8ee][data-v-0dc4e8ee][data-v-0dc4e8ee][data-v-0dc4e8ee] {
+    color: #000;
+    font-family: sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+}
+.form-titel a p[data-v-0dc4e8ee][data-v-0dc4e8ee][data-v-0dc4e8ee][data-v-0dc4e8ee] {
+    color: #000;
+    font-family: Anton;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.form-titel a svg[data-v-0dc4e8ee][data-v-0dc4e8ee] {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+.form-img img {
+    width: 45%;
+}
 }
 </style>
 

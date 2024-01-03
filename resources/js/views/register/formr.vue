@@ -940,6 +940,10 @@ button.button-20 p {
     height: 100%;
     background-image: url(/images/Up.png);
     padding: 10px 25px;
+    border-radius: 25px;    width: 100%;
+    height: 100%;
+    background-image: url(/images/Up.png);
+    padding: 10px 25px;
     border-radius: 25px;
 }
 .main-box {

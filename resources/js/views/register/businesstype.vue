@@ -257,7 +257,7 @@ this.form.businesstype = this.company_type;
     width: 100% !important;
     height: 900px;
     border-radius: 50px;
-    background-image: url(/images/Sign\ Up.png);
+    background-image: url(/images/Up.png);
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -381,7 +381,7 @@ a.form-last p {
     width: 100%;
     height: 785px;
     border-radius: 50px;
-    background-image: url(/images/Sign\ Up.png);
+    background-image: url(/images/Up.png);
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -428,7 +428,7 @@ a.form-last {
     width: 100%;
     height: 650px;
     border-radius: 50px;
-    background-image: url(/images/Sign\ Up.png);
+    background-image: url(/images/Up.png);
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -500,7 +500,7 @@ button.form-btn {
     width: 100%;
     height: 560px;
     border-radius: 50px;
-    background-image: url(/images/Sign\ Up.png);
+    background-image: url(/images/Up.png);
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -610,7 +610,7 @@ a.form-last {
     width: 100%;
     height: 100%;
     border-radius: 25px;
-    background-image: url(/images/Sign\ Up.png);
+    background-image: url(/images/Up.png);
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -636,7 +636,7 @@ form.form-1 {
     align-items: center;
     justify-content: center;
 }
-.form-titel h2[data-v-0b01a477] {
+.form-titel h2 {
     color: #1C1D1E;
     font-family: sans-serif;
     font-size: 24px;
@@ -644,7 +644,7 @@ form.form-1 {
     font-weight: 800;
     line-height: normal;
 }
-.form-box img[data-v-0b01a477][data-v-0b01a477][data-v-0b01a477] {
+.form-box img {
     position: absolute;
     left: 90px;
     bottom: 0px;
@@ -652,24 +652,24 @@ form.form-1 {
 }
 }
 @media screen and (max-width: 425px){
-    .form-titel[data-v-0b01a477] {
+    .form-titel {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.form-box[data-v-0b01a477] {
+.form-box {
     width: 100%;
     padding: 0px 20px;
 }
-.form-box img[data-v-0b01a477][data-v-0b01a477][data-v-0b01a477][data-v-0b01a477] {
+.form-box img {
     position: absolute;
     left: 90px;
     bottom: 0px;
     width: 35%;
     display: none;
 }
-form.form-1[data-v-0b01a477][data-v-0b01a477][data-v-0b01a477] {
+form.form-1 {
     width: 100%;
     height: 420px;
     flex-shrink: 0;
@@ -684,7 +684,7 @@ form.form-1[data-v-0b01a477][data-v-0b01a477][data-v-0b01a477] {
     align-items: center;
     justify-content: center;
 }
-a.form-last[data-v-0b01a477] {
+a.form-last {
     width: 100%;
     display: flex;
     align-items: center;

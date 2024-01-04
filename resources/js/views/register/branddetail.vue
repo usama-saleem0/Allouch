@@ -162,7 +162,7 @@ export default {
     width: 100%;
     height: 900px;
     border-radius: 50px;
-    background-image: url(/images/Sign\ Up.png);
+    background-image: url(/images/Up.png);
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -321,7 +321,7 @@ a.form-last p {
     width: 100%;
     height: 785px;
     border-radius: 50px;
-    background-image: url(/images/Sign\ Up.png);
+    background-image: url(/images/Up.png);
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -367,7 +367,7 @@ a.form-last p {
     width: 100%;
     height: 650px;
     border-radius: 50px;
-    background-image: url(/images/Sign\ Up.png);
+    background-image: url(/images/Up.png);
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -467,7 +467,7 @@ a.form-last svg {
     width: 100%;
     height: 560px;
     border-radius: 44px;
-    background-image: url(/images/Sign\ Up.png);
+    background-image: url(/images/Up.png);
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -621,7 +621,7 @@ button.form-btn{
     width: 100%;
     height: 100%;
     border-radius: 25px;
-    background-image: url(/images/Sign\ Up.png);
+    background-image: url(/images/Up.png);
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -648,11 +648,11 @@ button.form-btn{
 }
 }
 @media screen and (max-width: 425px){
-    .main-form[data-v-10ef68ab] {
+    .main-form {
     width: 100%;
     height: 100%;
     border-radius: 25px;
-    background-image: url(/images/Sign\ Up.png);
+    background-image: url(/images/Up.png);
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -663,14 +663,14 @@ button.form-btn{
     background-repeat: no-repeat;
     padding: 12px 0px;
 }
-.form-box[data-v-10ef68ab] {
+.form-box {
     width: 100%;
     padding: 0px 20px;
 }
-.form-img img[data-v-10ef68ab] {
+.form-img img {
     width: 35%;
 }
-.form-1[data-v-10ef68ab] {
+.form-1 {
     width: 100%;
     height: 420px;
     flex-shrink: 0;
@@ -685,14 +685,14 @@ button.form-btn{
     align-items: center;
     justify-content: space-between;
 }
-.form-box img[data-v-10ef68ab] {
+.form-box img {
     position: absolute;
     left: 90px;
     bottom: 0px;
     width: 35%;
     display: none;
 }
-a.form-last[data-v-10ef68ab] {
+a.form-last {
     width: 100%;
     display: flex;
     align-items: center;

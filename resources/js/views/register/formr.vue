@@ -536,7 +536,7 @@ button.Brand {
     background: #FFF;
     padding: 15px;
 }
-.fromr-btn a[data-v-0ea660fe] {
+.fromr-btn a {
     color: gray;
     width: 32%;
     font-size: 14px;
@@ -634,13 +634,13 @@ button.Brand {
     font-weight: 600;
     line-height: normal;
 }
-.input-group-1 input[data-v-0ea660fe] {
+.input-group-1 input {
     border-radius: 9px;
     border: 1px solid #ADADAD;
     background: #FFF;
     padding: 10px;
 }
-.input-group-1 label[data-v-0ea660fe] {
+.input-group-1 label {
     color: #000;
     font-family: sans-serif;
     font-size: 14px;
@@ -649,7 +649,7 @@ button.Brand {
     line-height: normal;
     padding-bottom: 10px;
 }
-.fromr-btn a[data-v-0ea660fe][data-v-0ea660fe] {
+.fromr-btn a {
     color: gray;
     width: 32%;
     font-size: 12px;
@@ -788,7 +788,7 @@ button.Brand {
     .logo-from img {
     width: 20%;
 }
-.input-group-1 input[data-v-0ea660fe] {
+.input-group-1 input {
     border-radius: 5px;
     border: 1px solid #ADADAD;
     background: #FFF;

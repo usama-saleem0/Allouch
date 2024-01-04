@@ -235,7 +235,7 @@ export default {
     width: 100%;
     height: 900px;
     border-radius: 50px;
-    background-image: url(/images/Sign\ Up.png);
+    background-image: url(/images/Up.png);
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -409,7 +409,7 @@ a.form-last p {
     line-height: normal;
     cursor: pointer;
 }
-.drop-zone[data-v-273194bc] {
+.drop-zone {
     width: 100%;
     height: 280px;
     padding: 25px;
@@ -482,7 +482,7 @@ img.image-preview {
 }
 
 @media screen and (max-width: 1600px){
-  .form-titel h2[data-v-273194bc] {
+  .form-titel h2 {
     color: #1C1D1E;
     font-family: sans-serif;
     font-size: 29px;
@@ -490,7 +490,7 @@ img.image-preview {
     font-weight: 800;
     line-height: normal;
 }
-img.image-preview[data-v-273194bc] {
+img.image-preview {
     width: 100%;
     min-width: 394px;
     min-height: 180px;
@@ -498,7 +498,7 @@ img.image-preview[data-v-273194bc] {
     max-width: 443px;
     max-height: 180px;
 }
-.form-1[data-v-273194bc] {
+.form-1 {
     width: 63%;
     height: 606px;
     flex-shrink: 0;
@@ -513,11 +513,11 @@ img.image-preview[data-v-273194bc] {
     align-items: center;
     justify-content: space-between;
 }
-.main-form[data-v-273194bc] {
+.main-form {
     width: 100%;
     height: 785px;
     border-radius: 50px;
-    background-image: url(/images/Sign\ Up.png);
+    background-image: url(/images/Up.png);
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -527,12 +527,12 @@ img.image-preview[data-v-273194bc] {
     background-size: cover;
     background-repeat: no-repeat;
 }
-.form-titel[data-v-273194bc] {
+.form-titel {
     width: 28%;
     display: flex;
     justify-content: flex-end;
 }
-.drop-zone[data-v-273194bc][data-v-273194bc] {
+.drop-zone {
     width: 100%;
     height: 180px;
     padding: 25px;
@@ -548,7 +548,7 @@ img.image-preview[data-v-273194bc] {
     border: 1px solid #FF5757;
     background: #FFF;
 }
-a.form-last[data-v-273194bc] {
+a.form-last {
     width: 60%;
     display: flex;
     align-items: center;
@@ -557,7 +557,7 @@ a.form-last[data-v-273194bc] {
     gap: 14px;
     padding-top: 20px;
 }
-.imgss[data-v-273194bc] {
+.imgss {
     position: absolute;
     left: 160px;
     bottom: 0px;
@@ -565,11 +565,11 @@ a.form-last[data-v-273194bc] {
 }
 }
 @media screen and (max-width: 1440px){
-  .main-form[data-v-273194bc][data-v-273194bc] {
+  .main-form {
     width: 100%;
     height: 650px;
     border-radius: 50px;
-    background-image: url(/images/Sign\ Up.png);
+    background-image: url(/images/Up.png);
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -579,7 +579,7 @@ a.form-last[data-v-273194bc] {
     background-size: cover;
     background-repeat: no-repeat;
 }
-img.image-preview[data-v-273194bc] {
+img.image-preview {
     width: 100%;
     min-width: 318px;
     min-height: 124px;
@@ -587,7 +587,7 @@ img.image-preview[data-v-273194bc] {
     max-width: 443px;
     max-height: 124px;
 }
-.drop-zone[data-v-273194bc][data-v-273194bc][data-v-273194bc] {
+.drop-zone {
     width: 100%;
     height: 125px;
     padding: 25px;
@@ -603,7 +603,7 @@ img.image-preview[data-v-273194bc] {
     background: #FFF;
     justify-content: center;
 }
-.input-group-2 input[data-v-273194bc] {
+.input-group-2 input {
     border-radius: 9px;
     border: 1px solid #ADADAD;
     background: #FFF;
@@ -615,7 +615,7 @@ img.image-preview[data-v-273194bc] {
     line-height: normal;
     padding: 10px;
 }
-.img-input label[data-v-273194bc] {
+.img-input label {
     color: #000;
     font-family: sans-serif;
     font-size: 14px;
@@ -624,7 +624,7 @@ img.image-preview[data-v-273194bc] {
     line-height: normal;
     padding-bottom: 10px;
 }
-.input-group-2 label[data-v-273194bc] {
+.input-group-2 label {
     color: #000;
     font-family: Poppins;
     font-size: 14px;
@@ -633,7 +633,7 @@ img.image-preview[data-v-273194bc] {
     line-height: normal;
     padding-bottom: 10px;
 }
-.input-3 label[data-v-273194bc] {
+.input-3 label {
     color: #000;
     font-family: sans-serif;
     font-size: 14px;
@@ -643,7 +643,7 @@ img.image-preview[data-v-273194bc] {
     width: 100%;
     padding-bottom: 10px;
 }
-.form-1[data-v-273194bc][data-v-273194bc] {
+.form-1 {
     width: 58%;
     height: 485px;
     flex-shrink: 0;
@@ -658,13 +658,13 @@ img.image-preview[data-v-273194bc] {
     align-items: center;
     justify-content: space-between;
 }
-.imgss[data-v-273194bc][data-v-273194bc] {
+.imgss {
     position: absolute;
     left: 160px;
     bottom: 0px;
     width: 30%;
 }
-a.form-last p[data-v-273194bc] {
+a.form-last p {
     color: #000;
     font-family: Anton;
     font-size: 15px;
@@ -675,11 +675,11 @@ a.form-last p[data-v-273194bc] {
 }
 }
 @media screen and (max-width: 1366px){
-  .main-form[data-v-273194bc][data-v-273194bc][data-v-273194bc] {
+  .main-form {
     width: 100%;
     height: 560px;
     border-radius: 45px;
-    background-image: url(/images/Sign\ Up.png);
+    background-image: url(/images/Up.png);
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -689,7 +689,7 @@ a.form-last p[data-v-273194bc] {
     background-size: cover;
     background-repeat: no-repeat;
 }
-.form-1[data-v-273194bc][data-v-273194bc][data-v-273194bc] {
+.form-1 {
     width:55%;
     height: 420px;
     flex-shrink: 0;
@@ -704,7 +704,7 @@ a.form-last p[data-v-273194bc] {
     align-items: center;
     justify-content: space-between;
 }
-img.image-preview[data-v-273194bc][data-v-273194bc] {
+img.image-preview {
     width: 100%;
     min-width: 282px;
     min-height: 108px;
@@ -712,7 +712,7 @@ img.image-preview[data-v-273194bc][data-v-273194bc] {
     max-width: 443px;
     max-height: 108px;
 }
-a.form-last p[data-v-273194bc][data-v-273194bc] {
+a.form-last p {
     color: #000;
     font-family: Anton;
     font-size: 12px;
@@ -721,11 +721,11 @@ a.form-last p[data-v-273194bc][data-v-273194bc] {
     line-height: normal;
     cursor: pointer;
 }
-a.form-last[data-v-273194bc][data-v-273194bc] svg {
+a.form-last svg {
     width: 20px;
     height: 20px;
 }
-button.form-btn[data-v-273194bc] {
+button.form-btn {
     width: 100%;
     display: flex;
     height: 38px;
@@ -739,7 +739,7 @@ button.form-btn[data-v-273194bc] {
     background: #F96;
     box-shadow: 2px 2px 0px 0px #1B1C1D;
 }
-button.form-btn p[data-v-273194bc] {
+button.form-btn p {
     color: #FFF;
     text-align: center;
     font-family: DM Sans;
@@ -748,7 +748,7 @@ button.form-btn p[data-v-273194bc] {
     font-weight: 700;
     line-height: 24px;
 }
-.drop-zone[data-v-273194bc][data-v-273194bc][data-v-273194bc][data-v-273194bc] {
+.drop-zone {
     width: 100%;
     height: 110px;
     padding: 25px;
@@ -764,7 +764,7 @@ button.form-btn p[data-v-273194bc] {
     background: #FFF;
     justify-content: center;
 }
-.img-input label[data-v-273194bc][data-v-273194bc] {
+.img-input label {
     color: #000;
     font-family: sans-serif;
     font-size: 12px;
@@ -773,7 +773,7 @@ button.form-btn p[data-v-273194bc] {
     line-height: normal;
     padding-bottom: 8px;
 }
-.input-group-2 label[data-v-273194bc][data-v-273194bc] {
+.input-group-2 label {
     color: #000;
     font-family: Poppins;
     font-size: 12px;
@@ -782,7 +782,7 @@ button.form-btn p[data-v-273194bc] {
     line-height: normal;
     padding-bottom: 8px;
 }
-.input-3 label[data-v-273194bc][data-v-273194bc] {
+.input-3 label {
     color: #000;
     font-family: sans-serif;
     font-size: 12px;
@@ -792,7 +792,7 @@ button.form-btn p[data-v-273194bc] {
     width: 100%;
     padding-bottom: 8px;
 }
-.input-group-2 input[data-v-273194bc][data-v-273194bc] {
+.input-group-2 input {
     border-radius: 9px;
     border: 1px solid #ADADAD;
     background: #FFF;
@@ -804,13 +804,13 @@ button.form-btn p[data-v-273194bc] {
     line-height: normal;
     padding: 8px;
 }
-.input-3 input[data-v-273194bc] {
+.input-3 input {
     width: 28%;
     border-radius: 9px;
     border: 1px solid #ADADAD;
     padding: 8px 8px 8px 35px !important;
 }
-.imgss[data-v-273194bc][data-v-273194bc][data-v-273194bc] {
+.imgss {
     position: absolute;
     left: 170px;
     bottom: 0px;
@@ -820,11 +820,11 @@ button.form-btn p[data-v-273194bc] {
 
 }
 @media screen and (max-width: 768px){
-  .main-form[data-v-273194bc][data-v-273194bc][data-v-273194bc][data-v-273194bc] {
+  .main-form {
     width: 100%;
     height: 560px;
     border-radius: 24px;
-    background-image: url(/images/Sign\ Up.png);
+    background-image: url(/images/Up.png);
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -834,11 +834,11 @@ button.form-btn p[data-v-273194bc] {
     background-size: cover;
     background-repeat: no-repeat;
 }
-.main-form[data-v-273194bc][data-v-273194bc][data-v-273194bc][data-v-273194bc] {
+.main-form {
     width: 100%;
     height: 100%;
     border-radius: 24px;
-    background-image: url(/images/Sign\ Up.png);
+    background-image: url(/images/Up.png);
     position: relative;
     display: flex;
     gap: 25px 0px;
@@ -849,12 +849,12 @@ button.form-btn p[data-v-273194bc] {
     align-content: center;
     align-items: center;
 }
-.form-titel[data-v-273194bc][data-v-273194bc] {
+.form-titel {
     width: 100%;
     display: flex;
     justify-content: center;
 }
-.form-1[data-v-273194bc][data-v-273194bc][data-v-273194bc][data-v-273194bc] {
+.form-1 {
     width: 50%;
     height: 420px;
     flex-shrink: 0;
@@ -869,19 +869,19 @@ button.form-btn p[data-v-273194bc] {
     align-items: center;
     justify-content: space-between;
 }
-.imgss[data-v-273194bc][data-v-273194bc][data-v-273194bc][data-v-273194bc][data-v-273194bc] {
+.imgss {
     position: relative;
     left: 85px;
     bottom: 0px;
     width: 33%;
 }
-.form-box[data-v-273194bc][data-v-273194bc] {
+.form-box {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
     justify-content: flex-start;
 }
-a.form-last[data-v-273194bc][data-v-273194bc] {
+a.form-last {
     width: 100%;
     display: flex;
     align-items: center;
@@ -890,7 +890,7 @@ a.form-last[data-v-273194bc][data-v-273194bc] {
     gap: 14px;
     padding-top: 20px;
 }
-img.image-preview[data-v-273194bc][data-v-273194bc][data-v-273194bc] {
+img.image-preview {
     width: 100%;
     min-width: 288px;
     min-height: 108px;
@@ -901,11 +901,11 @@ img.image-preview[data-v-273194bc][data-v-273194bc][data-v-273194bc] {
 }
 @media screen and (max-width: 425px){
 
-.main-form[data-v-273194bc][data-v-273194bc][data-v-273194bc][data-v-273194bc][data-v-273194bc] {
+.main-form {
     width: 100%;
     height: 100%;
     border-radius: 24px;
-    background-image: url(/images/Sign\ Up.png);
+    background-image: url(/images/Up.png);
     position: relative;
     display: flex;
     gap: 25px 0px;
@@ -920,10 +920,10 @@ img.image-preview[data-v-273194bc][data-v-273194bc][data-v-273194bc] {
 div#popup-box {
     padding-right: 0px;
 }
-.form-img img[data-v-273194bc] {
+.form-img img {
     width: 40%;
 }
-.form-titel h2[data-v-273194bc][data-v-273194bc] {
+.form-titel h2 {
     color: #1C1D1E;
     font-family: sans-serif;
     font-size: 24px;
@@ -931,14 +931,14 @@ div#popup-box {
     font-weight: 800;
     line-height: normal;
 }
-.imgss[data-v-273194bc][data-v-273194bc][data-v-273194bc][data-v-273194bc][data-v-273194bc][data-v-273194bc] {
+.imgss {
     position: relative;
     left: 85px;
     bottom: 0px;
     width: 33%;
     display: none;
 }
-.form-1[data-v-273194bc][data-v-273194bc][data-v-273194bc][data-v-273194bc][data-v-273194bc] {
+.form-1 {
     width: 100%;
     height: 420px;
     flex-shrink: 0;

@@ -501,14 +501,14 @@ button.Brand {
     line-height: 24px; /* 150% */
 }
 @media screen and (max-width: 1600px){
-    .main-form[data-v-208aaa41] {
+    .main-form {
     width: 100%;
     height: 785px;
     background-image: url(/images/Up.png);
     padding: 10px 40px;
     border-radius: 50px;
 }
-.from-titel h1[data-v-208aaa41] {
+.from-titel h1 {
     color: #1C1D1E;
     font-family: sans-serif;
     font-size: 32px;
@@ -516,11 +516,11 @@ button.Brand {
     font-weight: 600;
     line-height: normal;
 }
-.from-titel[data-v-208aaa41] {
+.from-titel {
     width: 38%;
     padding-top: 60px;
 }
-.main-box[data-v-208aaa41] {
+.main-box {
     width: 100%;
     display: flex;
     position: relative;
@@ -528,7 +528,7 @@ button.Brand {
     justify-content: space-between;
     flex-direction: column;
 }
-.form[data-v-208aaa41] {
+.form {
     border-radius: 40px;
     background: #FFF;
     box-shadow: 0px 4px 35px 0px rgba(0, 0, 0, 0.08);
@@ -542,7 +542,7 @@ button.Brand {
     align-items: center;
     padding: 25px;
 }
-button.Influencer[data-v-208aaa41] {
+button.Influencer {
     border-radius: 6px;
     border: 1px solid #000;
 
@@ -556,7 +556,7 @@ button.Influencer[data-v-208aaa41] {
     font-weight: 700;
     line-height: 24px;
 }
-button.Brand[data-v-208aaa41] {
+button.Brand {
     border-radius: 6px;
     border: 1px solid #000;
 
@@ -570,19 +570,19 @@ button.Brand[data-v-208aaa41] {
     font-weight: 700;
     line-height: 24px;
 }
-.input-group input[data-v-208aaa41] {
+.input-group input {
     border-radius: 9px;
     border: 1px solid #ADADAD;
     background: #FFF;
     padding: 15px;
 }
-.from-box img[data-v-208aaa41] {
+.from-box img {
     position: absolute;
     right: 250px;
     top: 110px;
     width: 90%;
 }
-.from-box[data-v-208aaa41] {
+.from-box {
     width: 40%;
     position: absolute;
     z-index: 1;
@@ -593,7 +593,7 @@ button.Brand[data-v-208aaa41] {
 }
 }
 @media screen and (max-width: 1440px){
-    .from-titel h1[data-v-208aaa41] {
+    .from-titel h1 {
     color: #1C1D1E;
     font-family: sans-serif;
     font-size: 28px;
@@ -601,7 +601,7 @@ button.Brand[data-v-208aaa41] {
     font-weight: 600;
     line-height: normal;
 }
-.from-titel h3[data-v-208aaa41] {
+.from-titel h3 {
     color: #1B1C1D;
     font-family: sans-serif;
     font-style: normal;
@@ -610,14 +610,14 @@ button.Brand[data-v-208aaa41] {
     font-size: 20px;
     padding: 8px 0px;
 }
-.main-form[data-v-208aaa41][data-v-208aaa41] {
+.main-form {
     width: 100%;
     height: 650px;
     background-image: url(/images/Up.png);
     padding: 10px 30px;
     border-radius: 50px;
 }
-button.Influencer[data-v-208aaa41][data-v-208aaa41] {
+button.Influencer {
     border-radius: 6px;
     border: 1px solid #000;
     /* background: #FFF; */
@@ -631,7 +631,7 @@ button.Influencer[data-v-208aaa41][data-v-208aaa41] {
     font-weight: 700;
     line-height: 15px;
 }
-button.Brand[data-v-208aaa41][data-v-208aaa41] {
+button.Brand {
     border-radius: 6px;
     border: 1px solid #000;
     /* background: #F96; */
@@ -645,15 +645,15 @@ button.Brand[data-v-208aaa41][data-v-208aaa41] {
     font-weight: 700;
     line-height: 15px;
 }
-.fromr-btn a[data-v-208aaa41] {
+.fromr-btn a {
     color: gray;
     width: 32%;
     font-size: 14px;
 }
-.fromr-btn a span[data-v-208aaa41] {
+.fromr-btn a span {
     color: #F96;
 }
-.input-group label[data-v-208aaa41] {
+.input-group label {
     color: #000;
     font-family: sans-serif;
     font-size: 14px;
@@ -662,13 +662,13 @@ button.Brand[data-v-208aaa41][data-v-208aaa41] {
     line-height: normal;
     padding-bottom: 10px;
 }
-.input-group input[data-v-208aaa41][data-v-208aaa41] {
+.input-group input {
     border-radius: 9px;
     border: 1px solid #ADADAD;
     background: #FFF;
     padding: 10px;
 }
-.form[data-v-208aaa41][data-v-208aaa41] {
+.form {
     border-radius: 40px;
     background: #FFF;
     box-shadow: 0px 4px 35px 0px rgba(0, 0, 0, 0.08);
@@ -682,7 +682,7 @@ button.Brand[data-v-208aaa41][data-v-208aaa41] {
     align-items: center;
     padding: 20px;
 }
-.card[data-v-208aaa41] {
+.card {
     width: 115px;
     height: 115px;
     flex-shrink: 0;
@@ -692,7 +692,7 @@ button.Brand[data-v-208aaa41][data-v-208aaa41] {
     align-items: center;
     justify-content: center;
 }
-.from-card h2[data-v-208aaa41] {
+.from-card h2 {
     color: #000;
     font-family: sans-serif;
     font-size: 15px;
@@ -700,7 +700,7 @@ button.Brand[data-v-208aaa41][data-v-208aaa41] {
     font-weight: 400;
     line-height: normal;
 }
-.from-card a p[data-v-208aaa41] {
+.from-card a p {
     color: #000;
     font-family: Anton;
     font-size: 15px;
@@ -708,14 +708,14 @@ button.Brand[data-v-208aaa41][data-v-208aaa41] {
     font-weight: 400;
     line-height: normal;
 }
-.card-box[data-v-208aaa41] {
+.card-box {
     width: 100%;
     display: flex;
     gap: 20px;
     align-items: center;
     padding: 18px 0px;
 }
-.main-box[data-v-208aaa41][data-v-208aaa41] {
+.main-box {
     width: 100%;
     display: flex;
     position: relative;
@@ -723,7 +723,7 @@ button.Brand[data-v-208aaa41][data-v-208aaa41] {
     justify-content: space-between;
     flex-direction: column;
 }
-.from-box img[data-v-208aaa41][data-v-208aaa41] {
+.from-box img {
     position: absolute;
     right: 230px;
     top: 45px;
@@ -734,7 +734,7 @@ button.Brand[data-v-208aaa41][data-v-208aaa41] {
     .logo-from img {
     width: 20%;
 }
-.from-titel h1[data-v-208aaa41][data-v-208aaa41] {
+.from-titel h1 {
     color: #1C1D1E;
     font-family: sans-serif;
     font-size: 24px;
@@ -742,7 +742,7 @@ button.Brand[data-v-208aaa41][data-v-208aaa41] {
     font-weight: 600;
     line-height: normal;
 }
-.from-titel h3[data-v-208aaa41][data-v-208aaa41] {
+.from-titel h3 {
     color: #1B1C1D;
     font-family: sans-serif;
     font-style: normal;
@@ -751,18 +751,18 @@ button.Brand[data-v-208aaa41][data-v-208aaa41] {
     font-size: 18px;
     padding: 8px 0px;
 }
-.from-titel[data-v-208aaa41][data-v-208aaa41] {
+.from-titel {
     width: 32%;
     padding-top: 40px;
 }
-.from-titel p[data-v-208aaa41] {
+.from-titel p {
     color: #1B1C1D;
     font-size: 12px;
     font-style: normal;
     font-weight: 300;
     line-height: normal;
 }
-.card[data-v-208aaa41][data-v-208aaa41] {
+.card {
     width: 110px;
     height: 110px;
     flex-shrink: 0;
@@ -772,7 +772,7 @@ button.Brand[data-v-208aaa41][data-v-208aaa41] {
     align-items: center;
     justify-content: center;
 }
-.from-card h2[data-v-208aaa41][data-v-208aaa41] {
+.from-card h2 {
     color: #000;
     font-family: sans-serif;
     font-size: 12px;
@@ -780,7 +780,7 @@ button.Brand[data-v-208aaa41][data-v-208aaa41] {
     font-weight: 400;
     line-height: normal;
 }
-.card p[data-v-208aaa41] {
+.card p {
     color: #1B1C1D;
     font-family: Poppins;
     font-size: 10px;
@@ -788,10 +788,10 @@ button.Brand[data-v-208aaa41][data-v-208aaa41] {
     font-weight: 400;
     line-height: normal;
 }
-.card img[data-v-208aaa41] {
+.card img {
     width: 45%;
 }
-.from-card a p[data-v-208aaa41][data-v-208aaa41] {
+.from-card a p {
     color: #000;
     font-family: Anton;
     font-size: 12px;
@@ -803,21 +803,21 @@ button.Brand[data-v-208aaa41][data-v-208aaa41] {
     width: 20px;
     height: 20px;
 }
-.card-box[data-v-208aaa41][data-v-208aaa41] {
+.card-box {
     width: 100%;
     display: flex;
     gap: 20px;
     align-items: center;
     padding: 15px 0px;
 }
-.main-form[data-v-208aaa41][data-v-208aaa41][data-v-208aaa41] {
+.main-form {
     width: 100%;
     height: 560px;
     background-image: url(/images/Up.png);
     padding: 10px 25px;
     border-radius: 45px;
 }
-.input-group label[data-v-208aaa41][data-v-208aaa41] {
+.input-group label {
     color: #000;
     font-family: sans-serif;
     font-size: 12px;
@@ -826,7 +826,7 @@ button.Brand[data-v-208aaa41][data-v-208aaa41] {
     line-height: normal;
     padding-bottom: 8px;
 }
-button.button-20[data-v-208aaa41] {
+button.button-20 {
     width: 100%;
     border-radius: 6px;
     border: 1px solid #000;
@@ -840,7 +840,7 @@ button.button-20[data-v-208aaa41] {
     gap: 7.647px;
     flex-shrink: 0;
 }
-button.button-20 p[data-v-208aaa41] {
+button.button-20 p {
     color: #FFF;
     text-align: center;
     font-family: DM Sans;
@@ -852,7 +852,7 @@ button.button-20 p[data-v-208aaa41] {
 .form-main.form p {
     font-size: 12px;
 }
-.form[data-v-208aaa41][data-v-208aaa41][data-v-208aaa41] {
+.form {
     border-radius: 30px;
     background: #FFF;
     box-shadow: 0px 4px 35px 0px rgba(0, 0, 0, 0.08);
@@ -866,7 +866,7 @@ button.button-20 p[data-v-208aaa41] {
     align-items: center;
     padding: 18px;
 }
-.main-box[data-v-208aaa41][data-v-208aaa41][data-v-208aaa41] {
+.main-box {
     width: 100%;
     display: flex;
     position: relative;
@@ -874,14 +874,14 @@ button.button-20 p[data-v-208aaa41] {
     justify-content: space-between;
     flex-direction: column;
 }
-.input-group input[data-v-208aaa41][data-v-208aaa41][data-v-208aaa41] {
+.input-group input {
     border-radius: 5px;
     border: 1px solid #ADADAD;
     background: #FFF;
     padding: 8px;
     font-size: 12px;
 }
-.from-box img[data-v-208aaa41][data-v-208aaa41][data-v-208aaa41] {
+.from-box img {
     position: absolute;
     right: 230px;
     top: 45px;
@@ -889,12 +889,12 @@ button.button-20 p[data-v-208aaa41] {
 }
 }
 @media screen and (max-width: 1024px){
-    section.form-1-sec[data-v-208aaa41] {
+    section.form-1-sec {
     width: 90%;
 }
 }
 @media screen and (max-width: 768px){
-    .main-form[data-v-208aaa41][data-v-208aaa41][data-v-208aaa41][data-v-208aaa41][data-v-208aaa41] {
+    .main-form {
         width: 100%;
     height: 100%;
     background-image: url(/images/Up.png);
@@ -904,7 +904,7 @@ button.button-20 p[data-v-208aaa41] {
     background-repeat: no-repeat;
     background-size: cover;
 }
-.main-box[data-v-208aaa41][data-v-208aaa41][data-v-208aaa41][data-v-208aaa41] {
+.main-box {
     width: 100%;
     display: flex;
     position: relative;
@@ -914,12 +914,12 @@ button.button-20 p[data-v-208aaa41] {
     flex-wrap: wrap;
     align-items: center;
 }
-.from-titel[data-v-208aaa41][data-v-208aaa41][data-v-208aaa41] {
+.from-titel {
     width: 48%;
     padding-top: 40px;
     text-align: center;
 }
-.from-box[data-v-208aaa41][data-v-208aaa41] {
+.from-box {
     width: 55%;
     position: relative;
     z-index: 0;
@@ -927,11 +927,11 @@ button.button-20 p[data-v-208aaa41] {
     align-items: center;
     margin-left: 90px;
 }
-.from-card[data-v-208aaa41] {
+.from-card {
     width: 50%;
     padding-top: 70px;
 }
-.from-box img[data-v-208aaa41][data-v-208aaa41][data-v-208aaa41][data-v-208aaa41] {
+.from-box img {
     position: absolute;
     right: 250px;
     top: 15px;
@@ -940,14 +940,14 @@ button.button-20 p[data-v-208aaa41] {
 }
 }
 @media screen and (max-width: 425px){
-    .main-form[data-v-208aaa41][data-v-208aaa41][data-v-208aaa41][data-v-208aaa41][data-v-208aaa41][data-v-208aaa41] {
+    .main-form {
     width: 100%;
     height: 100%;
     background-image: url(/images/Up.png);
     padding: 10px 15px;
     border-radius: 24px;
 }
-.main-box[data-v-208aaa41][data-v-208aaa41][data-v-208aaa41][data-v-208aaa41][data-v-208aaa41] {
+.main-box {
     width: 100%;
     display: flex;
     position: relative;
@@ -957,12 +957,12 @@ button.button-20 p[data-v-208aaa41] {
     flex-wrap: wrap;
     align-items: center;
 }
-.from-titel[data-v-208aaa41][data-v-208aaa41][data-v-208aaa41][data-v-208aaa41] {
+.from-titel {
     width: 100%;
     padding-top: 40px;
     text-align: center;
 }
-.from-box[data-v-208aaa41][data-v-208aaa41][data-v-208aaa41] {
+.from-box {
     width: 100%;
     position: relative;
     z-index: 0;
@@ -970,7 +970,7 @@ button.button-20 p[data-v-208aaa41] {
     align-items: center;
     margin-left: 0px;
 }
-.from-card[data-v-208aaa41][data-v-208aaa41] {
+.from-card {
     width: 100%;
     padding-top: 70px;
     display: flex;
@@ -978,7 +978,7 @@ button.button-20 p[data-v-208aaa41] {
     justify-content: center;
     flex-direction: column;
 }
-.from-box img[data-v-208aaa41][data-v-208aaa41][data-v-208aaa41][data-v-208aaa41][data-v-208aaa41] {
+.from-box img {
     position: absolute;
     right: 250px;
     top: 15px;
@@ -986,7 +986,7 @@ button.button-20 p[data-v-208aaa41] {
     bottom: 0px;
     display: none;
 }
-.card-box[data-v-208aaa41][data-v-208aaa41][data-v-208aaa41] {
+.card-box {
     width: 100%;
     display: flex;
     gap: 20px;
@@ -994,7 +994,7 @@ button.button-20 p[data-v-208aaa41] {
     padding: 15px 0px;
     justify-content: center;
 }
-.logo-from img[data-v-208aaa41] {
+.logo-from img {
     width: 40%;
 }
 }

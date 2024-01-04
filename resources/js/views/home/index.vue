@@ -4,7 +4,9 @@
       <!-- Other Vue.js content -->
   
       <!-- Embed WordPress landing page using iframe -->
-      <iframe src="https://aisites.me/" width="100%" height="600" frameborder="0"></iframe>
+      <div style="height:100vh !important;">
+      <iframe src="https://aisites.me/" width="100%" height="100%" frameborder="0"></iframe>
+    </div>
     </div>
   </template>
   

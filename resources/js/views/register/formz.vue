@@ -116,14 +116,14 @@ export default {
 }
 
 @media screen and (max-width: 1600px){
-    .main-form[data-v-0dc4e8ee] {
+    .main-form {
     border-radius: 50px;
     background: #F96;
     width: 100%;
     height: 770px;
     padding: 20px 50px 0px 50px;
 }
-.form-titel h3[data-v-0dc4e8ee] {
+.form-titel h3 {
     color: #000;
     font-family: sans-serif;
     font-size: 30px;
@@ -131,7 +131,7 @@ export default {
     font-weight: 600;
     line-height: normal;
 }
-.form-titel h1[data-v-0dc4e8ee] {
+.form-titel h1 {
     color: #000;
     font-family: sans-serif;
     font-size: 58px;
@@ -140,7 +140,7 @@ export default {
     line-height: normal;
     padding: 15px 0px;
 }
-.form-titel p[data-v-0dc4e8ee] {
+.form-titel p {
     color: #000;
     font-family: sans-serif;
     font-size: 34px;
@@ -151,7 +151,7 @@ export default {
 .imger img {
     width: 100%;
 }
-.form-titel a p[data-v-0dc4e8ee] {
+.form-titel a p {
     color: #000;
     font-family: Anton;
     font-size: 16px;
@@ -161,14 +161,14 @@ export default {
 }
 }
 @media screen and (max-width: 1440px){
-    .main-form[data-v-0dc4e8ee][data-v-0dc4e8ee] {
+    .main-form {
     border-radius: 50px;
     background: #F96;
     width: 100%;
     height: 650px;
     padding: 20px 50px 0px 50px;
 }
-.form-titel h3[data-v-0dc4e8ee][data-v-0dc4e8ee] {
+.form-titel h3 {
     color: #000;
     font-family: sans-serif;
     font-size: 28px;
@@ -176,7 +176,7 @@ export default {
     font-weight: 600;
     line-height: normal;
 }
-.form-titel h1[data-v-0dc4e8ee][data-v-0dc4e8ee] {
+.form-titel h1 {
     color: #000;
     font-family: sans-serif;
     font-size: 52px;
@@ -185,7 +185,7 @@ export default {
     line-height: normal;
     padding: 15px 0px;
 }
-.form-titel p[data-v-0dc4e8ee][data-v-0dc4e8ee] {
+.form-titel p {
     color: #000;
     font-family: sans-serif;
     font-size: 28px;
@@ -193,10 +193,10 @@ export default {
     font-weight: 600;
     line-height: normal;
 }
-.col-lg-6.col-md-12.col-sm-12.imger img[data-v-0dc4e8ee] {
+.col-lg-6.col-md-12.col-sm-12.imger img {
     width: 93%;
 }
-.form-titel a p[data-v-0dc4e8ee][data-v-0dc4e8ee] {
+.form-titel a p {
     color: #000;
     font-family: Anton;
     font-size: 16px;
@@ -204,19 +204,19 @@ export default {
     font-weight: 600;
     line-height: normal;
 }
-.imger img[data-v-0dc4e8ee] {
+.imger img {
     width: 93%;
 }
 }
 @media screen and (max-width: 1366px){
-    .main-form[data-v-0dc4e8ee][data-v-0dc4e8ee] {
+    .main-form {
     border-radius:45px;
     background: #F96;
     width: 100%;
     height: 560px;
     padding: 20px 35px 0px 35px;
 }
-.form-titel h3[data-v-0dc4e8ee][data-v-0dc4e8ee] {
+.form-titel h3 {
     color: #000;
     font-family: sans-serif;
     font-size: 24px;
@@ -224,7 +224,7 @@ export default {
     font-weight: 600;
     line-height: normal;
 }
-.form-titel h1[data-v-0dc4e8ee][data-v-0dc4e8ee] {
+.form-titel h1 {
     color: #000;
     font-family: sans-serif;
     font-size: 45px;
@@ -233,7 +233,7 @@ export default {
     line-height: normal;
     padding: 10px 0px;
 }
-.form-titel p[data-v-0dc4e8ee][data-v-0dc4e8ee] {
+.form-titel p {
     color: #000;
     font-family: sans-serif;
     font-size: 24px;
@@ -241,10 +241,10 @@ export default {
     font-weight: 600;
     line-height: normal;
 }
-.col-lg-6.col-md-12.col-sm-12.imger img[data-v-0dc4e8ee] {
+.col-lg-6.col-md-12.col-sm-12.imger img {
     width: 80%;
 }
-.form-titel a p[data-v-0dc4e8ee][data-v-0dc4e8ee] {
+.form-titel a p {
     color: #000;
     font-family: Anton;
     font-size: 16px;
@@ -252,22 +252,22 @@ export default {
     font-weight: 600;
     line-height: normal;
 }
-.imger img[data-v-0dc4e8ee] {
+.imger img {
     width: 80%;
 }
 }
 @media screen and (max-width: 768px){
-    .main-form[data-v-0dc4e8ee][data-v-0dc4e8ee][data-v-0dc4e8ee] {
+    .main-form {
     border-radius: 25px;
     background: #F96;
     width: 100%;
     height: 100%;
     padding: 20px 30px 0px 30px;
 }
-.imger img[data-v-0dc4e8ee] {
+.imger img {
     width: 82%;
 }
-.form-titel h3[data-v-0dc4e8ee][data-v-0dc4e8ee][data-v-0dc4e8ee] {
+.form-titel h3 {
     color: #000;
     font-family: sans-serif;
     font-size: 20px;
@@ -275,7 +275,7 @@ export default {
     font-weight: 600;
     line-height: normal;
 }
-.form-titel h1[data-v-0dc4e8ee][data-v-0dc4e8ee][data-v-0dc4e8ee] {
+.form-titel h1 {
     color: #000;
     font-family: sans-serif;
     font-size: 38px;
@@ -284,7 +284,7 @@ export default {
     line-height: normal;
     padding: 10px 0px;
 }
-.form-titel p[data-v-0dc4e8ee][data-v-0dc4e8ee][data-v-0dc4e8ee] {
+.form-titel p {
     color: #000;
     font-family: sans-serif;
     font-size: 20px;
@@ -292,12 +292,12 @@ export default {
     font-weight: 600;
     line-height: normal;
 }
-.form-titel a svg[data-v-0dc4e8ee] {
+.form-titel a svg {
     width: 20px;
     height: 20px;
     flex-shrink: 0;
 }
-.form-titel a p[data-v-0dc4e8ee][data-v-0dc4e8ee][data-v-0dc4e8ee] {
+.form-titel a p {
     color: #000;
     font-family: Anton;
     font-size: 12px;
@@ -307,7 +307,7 @@ export default {
 }
 }
 @media screen and (max-width: 425px){
-    .row.formz[data-v-0dc4e8ee] {
+    .row.formz {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -316,7 +316,7 @@ export default {
     align-content: center;
     padding-top: 30px;
     }
-    .main-form[data-v-0dc4e8ee][data-v-0dc4e8ee][data-v-0dc4e8ee][data-v-0dc4e8ee] {
+    .main-form {
     border-radius: 25px;
     background: #F96;
     width: 100%;
@@ -324,7 +324,7 @@ export default {
     padding: 20px 20px 0px 20px;
 }
 
-    .form-titel h3[data-v-0dc4e8ee][data-v-0dc4e8ee][data-v-0dc4e8ee][data-v-0dc4e8ee] {
+    .form-titel h3 {
     color: #000;
     font-family: sans-serif;
     font-size: 18px;
@@ -333,7 +333,7 @@ export default {
     line-height: normal;
     text-align: center;
 }
-.form-titel h1[data-v-0dc4e8ee][data-v-0dc4e8ee][data-v-0dc4e8ee][data-v-0dc4e8ee] {
+.form-titel h1 {
     color: #000;
     font-family: sans-serif;
     font-size: 30px;
@@ -343,7 +343,7 @@ export default {
     padding: 10px 0px;
     text-align: center;
 }
-.form-titel p[data-v-0dc4e8ee][data-v-0dc4e8ee][data-v-0dc4e8ee][data-v-0dc4e8ee] {
+.form-titel p {
     color: #000;
     font-family: sans-serif;
     font-size: 18px;
@@ -352,7 +352,7 @@ export default {
     line-height: normal;
     text-align: center;
 }
-.form-titel a p[data-v-0dc4e8ee][data-v-0dc4e8ee][data-v-0dc4e8ee][data-v-0dc4e8ee] {
+.form-titel a p {
     color: #000;
     font-family: Anton;
     font-size: 12px;
@@ -360,7 +360,7 @@ export default {
     font-weight: 600;
     line-height: normal;
 }
-.form-titel a svg[data-v-0dc4e8ee][data-v-0dc4e8ee] {
+.form-titel a svg {
     width: 20px;
     height: 20px;
     flex-shrink: 0;

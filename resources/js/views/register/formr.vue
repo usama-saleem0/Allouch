@@ -83,6 +83,8 @@
 import { get , byMethod} from '../admin/components/lib/api'
 import Upload from "../register/profile.vue";
 import Brand from "./branddetail.vue";
+import VueSweetalert2 from 'vue-sweetalert2';
+  import 'sweetalert2/dist/sweetalert2.min.css';
 
 export default {
   name: "Form",
@@ -90,7 +92,8 @@ export default {
   components: {
    
     Upload,
-    Brand
+    Brand,
+    VueSweetalert2
  },
 
   data() {
@@ -172,6 +175,7 @@ this.form.auth_type = this.auth_type;
 
         byMethod(this.method, 'register' , this.form)
             .then((res) => {
+                console.log(res);
 
 
                 if(res.data.data.auth_type == 'Influencer') {
@@ -191,9 +195,35 @@ this.form.auth_type = this.auth_type;
 
                     // this.$router.push(`/register/company/${this.company_id}`);
                 }
+
+                if(res.data.data.auth_type == null){
+                    this.$swal.fire({
+                              icon:'error',
+                              title:'Error',
+                              text: 'PLease Select Influencer or Brand for Registration',
+                              // Set the position to top-end for the toast
+  showConfirmButton: false, // Hide the "OK" button for the toast
+  timer: 3000, // Adjust the timer (milliseconds) for how long the toast will be shown
+  timerProgressBar: true,
+                          })
+
+                }
             })
             .catch((error) => {
                 if(error.response.status === 422) {
+                    console.log(error.response.data.errors.email[0]);
+                    const dynamic = error.response.data.errors.email[0];
+                    
+                          this.$swal.fire({
+                              icon:'error',
+                              title:'Error',
+                              text: `${dynamic}`,
+                              // Set the position to top-end for the toast
+  showConfirmButton: false, // Hide the "OK" button for the toast
+  timer: 3000, // Adjust the timer (milliseconds) for how long the toast will be shown
+  timerProgressBar: true,
+                          })
+                      
                     this.errors = error.response.data.errors
                 }
                 this.isProcessing = false

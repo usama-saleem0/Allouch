@@ -24,6 +24,7 @@
                   </div>
                 </div>
                  <div class="poxs-2">
+                   
                     <!-- <img src="/images/tshairt.png" alt=""> -->
                     <img :src="'/uploads/' + item.image" alt="">
 
@@ -38,18 +39,23 @@
                         <h2>${{ item.price }}</h2>
                     </div>
                  </div>
-                    <div class="col" >
+                <div class=" row text-right">
+                    <div class="col">
                         <p style="font-size: 12px;
     color: black;
     font-weight: bold;">Assign To:{{ item.user? item.user.user_name:'' }}</p>
                     </div>
-                 <!-- <div class="poxs-3">
-                    <div class="poxs-box">
-                       
-                        <p>Assign To:{{ item.user? item.user.user_name:'' }}</p>
-                    </div>
-                    
-                 </div> -->
+
+                    <div class="col">
+                    <span :class="{ 'selected': isSelected(item.id) }" style="color: white;
+    font-family: fantasy;">Select</span>
+                 <img style="width: 45%;" @click="toggleSelect( item.id)"  src="/images/select.png"/>
+                </div>
+                </div>
+                 <!-- <button @click="toggleSelect( item.id)"  
+      :class="{ 'selected': isSelected(item.id) }">
+     Select
+    </button> -->
               </div>
 
 
@@ -60,8 +66,8 @@
             <div class="btn-box">
               <div class="btn-1">
                 
-                <button class="Add" @click="add_new">
-                  <span>Add New</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
+                <button class="Add" @click="assing">
+                  <span>Assign Influencer</span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
   <path d="M2.51279 5.45272C3.05059 5.44321 3.53656 5.41563 4.0192 5.49884C4.07008 5.5074 4.12904 5.47935 4.18278 5.46318C4.44763 5.38329 4.71344 5.37236 4.98305 5.44131C5.21748 5.50122 5.45666 5.44986 5.69394 5.46746C6.06008 5.49456 6.42432 5.39566 6.78809 5.4142C7.08433 5.42942 7.3839 5.42466 7.67824 5.47079C7.82755 5.49409 7.96877 5.50217 8.12141 5.46366C8.28736 5.42229 8.45189 5.52167 8.62402 5.52167C8.81328 5.52167 8.99968 5.56922 9.18132 5.62343C9.38484 5.68382 9.43619 5.86831 9.28784 6.0181C9.06149 6.24682 8.76573 6.34715 8.4595 6.39185C8.20605 6.42894 7.94738 6.45033 7.69203 6.46365C7.42194 6.47744 7.14995 6.57064 6.87605 6.48029C6.82898 6.4646 6.77049 6.46127 6.72294 6.47411C6.40435 6.56161 6.07292 6.50264 5.75195 6.56541C5.65305 6.5849 5.54463 6.57825 5.44382 6.56256C5.30402 6.54068 5.16993 6.54449 5.03679 6.58823C4.86656 6.64434 4.69728 6.57302 4.52657 6.57634C4.35396 6.57967 4.18278 6.58585 4.0192 6.62722C3.76195 6.69284 3.50613 6.65623 3.25553 6.6296C3.02919 6.60583 2.81093 6.6258 2.58792 6.6315C2.37727 6.63721 2.15711 6.65528 1.94979 6.61867C1.71441 6.57682 1.61217 6.36189 1.52611 6.1655C1.44907 5.98957 1.55749 5.85975 1.67589 5.73327C1.8504 5.54639 2.05154 5.44653 2.3107 5.46413C2.39534 5.46983 2.48141 5.45414 2.51422 5.45224L2.51279 5.45272Z" fill="#1C1D1E"/>
   <path d="M9.13513 9.8451C8.83651 9.84748 8.60731 9.58072 8.65724 9.27068C8.69005 9.06574 8.76518 8.87411 8.89833 8.70768C9.00056 8.57977 9.10422 8.45091 9.18839 8.31111C9.48177 7.82181 9.80322 7.35391 10.1884 6.93166C10.2221 6.89457 10.2497 6.84654 10.2664 6.79899C10.3657 6.51416 10.565 6.2978 10.7595 6.07907C10.8779 5.94593 10.8883 5.84702 10.7533 5.7291C10.5745 5.57265 10.4347 5.39386 10.3353 5.17798C10.2649 5.02582 10.1166 4.93737 10.0082 4.81612C9.85743 4.64731 9.76043 4.44094 9.65439 4.24646C9.50745 3.97685 9.2949 3.76192 9.12229 3.5156C8.94825 3.26739 8.80227 3.00396 8.69671 2.71913C8.67294 2.65493 8.65629 2.58646 8.64964 2.51846C8.63775 2.39008 8.71573 2.31019 8.81607 2.2479C8.91069 2.18894 8.9958 2.21366 9.07949 2.27595C9.24497 2.39911 9.42043 2.5042 9.54882 2.67728C9.71287 2.89792 9.96299 3.0439 10.1052 3.28736C10.4799 3.50086 10.6601 3.88507 10.9159 4.20414C11.0662 4.39149 11.2497 4.55364 11.4261 4.71817C11.5683 4.85083 11.6843 4.99586 11.7357 5.18654C11.7656 5.29733 11.8322 5.38673 11.894 5.48136C12.0414 5.70722 12.0319 5.93737 11.8874 6.16276C11.6739 6.49562 11.497 6.85225 11.2549 7.16703C11.0039 7.49371 10.8375 7.87982 10.545 8.17844C10.3672 8.36008 10.273 8.59356 10.1632 8.81847C10.0115 9.12898 9.83222 9.4238 9.57782 9.66345C9.43755 9.79517 9.30917 9.84415 9.13656 9.84557L9.13513 9.8451Z" fill="#1C1D1E"/>
 </svg>
@@ -99,13 +105,17 @@ import { get , byMethod} from '../admin/components/lib/api'
 import Profile from "./brandprofile.vue";
 import Add from "./addmerchendise.vue";
 
+import VueSweetalert2 from 'vue-sweetalert2';
+  import 'sweetalert2/dist/sweetalert2.min.css';
+
 export default {
     name: 'admin',
 
     components: {
    
       Profile,
-      Add
+      Add,
+      VueSweetalert2
  },
 
    
@@ -117,6 +127,13 @@ export default {
                 model:'',
                 model:[],
                 isModalOpen:true,
+                selectedOption:'',
+                selectedItems: [],
+              selectedLabels: [],
+              isButtonClicked: false,
+            button_click:false,
+            users_data:{},
+            form:{},
 
                
                
@@ -127,6 +144,9 @@ export default {
         },
         created(){
         
+
+            this.id = this.$route.params.id;
+
         get('/getmerchandises')
               .then((res) => {
                 
@@ -137,6 +157,26 @@ export default {
         }, 
 
         methods:{
+
+            toggleSelect( label) {
+        // Toggle selection by clicking on the image
+        const selectedIndex = this.selectedLabels.indexOf(label);
+        console.log(selectedIndex)
+        if (selectedIndex === -1) {
+          // Add to selection
+          this.selectedLabels.push(label);
+        } else {
+          // Remove from selection
+          this.selectedLabels.splice(selectedIndex, 1);
+        }
+        console.log(this.selectedLabels)
+        this.form.selectedLabelsss = this.selectedLabels
+      },
+      isSelected(label) {
+        // Check if the label is selected
+        return this.selectedLabels.includes(label);
+        
+      },
 
             add_new() {
      
@@ -170,7 +210,39 @@ export default {
 
           profile(){
                 this.$router.push('/admin/dashborad4')
-            }
+            },
+
+            assing(){
+                this.form = [
+        this.selectedLabels,
+        this.id
+      ]
+      byMethod(this.method, 'api/post_influencers', this.form)
+                    .then((res) => {
+                      
+                       
+                        if(res.data && res.data.saved) {
+                          this.$swal.fire({
+                              icon:'success',
+                              title:'Assign to Influencer',
+                              text: 'Your merchandise assign to influencer',
+                              // Set the position to top-end for the toast
+  showConfirmButton: false, // Hide the "OK" button for the toast
+  timer: 3000, // Adjust the timer (milliseconds) for how long the toast will be shown
+  timerProgressBar: true,
+                          })
+                        }
+
+
+                        get('/getmerchandises')
+              .then((res) => {
+                
+                 this.setData(res)
+
+              })
+                    })
+
+            },
 
           
 
@@ -179,6 +251,10 @@ export default {
 </script>
 
 <style scoped>
+.selected {
+      /* background-color: #3498db;  */
+      color: black !important; 
+    }
 .page-1 {
     width: 100%;
     background-color: #F5F3EA;
@@ -324,7 +400,7 @@ export default {
     background: #F96;
     box-shadow: 2px 2px 0px 0px #1B1C1D;
     display: flex;
-    width: 154.75px;
+    width: 180.75px;
     justify-content: center;
     align-items: center;
     gap: 7.647px;
@@ -750,7 +826,7 @@ h2.main-para {
     background: #F96;
     box-shadow: 2px 2px 0px 0px #1B1C1D;
     display: flex;
-    width: 154.75px;
+    width: 175.75px;
     justify-content: center;
     align-items: center;
     gap: 7.647px;
@@ -1029,7 +1105,7 @@ button.Add {
     background: #F96;
     box-shadow: 2px 2px 0px 0px #1B1C1D;
     display: flex;
-    width: 130.75px;
+    width: 155.75px;
     justify-content: center;
     align-items: center;
     gap: 7.647px;

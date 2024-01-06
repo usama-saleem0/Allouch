@@ -156,6 +156,16 @@ let router = new Router({
             }
         },
 
+        {
+            path: "/assign_product",
+            name: "admin",
+            component: () => import("./views/admin/assing_product.vue"),
+            meta: {
+                requiresAuth: true,
+                layout: AdminLayout
+            }
+        },
+
 
         {
             path: "/influncers",
@@ -193,6 +203,16 @@ let router = new Router({
             path: "/allmerchandise",
             name: "chats",
             component: () => import("./views/admin/allmerchandise.vue"),
+            meta: {
+                requiresAuth: true,
+                layout: AdminLayout
+            }
+        },
+
+        {
+            path: "/allmerchandises/:id",
+            name: "chats",
+            component: () => import("./views/admin/allmerchandise_id.vue"),
             meta: {
                 requiresAuth: true,
                 layout: AdminLayout

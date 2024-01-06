@@ -54,11 +54,15 @@ Route::group(['middleware' => ['auth:api']], function () {
     Route::post('api/edit_profile', [ProfileController::class, 'edit_profile']);
 
     Route::get('getuser', [ProfileController::class, 'getuser']);
+    Route::get('getbrand', [ProfileController::class, 'getbrand']);
+
     Route::get('getprofile', [ProfileController::class, 'getprofile']);
 
     Route::get('getpackage', [ProfileController::class, 'getpackage']);
 
     Route::post('api/package', [ProfileController::class, 'package']);
+    Route::post('api/post_influencers', [ProfileController::class, 'post_influencers']);
+
 
     Route::get('getinfluencer', [ProfileController::class, 'getinfluencer']);
     Route::get('get_influencers', [ProfileController::class, 'getinfluencers']);
@@ -66,6 +70,8 @@ Route::group(['middleware' => ['auth:api']], function () {
 
     Route::get('getmerchandise', [MerchandiseController::class, 'getmerchandise']);
     Route::get('getmerchandises', [MerchandiseController::class, 'getmerchandises']);
+    Route::get('getmerchandises_inf', [MerchandiseController::class, 'getmerchandises_inf']);
+
 
 
 

@@ -351,7 +351,7 @@ this.form.country = this.company_type;
     width: 100% !important;
     height: 900px;
     border-radius: 50px;
-    background-image: url(/images/Sign\ Up.png);
+    background-image: url(/images/Up.png);
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -475,7 +475,7 @@ a.form-last p {
     width: 100%;
     height: 785px;
     border-radius: 50px;
-    background-image: url(/images/Sign\ Up.png);
+    background-image: url(/images/Up.png);
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -522,7 +522,7 @@ a.form-last {
     width: 100%;
     height: 650px;
     border-radius: 50px;
-    background-image: url(/images/Sign\ Up.png);
+    background-image: url(/images/Up.png);
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -594,7 +594,7 @@ button.form-btn {
     width: 100%;
     height: 560px;
     border-radius: 50px;
-    background-image: url(/images/Sign\ Up.png);
+    background-image: url(/images/Up.png);
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -704,7 +704,7 @@ a.form-last {
     width: 100%;
     height: 100%;
     border-radius: 25px;
-    background-image: url(/images/Sign\ Up.png);
+    background-image: url(/images/Up.png);
     position: relative;
     display: flex;
     justify-content: space-between;

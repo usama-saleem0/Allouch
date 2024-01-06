@@ -135,7 +135,7 @@
                     <h3>+11.6% (2817)</h3>
                 </div>
                 <div class="short-card">
-                    <p>Completed</p>
+                    <p>Un Paid</p>
                     <h2>24.9k</h2>
                     <h3>+11.6% (2817)</h3>
                 </div>

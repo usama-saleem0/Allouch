@@ -311,11 +311,23 @@
           class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
           aria-labelledby="userDropdown"
         >
-          <a class="dropdown-item"  @click="back">
+
+        <a class="dropdown-item"  @click="back"  v-if="user && user.auth_type === 'Influencer'">
+            <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+            Profile
+          </a>
+
+
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item"  @click="backs"  v-if="user && user.auth_type === 'Brand'">
             <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
             Profile
           </a>
          
+          <a class="dropdown-item"  @click="assign"  v-if="user && user.auth_type === 'Influencer'">
+            <i class="fas fa-box fa-sm fa-fw mr-2 text-gray-400"></i>
+            Assign Product
+          </a>
           <div class="dropdown-divider"></div>
           <a
             class="dropdown-item"
@@ -357,7 +369,15 @@ export default {
     },
 
     back(){
-      this.$router.go(-1);
+      this.$router.push('/influncer/dashborad');
+    },
+
+    backs(){
+      this.$router.push('/Branddashoboard');
+    },
+    assign(){
+      this.$router.push('/assign_product');
+
     }
   },
 };

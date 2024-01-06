@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Package;
 use App\Models\Chat;
+use App\Models\Merchandise;
+
 
 
 
@@ -18,6 +20,13 @@ class ProfileController extends Controller
         $data = User::with('brand')->where('id' , auth()->user()->id)->first();
         return response()->json(['data'=> $data]);
      }
+
+     public function getbrand(){
+      // dd(request()->id);
+
+      $data = User::with('brand')->where('id' , request()->id)->first();
+      return response()->json(['data'=> $data]);
+   }
 
 
      public function getinfluencer(){
@@ -139,6 +148,24 @@ class ProfileController extends Controller
       $data = User::with('package')->where('auth_type' , 'Influencer')->get();
       return response()->json(['data' => $data]);
      }
+
+
+     public function post_influencers( Request $request){
+
+      $data = $request->all();
+        $influencer = $data[0];
+        $id = $data[1];
+      
+      $assign = Merchandise::whereIn('id' , $influencer)->get();
+ 
+         foreach($assign as $new){
+           $new->assign_to = $id;
+           $new->save();
+         }
+
+         return response()->json(['saved' => true]);
+
+      }
 
      
 }

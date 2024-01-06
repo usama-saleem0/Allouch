@@ -290,7 +290,7 @@ export default {
         methods:{
 
             hiring(){
-                this.$router.push('/allmerchandise')
+                this.$router.push(`/allmerchandises/${this.id}`)
             },
 
             chat(){

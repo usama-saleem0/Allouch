@@ -11,19 +11,19 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/44405810/129751765-07802bb1-0e55-4311-b6ee-d90f9b2e237b.png" width="160px">
+  <img src="https://allouch.conceptrecall.com/public/images/image.png" width="160px">
 
 
-  <h1 align="center">🎉 Laravel 8, Vue.js & Bootstrap 4 SPA Dashboard 🎉</h1>
+  <h1 align="center">Influencer Campaign</h1>
 
   <div align="center">
-    <h2>An awesome SPA Admin Dashboard starter kit!</h2>
+    <h2>An awesome SPA Influencer Dashboard </h2>
   </div>
 </p>
 
 <!-- PREVIEW -->
 ## PREVIEW
-![laravel_vue_admin_dashboard_preview](https://user-images.githubusercontent.com/44405810/129740905-6cce06a4-05ca-4e73-b04f-4045c09eb4a3.gif)
+![Influencer campaings](https://www.loom.com/share/2052408dbf56437ea147af4f90146230)
 
 
 
@@ -129,10 +129,7 @@ The code is structured in such a way to make it easy to modify and add new pages
 
 
 
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+**greatly appreciated**.
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
@@ -142,27 +139,21 @@ Contributions are what make the open source community such an amazing place to l
 
 
 
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See [LICENSE](https://github.com/ramoncrisante/laravel-vue-dashboard/blob/main/LICENSE.txt) for more information.
-Basically, feel free to use and re-use any way you want.
 
 
 
-<!-- CONTACT -->
+
 ## Contact
 
-Ramon Crisante - ramon.crisante@yahoo.com
+Website Link
 
-Project Link: [https://github.com/ramoncrisante/laravel-vue-dashboard](https://github.com/ramoncrisante/laravel-vue-dashboard)
-
-
+Portfolio Link: [https://github.com/ramoncrisante/laravel-vue-dashboard](https://github.com/ramoncrisante/laravel-vue-dashboard)
 
 
 
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+<!-- 
+
 [contributors-shield]: https://img.shields.io/github/contributors/ramoncrisante/laravel-vue-dashboard.svg?style=for-the-badge
 [contributors-url]: https://github.com/ramoncrisante/laravel-vue-dashboard/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/ramoncrisante/laravel-vue-dashboard.svg?style=for-the-badge
@@ -174,4 +165,4 @@ Project Link: [https://github.com/ramoncrisante/laravel-vue-dashboard](https://g
 [license-shield]: https://img.shields.io/github/license/ramoncrisante/laravel-vue-dashboard.svg?style=for-the-badge
 [license-url]: https://github.com/ramoncrisante/laravel-vue-dashboard/blob/main/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/ramoncrisante
+[linkedin-url]: https://linkedin.com/in/ramoncrisante -->

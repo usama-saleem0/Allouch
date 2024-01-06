@@ -155,7 +155,21 @@ this.bgColor2 = '#F96';
 });;
         }
       } catch (error) {
-        notify.authError(error);
+
+        console.log(error.response.data.message);
+
+        const dynamic = error.response.data.message;
+
+        this.$swal.fire({
+                              icon:'error',
+                              title:'Error',
+                              text: `${dynamic}`,
+                              // Set the position to top-end for the toast
+  showConfirmButton: false, // Hide the "OK" button for the toast
+  timer: 3000, // Adjust the timer (milliseconds) for how long the toast will be shown
+  timerProgressBar: true,
+                          })
+        // notify.authError(error);
       }
     },
 

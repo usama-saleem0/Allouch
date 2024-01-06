@@ -5,11 +5,11 @@
        <div class="main">
         <div class="box-1">
           <div class="Sponsorship">
-            <h2 class="main-para">My Merchandise</h2>
+            <h2 class="main-para">Assign Merchandise</h2>
             <div class="card-box">
 
 
-              <div class="cards" v-for="item in model" >
+              <div class="cards" v-for="item in model" @click="add_new(item.user_id)" style="cursor:pointer">
                 <div class="pox-1">
                   <h2>{{ item.title }}</h2>
                   <div class="top-btn">
@@ -57,7 +57,7 @@
 
             </div>
 
-            <div class="btn-box">
+            <!-- <div class="btn-box">
               <div class="btn-1">
                 
                 <button class="Add" @click="add_new">
@@ -68,7 +68,7 @@
                 </button>
               </div>
               
-            </div>
+            </div> -->
           </div>
          
        
@@ -79,12 +79,12 @@
     </div>
 
 
-    <div id="popup-box" class="modal" v-if="isModalOpen" >
+    <div id="popup-box" class="modal" v-if="modals">
       <div style="display: flex;
     padding-left: 0px;
     justify-content: space-evenly;">
 
-        <Add @cancel="closeModal"/>
+        <Add :user-id="user_id" @cancel="closeModal"/>
       </div>
       
     </div>
@@ -97,7 +97,7 @@ import Vue from 'vue'
 import chartBarDemo from "../../chart/demo/chart-bar-demo";
 import { get , byMethod} from '../admin/components/lib/api'
 import Profile from "./brandprofile.vue";
-import Add from "./addmerchendise.vue";
+import Add from "./branddetasils.vue";
 
 export default {
     name: 'admin',
@@ -112,11 +112,13 @@ export default {
 
     data () {
             return {
+                modals:false,
                 method:'POST',
                 model:{},
                 model:'',
                 model:[],
                 isModalOpen:true,
+                user_id:'',
 
                
                
@@ -127,7 +129,7 @@ export default {
         },
         created(){
         
-        get('/getmerchandises')
+        get('/getmerchandises_inf')
               .then((res) => {
                 
                  this.setData(res)
@@ -138,8 +140,10 @@ export default {
 
         methods:{
 
-            add_new() {
-     
+            add_new(e) {
+                this.user_id = e;
+                console.log(this.user_id)
+                this.modals = true;
      $('#popup-box').modal('show');
      
      
@@ -150,12 +154,7 @@ export default {
    this.shows = false;
    $('#popup-box').modal('hide');
 
-   get('/getmerchandises')
-              .then((res) => {
-                
-                 this.setData(res)
-
-              })
+ 
           
         }, 
             setData(res) {

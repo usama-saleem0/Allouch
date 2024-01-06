@@ -14,7 +14,7 @@
 
 <!-- PREVIEW -->
 ## PREVIEW
-![Influencer campaings](https://allouch.conceptrecall.com/public/images/image.png)
+![Influencer campaings](https://allouch.conceptrecall.com/public/images/dashboard_allouch.png)
 
 
 
@@ -106,6 +106,9 @@ The code is structured in such a way to make it easy to modify and add new pages
   In order to successfully send emails, we need to provide `MAIL_DRIVER`, `MAIL_HOST`, `MAIL_PORT`, `MAIL_USERNAME`, `MAIL_PASSWORD` in the `.env` file.
 
 
+  * Same in Payment merchant to enable payment merchant set creadentails in .env
+
+
 ## Built With
 
 * [Laravel 8](https://laravel.com)
@@ -136,7 +139,7 @@ The code is structured in such a way to make it easy to modify and add new pages
 
 ## Contact
 
-Website Link
+Website Link: [https://allouch.conceptrecall.com/](https://allouch.conceptrecall.com/)
 
 Portfolio Link: [https://brandrevam.com/](https://brandrevam.com/)
 

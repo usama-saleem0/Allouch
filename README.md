@@ -14,7 +14,7 @@
 
 <!-- PREVIEW -->
 ## PREVIEW
-![Influencer campaings](https://allouch.conceptrecall.com/public/images/Allouch%20-%20Google%20Chrome%202024-01-06%2016-47-29.mp4)
+![Influencer campaings](https://allouch.conceptrecall.com/public/images/image.png)
 
 
 

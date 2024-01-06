@@ -61,7 +61,7 @@ The code is structured in such a way to make it easy to modify and add new pages
 
    ```sh
     # Clone the project
-    git clone https://github.com/nazarnasim999/allouch.git
+    git clone https://github.com/Farhanahmed86/Allouch.git
 
     # Enter the project directory
     cd laravel-vue-dashboard

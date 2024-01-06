@@ -1,13 +1,4 @@
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-
-
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
@@ -23,7 +14,7 @@
 
 <!-- PREVIEW -->
 ## PREVIEW
-![Influencer campaings](https://www.loom.com/share/2052408dbf56437ea147af4f90146230)
+![Influencer campaings](https://allouch.conceptrecall.com/public/images/Allouch%20-%20Google%20Chrome%202024-01-06%2016-47-29.mp4)
 
 
 
@@ -33,8 +24,8 @@
 ## About The Project
 
 
-`laravel-vue-dashboard` is a Single Page Application (SPA) dashboard
-built with [Laravel 8](https://laravel.com), [Vue.js](https://vuejs.org/) and [Bootstrap 4](https://getbootstrap.com) ([SB Admin Template](https://github.com/StartBootstrap/startbootstrap-sb-admin-2)). Thanks to the combination of the power of Laravel and the speed of Vue.js it is an excellent full-stack starter kit for enterprise applications.
+`Influencer-dashboard` is a Single Page Application (SPA) dashboard
+built with [Laravel 8](https://laravel.com), [Vue.js](https://vuejs.org/) and [Bootstrap 4](https://getbootstrap.com) ([SB Admin Template]). Thanks to the combination of the power of Laravel and the speed of Vue.js it is an excellent full-stack Influencer campign enterprise applications.
  
  
 It's a kit to start from scratch, not a Laravel package. It can help you to cut down your time by having an SPA dashboard with authentication system ready to use, taking advantage of [Laravel Passport](https://laravel.com/docs/8.x/passport) that uses the oauth2 authentication protocol.
@@ -70,7 +61,7 @@ The code is structured in such a way to make it easy to modify and add new pages
 
    ```sh
     # Clone the project
-    git clone https://github.com/ramoncrisante/laravel-vue-dashboard.git
+    git clone https://github.com/nazarnasim999/allouch.git
 
     # Enter the project directory
     cd laravel-vue-dashboard
@@ -147,7 +138,7 @@ The code is structured in such a way to make it easy to modify and add new pages
 
 Website Link
 
-Portfolio Link: [https://github.com/ramoncrisante/laravel-vue-dashboard](https://github.com/ramoncrisante/laravel-vue-dashboard)
+Portfolio Link: [https://brandrevam.com/](https://brandrevam.com/)
 
 
 
